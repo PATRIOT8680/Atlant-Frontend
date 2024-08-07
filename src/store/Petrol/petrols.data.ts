@@ -1,15 +1,19 @@
 interface IPetrolsName {
-  name: string
+  name: string,
+  shortName: string
 }
 
 export const petrolsName: IPetrolsName[] = [
   {
-    name: 'XGasline',
+    name: 'Xero Gas',
+    shortName: 'xero'
   },
   {
     name: 'LTD',
+    shortName: 'ltd'
   },
   {
-    name: 'Ron',
+    name: 'RON',
+    shortName: 'ron'
   }
 ]

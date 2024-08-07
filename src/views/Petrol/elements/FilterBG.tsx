@@ -5,36 +5,36 @@ export const ElipseBG = () => {
     <>
       <div className="elipse-bg">
         <svg viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="11" cy="11" r="11" fill-opacity="0.47" />
-          <circle cx="11" cy="11" r="10" stroke-opacity="0.65" stroke-width="2" />
+          <circle cx="11" cy="11" r="11" fillOpacity="0.47" />
+          <circle cx="11" cy="11" r="10" strokeOpacity="0.65" strokeWidth="2" />
         </svg>
         <svg viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="11" cy="11" r="11" fill-opacity="0.47" />
-          <circle cx="11" cy="11" r="10" stroke-opacity="0.65" stroke-width="2" />
+          <circle cx="11" cy="11" r="11" fillOpacity="0.47" />
+          <circle cx="11" cy="11" r="10" strokeOpacity="0.65" strokeWidth="2" />
         </svg>
         <svg viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="11" cy="11" r="11" fill-opacity="0.47" />
-          <circle cx="11" cy="11" r="10" stroke-opacity="0.65" stroke-width="2" />
+          <circle cx="11" cy="11" r="11" fillOpacity="0.47" />
+          <circle cx="11" cy="11" r="10" strokeOpacity="0.65" strokeWidth="2" />
         </svg>
         <svg viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="11" cy="11" r="11" fill-opacity="0.47" />
-          <circle cx="11" cy="11" r="10" stroke-opacity="0.65" stroke-width="2" />
+          <circle cx="11" cy="11" r="11" fillOpacity="0.47" />
+          <circle cx="11" cy="11" r="10" strokeOpacity="0.65" strokeWidth="2" />
         </svg>
         <svg viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="11" cy="11" r="11" fill-opacity="0.47" />
-          <circle cx="11" cy="11" r="10" stroke-opacity="0.65" stroke-width="2" />
+          <circle cx="11" cy="11" r="11" fillOpacity="0.47" />
+          <circle cx="11" cy="11" r="10" strokeOpacity="0.65" strokeWidth="2" />
         </svg>
         <svg viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="11" cy="11" r="11" fill-opacity="0.47" />
-          <circle cx="11" cy="11" r="10" stroke-opacity="0.65" stroke-width="2" />
+          <circle cx="11" cy="11" r="11" fillOpacity="0.47" />
+          <circle cx="11" cy="11" r="10" strokeOpacity="0.65" strokeWidth="2" />
         </svg>
         <svg viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="11" cy="11" r="11" fill-opacity="0.47" />
-          <circle cx="11" cy="11" r="10" stroke-opacity="0.65" stroke-width="2" />
+          <circle cx="11" cy="11" r="11" fillOpacity="0.47" />
+          <circle cx="11" cy="11" r="10" strokeOpacity="0.65" strokeWidth="2" />
         </svg>
         <svg viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="11" cy="11" r="11" fill-opacity="0.47" />
-          <circle cx="11" cy="11" r="10" stroke-opacity="0.65" stroke-width="2" />
+          <circle cx="11" cy="11" r="11" fillOpacity="0.47" />
+          <circle cx="11" cy="11" r="10" strokeOpacity="0.65" strokeWidth="2" />
         </svg>
       </div>
     </>

@@ -1,20 +1,21 @@
-import { useState, useRef } from 'react'
-import '../assets/styles/compiled-css/LTD.css'
+import { useState, useRef, useEffect, useContext } from 'react'
+import '../assets/styles/compiled-css/Petrol.css'
 
 import { vehiclesData } from '../../../store/Petrol/vehicles.data'
 import { selectPetrolData } from '../../../store/Petrol/selectPetrol.data'
+import { PetrolIndexContext } from '../Index'
+
 import { ElipseBG } from './FilterBG'
 import { FlashBG } from './FilterBG'
 
-import Blob from '../assets/img/blob.svg'
-import Ltd_logo from '../assets/img/ltd-logo.svg'
 import Select_svg from '../assets/img/select.svg'
 
-const LTD = () => {
+const Petrol = () => {
   const [selectedType, setSelectedType] = useState<string | null>(selectPetrolData[0].type)
-  const [selectedVeh] = useState<string | null>('camry')
+  const [selectedVeh, setSelectedVeh] = useState<string | null>('camry')
   const [selectedAmount, setSelectedAmount] = useState<number>(10)
   const [selectedPay, setSelectedPay] = useState<string>('cash')
+  const { selectedPetrolName, selectedPetrolShortName } = useContext(PetrolIndexContext)
 
   const sliderRef = useRef<HTMLInputElement>(null)
   const handleAmountChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -39,21 +40,79 @@ const LTD = () => {
     setSelectedAmount(selectedVehData?.maxFuel || 0)
   }
 
+  const totalPrice = getSelectedPrice() * selectedAmount
+
   const handleSelectPay = (type: string) => {
     setSelectedPay(type)
   }
 
+  const handleSubmit = async () => {
+    /* Отправка данных на Backend при нажатии на кнопку 'Заправить / зарядить' */
+    //try {
+    //  if (selectedType !== selectedVehData?.typePetrol) {
+    //    return console.error(`Транспорт ${selectedVeh} не поддерживает заправку ${selectedType}`)
+    //  }
+
+    //  const response = await fetch('api/petrol', {
+    //    method: 'POST',
+    //    headers: { 'Content-Type': 'application/json' },
+    //    body: JSON.stringify({
+    //      selectedType,
+    //      selectedAmount,
+    //      totalPrice,
+    //      selectedPay
+    //    })
+    //  })
+
+    //  if (response.ok) {
+    //    console.info('Успешная заправка / зарядка')
+    //  } else {
+    //    const errorData = await response.json()
+    //    console.error(`Ошибка заправки / зарядки: ${errorData.error}`)
+    //  }
+
+    //} catch (error) {
+    //  console.error(`Ошибка при отправке данных: ${error}`)
+    //}
+  }
+
+  /* Получение имени транспорта */
+  //useEffect(() => {
+  //  fetch('api/vehicles', {
+  //    method: 'GET'
+  //  })
+  //    .then((response) => response.json())
+  //    .then((data) => {
+  //      const validVehicle = vehiclesData.find(
+  //        (vehicle) => vehicle.shortName === data.shortName
+  //      )
+
+  //      if(validVehicle) {
+  //        setSelectedVeh(validVehicle.shortName)
+  //      } else {
+  //        console.error(`Ошибка в получении имени транспорта ${data.shortName} с базы данных (shortName)`)
+  //      }
+  //    })
+  //    .catch((error) => {
+  //      console.error(`Ошибка при получении данных с сервера (api/vehicles): ${error}`)
+  //    })
+  //}, [])
+
   return(
     <>
-      <div className="LTD">
+      <div className="petrol" id={selectedPetrolShortName}>
         <div className="blobs">
-          <img src={Blob} id="one" />
-          <img src={Blob} id="two" />
+          <svg id='one' width="434" height="422" viewBox="0 0 434 422" xmlns="http://www.w3.org/2000/svg">
+            <path fillRule="evenodd" clipRule="evenodd" d="M228.6 0.290852C284.621 4.92463 309.167 69.7374 346.616 111.702C380.441 149.605 440.363 179.488 433.45 229.839C426.562 280.012 355.18 284.977 318.097 319.428C283.894 351.203 274.33 410.853 228.6 420.148C179.063 430.217 132.361 397.438 93.4966 365.082C49.725 328.64 0.87683 286.822 0.0113039 229.839C-0.860326 172.453 48.8482 131.066 89.3247 90.4197C129.897 49.6772 171.327 -4.44651 228.6 0.290852Z" />
+          </svg>
+          <svg id='two' width="434" height="422" viewBox="0 0 434 422" xmlns="http://www.w3.org/2000/svg">
+            <path fillRule="evenodd" clipRule="evenodd" d="M228.6 0.290852C284.621 4.92463 309.167 69.7374 346.616 111.702C380.441 149.605 440.363 179.488 433.45 229.839C426.562 280.012 355.18 284.977 318.097 319.428C283.894 351.203 274.33 410.853 228.6 420.148C179.063 430.217 132.361 397.438 93.4966 365.082C49.725 328.64 0.87683 286.822 0.0113039 229.839C-0.860326 172.453 48.8482 131.066 89.3247 90.4197C129.897 49.6772 171.327 -4.44651 228.6 0.290852Z" />
+          </svg>
         </div>
         <div className="content-inside">
           <div className="header">
             <div className="logotype">
-              <img src={Ltd_logo} className="logo" />
+              <img src={`/src/views/Petrol/assets/img/Petrols/${selectedPetrolShortName}.png`} className="logo" />
               <span className="description">The best gas station in the state</span>
             </div>
             { selectedVeh && (
@@ -104,7 +163,7 @@ const LTD = () => {
               <div className="select-amount">
                 <div className="info">
                   <span className="liters">{selectedAmount} <span className='measurement'>{selectedType === 'gas' || selectedType === 'diesel' ? 'л.' : 'кВт.'}</span></span>
-                  <span className="money">${getSelectedPrice() * selectedAmount}</span>
+                  <span className="money">${totalPrice}</span>
                 </div>
                 <input 
                   className='range' type="range"
@@ -123,7 +182,7 @@ const LTD = () => {
             <div className="btns">
               <button onClick={() => handleSelectPay('cash')} className={`btn ${selectedPay === 'cash' ? 'cash' : ''}`}>
                 <svg width="18" height="12" viewBox="0 0 18 12" xmlns="http://www.w3.org/2000/svg">
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M0 1.82199C0 0.786597 0.894857 0 1.92857 0H16.0714C17.1051 0 18 0.786597 18 1.82199V10.178C18 11.2134 17.1051 12 16.0714 12H1.92857C0.894857 12 0 11.2134 0 10.178V1.82199ZM6.3 6C6.3 5.30016 6.58446 4.62899 7.09081 4.13413C7.59716 3.63927 8.28392 3.36126 9 3.36126C9.71608 3.36126 10.4028 3.63927 10.9092 4.13413C11.4155 4.62899 11.7 5.30016 11.7 6C11.7 6.69984 11.4155 7.37101 10.9092 7.86587C10.4028 8.36073 9.71608 8.63874 9 8.63874C8.28392 8.63874 7.59716 8.36073 7.09081 7.86587C6.58446 7.37101 6.3 6.69984 6.3 6ZM3.86229 6C3.86229 6.25061 3.76042 6.49095 3.5791 6.66816C3.39778 6.84537 3.15186 6.94492 2.89543 6.94492C2.639 6.94492 2.39308 6.84537 2.21176 6.66816C2.03044 6.49095 1.92857 6.25061 1.92857 6C1.92857 5.74939 2.03044 5.50905 2.21176 5.33184C2.39308 5.15463 2.639 5.05508 2.89543 5.05508C3.15186 5.05508 3.39778 5.15463 3.5791 5.33184C3.76042 5.50905 3.86229 5.74939 3.86229 6ZM15.1046 6.94492C15.361 6.94492 15.6069 6.84537 15.7882 6.66816C15.9696 6.49095 16.0714 6.25061 16.0714 6C16.0714 5.74939 15.9696 5.50905 15.7882 5.33184C15.6069 5.15463 15.361 5.05508 15.1046 5.05508C14.8481 5.05508 14.6022 5.15463 14.4209 5.33184C14.2396 5.50905 14.1377 5.74939 14.1377 6C14.1377 6.25061 14.2396 6.49095 14.4209 6.66816C14.6022 6.84537 14.8481 6.94492 15.1046 6.94492Z" />
+                  <path fillRule="evenodd" clipRule="evenodd" d="M0 1.82199C0 0.786597 0.894857 0 1.92857 0H16.0714C17.1051 0 18 0.786597 18 1.82199V10.178C18 11.2134 17.1051 12 16.0714 12H1.92857C0.894857 12 0 11.2134 0 10.178V1.82199ZM6.3 6C6.3 5.30016 6.58446 4.62899 7.09081 4.13413C7.59716 3.63927 8.28392 3.36126 9 3.36126C9.71608 3.36126 10.4028 3.63927 10.9092 4.13413C11.4155 4.62899 11.7 5.30016 11.7 6C11.7 6.69984 11.4155 7.37101 10.9092 7.86587C10.4028 8.36073 9.71608 8.63874 9 8.63874C8.28392 8.63874 7.59716 8.36073 7.09081 7.86587C6.58446 7.37101 6.3 6.69984 6.3 6ZM3.86229 6C3.86229 6.25061 3.76042 6.49095 3.5791 6.66816C3.39778 6.84537 3.15186 6.94492 2.89543 6.94492C2.639 6.94492 2.39308 6.84537 2.21176 6.66816C2.03044 6.49095 1.92857 6.25061 1.92857 6C1.92857 5.74939 2.03044 5.50905 2.21176 5.33184C2.39308 5.15463 2.639 5.05508 2.89543 5.05508C3.15186 5.05508 3.39778 5.15463 3.5791 5.33184C3.76042 5.50905 3.86229 5.74939 3.86229 6ZM15.1046 6.94492C15.361 6.94492 15.6069 6.84537 15.7882 6.66816C15.9696 6.49095 16.0714 6.25061 16.0714 6C16.0714 5.74939 15.9696 5.50905 15.7882 5.33184C15.6069 5.15463 15.361 5.05508 15.1046 5.05508C14.8481 5.05508 14.6022 5.15463 14.4209 5.33184C14.2396 5.50905 14.1377 5.74939 14.1377 6C14.1377 6.25061 14.2396 6.49095 14.4209 6.66816C14.6022 6.84537 14.8481 6.94492 15.1046 6.94492Z" />
                 </svg>
                 Наличные
               </button>
@@ -136,8 +195,8 @@ const LTD = () => {
             </div>
           </div>
 
-          <button className="pay-petrol">
-            {selectedType === 'gas' || selectedType === 'diesel' ? 'Заправить' : 'Зарядить'} на ${getSelectedPrice() * selectedAmount}
+          <button className="pay-petrol" onClick={handleSubmit}>
+            {selectedType === 'gas' || selectedType === 'diesel' ? 'Заправить' : 'Зарядить'} на ${totalPrice}
           </button>
           
         </div>
@@ -146,4 +205,4 @@ const LTD = () => {
   )
 }
 
-export default LTD
+export default Petrol

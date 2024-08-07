@@ -1,3 +1,15 @@
+#ltd .content-inside .header .logo {
+  fill: #F20D36;
+}
+
+#ron .content-inside .header .logo {
+  fill: #FF5F1A;
+}
+
+#xero .content-inside .header .logo {
+  fill: #389fff;
+}
+
 .shop {
   position: relative;
   overflow: hidden;

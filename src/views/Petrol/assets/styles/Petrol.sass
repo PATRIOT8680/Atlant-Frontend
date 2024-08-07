@@ -1,5 +1,126 @@
 $Montserrat: "Montserrat", sans-serif
-.LTD
+
+#ltd
+  .blobs
+    #one
+      fill: rgba(255, 57, 57, 0.3)
+    
+    #two
+      fill: rgba(255, 57, 57, 0.3)
+
+  .content-inside
+    .select-petrol
+      .type.selected
+        .header
+          .select-svg
+            background: #fe2d53
+
+    .amount-petrol
+      .input-btn
+        .select-amount
+          .range
+            &::-webkit-slider-thumb
+              box-shadow: -407px 0 0 400px #f20d37dd
+
+              &:active
+                box-shadow: -407px 0 0 400px #F20D36
+
+    .select-pay
+      .btns
+        .btn.cash
+          color: #ffff
+          background: #f46
+
+          svg
+            fill: #ffff
+
+    .pay-petrol
+      background: linear-gradient(90deg, #f46 0%, #ff103a 100%)
+
+      &::before
+        background: linear-gradient(90deg, #ff103a 0%, #f46 100%)
+
+#ron
+  .blobs
+    #one
+      fill: rgba(255, 95, 26, 0.3)
+    
+    #two
+      fill: rgba(255, 95, 26, 0.3)
+
+  .content-inside
+    .select-petrol
+      .type.selected
+        .header
+          .select-svg
+            background: #fdaa04
+
+    .amount-petrol
+      .input-btn
+        .select-amount
+          .range
+            &::-webkit-slider-thumb
+              box-shadow: -407px 0 0 400px #ffb82e
+
+              &:active
+                box-shadow: -407px 0 0 400px #ff961c
+
+    .select-pay
+      .btns
+        .btn.cash
+          background: #ffb82e
+
+    .pay-petrol
+      background: linear-gradient(90deg, #ffb82e 0%, #ff961c 100%)
+
+      &::before
+        background: linear-gradient(90deg, #ff961c 0%, #ffb82e 100%)
+
+
+#xero
+  .blobs
+    #one
+      fill: rgba(42, 140, 255, 0.3)
+    
+    #two
+      fill: rgba(42, 140, 255, 0.3)
+
+  .content-inside
+    .select-petrol
+      .type.selected
+        .header
+          .select-svg
+            background: #4fb1f7
+
+    .amount-petrol
+      .input-btn
+        .select-amount
+          .range
+            &::-webkit-slider-thumb
+              box-shadow: -407px 0 0 400px #389fffc9
+
+              &:active
+                box-shadow: -407px 0 0 400px #389fff
+
+    .select-pay
+      .btns
+        .btn.cash
+          background: #6cb8ff
+
+        .btn.card
+          color: #ffff
+          background: #1d85ff
+
+          svg
+            fill: #ffff
+
+    .pay-petrol
+      background: linear-gradient(90deg, #6cb8ff 0%, #1d85ff 100%)
+
+      &::before
+        background: linear-gradient(90deg, #1d85ff 0%, #6cb8ff 100%)
+
+.petrol
   position: relative
   overflow: hidden
   background: #141614
@@ -208,13 +329,13 @@ $Montserrat: "Montserrat", sans-serif
           z-index: 1
 
           .price
-            background: #1dff77
             border-radius: 0.3vw
             padding: 0.5vw 0.95vw
-            font-weight: 700
-            font-size: 0.9vw
+            font-weight: 600
+            font-size: 0.85vw
             text-transform: uppercase
-            color: #131c33
+            background: rgba(255, 255, 255, 0.08)
+            color: #ffff
 
           .select-svg
             display: none
@@ -246,7 +367,6 @@ $Montserrat: "Montserrat", sans-serif
         .header
           .select-svg
             display: flex
-            background: #1dff77
             border-radius: 0.3vw
             padding: 0.5vw 0.5vw
             animation: fadeInSelectSVG 0.5s ease-in-out
@@ -320,10 +440,6 @@ $Montserrat: "Montserrat", sans-serif
               width: 0.9vw
               background-color: #ffff
               border-radius: 0.1vw
-              box-shadow: -407px 0 0 400px #21dd6cc6
-
-              &:active
-                box-shadow: -407px 0 0 400px #21dd6c
 
             &::-moz-range-thumb
               cursor: grabbing
@@ -410,8 +526,8 @@ $Montserrat: "Montserrat", sans-serif
               fill: #131c33
 
         .btn.cash
-          background: #1DFF77
           color: #131c33
+          background: #1DFF77
           transition: all 0.4s
 
           svg
@@ -450,13 +566,12 @@ $Montserrat: "Montserrat", sans-serif
       margin-top: 1.5vw
       outline: none
       border: none
-      background: linear-gradient(90deg, #2effff 0%, #1dff77 100%)
       border-radius: 0.354vw
       font-family: $Montserrat
       font-weight: 600
       font-size: 1vw
       text-transform: uppercase
-      color: #000
+      color: #131C33
       z-index: 1000
 
       &::before
@@ -471,7 +586,6 @@ $Montserrat: "Montserrat", sans-serif
         z-index: -1000
         border-radius: 0.354vw
         transition: opacity 0.3s ease-in-out
-        background: linear-gradient(90deg, #1dff77 0%, #2effff 100%)
 
       &:hover
         &::before
