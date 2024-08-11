@@ -14,7 +14,7 @@ export const PetrolIndexContext = createContext({
 const IndexPetrol = () => {
   const navigate = useNavigate()
   const [selectedPetrolName, setSelectedPetrolName] = useState('Xero Gas') 
-  const [selectedPetrolShortName, setSelectedPetrolShortName] = useState('xero')
+  const [selectedPetrolShortName, setSelectedPetrolShortName] = useState('ron')
 
   useEffect(() => {
     const handleCloseMenu = (event: KeyboardEvent) => {

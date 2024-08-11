@@ -1,4 +1,5 @@
 import { useState, useRef, useEffect, useContext } from 'react'
+import { useNotify } from '../../../components/Notify/NotificationProvider'
 import '../assets/styles/compiled-css/Petrol.css'
 
 import { vehiclesData } from '../../../store/Petrol/vehicles.data'
@@ -16,6 +17,8 @@ const Petrol = () => {
   const [selectedAmount, setSelectedAmount] = useState<number>(10)
   const [selectedPay, setSelectedPay] = useState<string>('cash')
   const { selectedPetrolName, selectedPetrolShortName } = useContext(PetrolIndexContext)
+
+  const sendNotify = useNotify()
 
   const sliderRef = useRef<HTMLInputElement>(null)
   const handleAmountChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -47,7 +50,7 @@ const Petrol = () => {
   }
 
   const handleSubmit = async () => {
-    /* Отправка данных на Backend при нажатии на кнопку 'Заправить / зарядить' */
+    /* Отправка данных при нажатии на кнопку 'Заправить / зарядить' */
     //try {
     //  if (selectedType !== selectedVehData?.typePetrol) {
     //    return console.error(`Транспорт ${selectedVeh} не поддерживает заправку ${selectedType}`)
