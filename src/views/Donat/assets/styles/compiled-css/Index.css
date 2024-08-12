@@ -1,0 +1,77 @@
+.donat-menu {
+  height: 100vh;
+}
+.donat-menu .bg {
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+  background: rgba(19, 28, 51, 0.98);
+  z-index: -2;
+}
+.donat-menu .effects {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  pointer-events: none;
+  position: relative;
+  z-index: -1;
+  -webkit-filter: blur(20vw);
+          filter: blur(20vw);
+}
+.donat-menu .effects #one {
+  position: absolute;
+  top: -12vw;
+  left: -16vw;
+  width: 52.81vw;
+}
+.donat-menu .effects #two {
+  position: absolute;
+  bottom: -81vw;
+  right: -24vw;
+  width: 69.025vw;
+  -webkit-transform: rotate(-177deg);
+      -ms-transform: rotate(-177deg);
+          transform: rotate(-177deg);
+}
+.donat-menu .header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  width: 95%;
+  padding: 1.5vw 2.5vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.donat-menu .content {
+  position: absolute;
+  top: 50%;
+  width: 95%;
+  padding: 0 2.5vw;
+  -webkit-transform: translate(0, -50%);
+      -ms-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+}
+.donat-menu .navigation-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: absolute;
+  bottom: 0;
+  padding: 0 2.5vw 1vw 2.5vw;
+  width: 95%;
+}

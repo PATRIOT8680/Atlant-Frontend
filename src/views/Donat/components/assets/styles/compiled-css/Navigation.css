@@ -1,0 +1,93 @@
+.tab-btn {
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  outline: none;
+  background: rgba(255, 255, 255, 0.03);
+  gap: 1vw;
+  width: 100%;
+  height: 8vw;
+  overflow: hidden;
+}
+.tab-btn:nth-child(1) {
+  border: 0.035vw solid rgba(255, 255, 255, 0.15);
+  border-radius: 0.708vw 0 0 0.708vw;
+}
+.tab-btn:nth-child(9) {
+  border-radius: 0 0.708vw 0.708vw 0;
+}
+.tab-btn:nth-child(2), .tab-btn:nth-child(3), .tab-btn:nth-child(4), .tab-btn:nth-child(5), .tab-btn:nth-child(6), .tab-btn:nth-child(7), .tab-btn:nth-child(8), .tab-btn:nth-child(9) {
+  border-bottom: 0.035vw solid rgba(255, 255, 255, 0.2);
+  border-right: 0.035vw solid rgba(255, 255, 255, 0.2);
+  border-top: 0.035vw solid rgba(255, 255, 255, 0.2);
+  border-left: 0vw solid white;
+}
+.tab-btn .title {
+  margin-bottom: 1vw;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 1vw;
+  color: rgba(255, 255, 255, 0.7);
+}
+.tab-btn svg {
+  fill: rgba(255, 255, 255, 0.7);
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 0.25vw;
+  width: 1.5vw;
+  height: 1.5vw;
+  padding: 0.6vw 0.6vw;
+}
+
+.tab-btn.selected {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(12, 255, 182, 0.3)), to(rgba(12, 255, 182, 0.3)));
+  background: linear-gradient(180deg, rgba(12, 255, 182, 0.3) 0%, rgba(12, 255, 182, 0.3) 100%);
+}
+.tab-btn.selected .title {
+  color: #0cffb6;
+  -webkit-animation: fadeInTabSelect 0.6s ease;
+          animation: fadeInTabSelect 0.6s ease;
+}
+.tab-btn.selected svg {
+  fill: #0cffb6;
+  background: rgba(12, 255, 182, 0.2);
+  border: 0.035vw solid #0cffb6;
+  -webkit-animation: fadeInTabSelect 0.6s ease;
+          animation: fadeInTabSelect 0.6s ease;
+}
+
+@-webkit-keyframes fadeInTabSelect {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(5vw);
+            transform: translateY(5vw);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@keyframes fadeInTabSelect {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(5vw);
+            transform: translateY(5vw);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}

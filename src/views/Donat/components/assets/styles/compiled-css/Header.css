@@ -1,0 +1,143 @@
+.text-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 0.6vw;
+}
+.text-block .title {
+  font-family: "MBF Moonlander", sans-serif;
+  font-size: 1.6vw;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  background: linear-gradient(119deg, #1dff77 0%, #00ffe0 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.text-block .description {
+  width: 25vw;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 0.85vw;
+  line-height: 140%;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.right-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1vw;
+}
+.right-block .esc-key {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  cursor: pointer;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 0.95vw;
+  color: #131c33;
+  width: 4vw;
+  height: 2.5vw;
+  background: white;
+  border-radius: 0.3vw;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+.right-block .esc-key:hover {
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  -webkit-box-shadow: 0 0 0 0.3vw rgba(255, 255, 255, 0.25);
+          box-shadow: 0 0 0 0.3vw rgba(255, 255, 255, 0.25);
+}
+.right-block .important {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  gap: 1.5vw;
+}
+.right-block .important .coins {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.right-block .important .coins .number {
+  margin-right: 1vw;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.2vw;
+  font-weight: 600;
+  color: #11ffd4;
+}
+.right-block .important .coins .icon {
+  border: 0.5px solid rgba(17, 255, 212, 0.6);
+  background: rgba(17, 255, 212, 0.2);
+  border-radius: 0.2vw;
+  width: 2vw;
+  padding: 0.7vw 0.9vw;
+}
+.right-block .important .to-inventory {
+  cursor: pointer;
+  outline: none;
+  border: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.5vw;
+  padding: 0.55vw 1.3vw;
+  background: #00ffa3;
+  border-radius: 0.2vw;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.right-block .important .to-inventory:hover {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  -webkit-box-shadow: 0 0 24px 1px rgba(0, 255, 163, 0.2);
+          box-shadow: 0 0 24px 1px rgba(0, 255, 163, 0.2);
+}
+.right-block .important .to-inventory img {
+  width: 1.1vw;
+}
+.right-block .important .to-inventory span {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  color: #131c33;
+}
