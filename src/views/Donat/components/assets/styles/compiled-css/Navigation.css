@@ -19,6 +19,23 @@
   width: 100%;
   height: 8vw;
   overflow: hidden;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.tab-btn:hover {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  background: rgba(255, 255, 255, 0.1);
+}
+.tab-btn:hover .title {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  color: rgba(255, 255, 255, 0.9);
+}
+.tab-btn:hover svg {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  fill: rgba(255, 255, 255, 0.9);
 }
 .tab-btn:nth-child(1) {
   border: 0.035vw solid rgba(255, 255, 255, 0.15);
@@ -39,6 +56,8 @@
   font-weight: 600;
   font-size: 1vw;
   color: rgba(255, 255, 255, 0.7);
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 .tab-btn svg {
   fill: rgba(255, 255, 255, 0.7);
@@ -47,6 +66,8 @@
   width: 1.5vw;
   height: 1.5vw;
   padding: 0.6vw 0.6vw;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 
 .tab-btn.selected {
@@ -55,22 +76,22 @@
 }
 .tab-btn.selected .title {
   color: #0cffb6;
-  -webkit-animation: fadeInTabSelect 0.6s ease;
-          animation: fadeInTabSelect 0.6s ease;
+  -webkit-animation: fadeInTabSelect 0.9s ease;
+          animation: fadeInTabSelect 0.9s ease;
 }
 .tab-btn.selected svg {
   fill: #0cffb6;
   background: rgba(12, 255, 182, 0.2);
   border: 0.035vw solid #0cffb6;
-  -webkit-animation: fadeInTabSelect 0.6s ease;
-          animation: fadeInTabSelect 0.6s ease;
+  -webkit-animation: fadeInTabSelect 0.9s ease;
+          animation: fadeInTabSelect 0.9s ease;
 }
 
 @-webkit-keyframes fadeInTabSelect {
   from {
     opacity: 0;
-    -webkit-transform: translateY(5vw);
-            transform: translateY(5vw);
+    -webkit-transform: translateY(8vw);
+            transform: translateY(8vw);
   }
   to {
     opacity: 1;
@@ -82,8 +103,8 @@
 @keyframes fadeInTabSelect {
   from {
     opacity: 0;
-    -webkit-transform: translateY(5vw);
-            transform: translateY(5vw);
+    -webkit-transform: translateY(8vw);
+            transform: translateY(8vw);
   }
   to {
     opacity: 1;

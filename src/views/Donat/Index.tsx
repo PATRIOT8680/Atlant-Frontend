@@ -41,7 +41,7 @@ const DonatMenu = () => {
         </div>
 
         <div className="content">
-          <Content selectedTab={selectedTab} />
+          <Content selectedTab={selectedTab} onTabChange={handleChangeTab} />
         </div>
 
         <div className="navigation-menu">

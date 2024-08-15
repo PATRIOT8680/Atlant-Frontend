@@ -11,13 +11,14 @@ import Cases from '../pages/Cases'
 import Skins from '../pages/Skins'
 
 interface IContent {
-  selectedTab: string
+  selectedTab: string,
+  onTabChange: (tab: string) => void
 }
 
-const Content: FC<IContent> = ({ selectedTab }) => {
+const Content: FC<IContent> = ({ selectedTab, onTabChange }) => {
   switch (selectedTab) {
     case 'main':
-      return <Main />
+      return <Main onTabChange={onTabChange} />
     case 'sets':
       return <Sets />
     case 'services':

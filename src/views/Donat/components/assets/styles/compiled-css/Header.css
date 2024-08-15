@@ -137,6 +137,7 @@
   width: 1.1vw;
 }
 .right-block .important .to-inventory span {
+  font-size: 1vw;
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
   color: #131c33;

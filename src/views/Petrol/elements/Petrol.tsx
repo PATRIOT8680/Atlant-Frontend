@@ -50,8 +50,6 @@ const Petrol = () => {
   }
 
   const handleSubmit = async () => {
-    sendNotify({type: 'ERROR', message: 'тестовое сообщение', timer: 10000})
-
     /* Отправка данных при нажатии на кнопку 'Заправить / зарядить' */
     //try {
     //  if (selectedType !== selectedVehData?.typePetrol) {
@@ -70,7 +68,7 @@ const Petrol = () => {
     //  })
 
     //  if (response.ok) {
-    //    console.info('Успешная заправка / зарядка')
+    //    sendNotify({type: 'SUCCESS', message: 'Вы успешно заправились!', timer: 4000})
     //  } else {
     //    const errorData = await response.json()
     //    console.error(`Ошибка заправки / зарядки: ${errorData.error}`)
