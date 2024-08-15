@@ -18,24 +18,16 @@ interface ITabChange {
 }
 
 const Main: FC<ITabChange> = ({ onTabChange }) => {
-  //const navigate = useNavigate()
   const sendNotify = useNotify()
   const [enteredAcoins, setEnteredAcoins] = useState<number | null>(null)
   const [resultDollars, setResultDollars] = useState(0)
-  const maxOffset = 7
-  let animationId: number | null = null
-  
-  const womanBgRef = useRef<HTMLImageElement>(null)
-  const uniqImgRef = useRef<HTMLImageElement>(null)
-  const servicesImgRef = useRef<HTMLImageElement>(null)
+  const maxOffset = 7;
+  let animationId: number | null = null;
 
-  const [womanBgPosition, setWomanBgPosition] = useState({ x: 0, y: 0 })
-  const [uniqImgPosition, setUniqImgPosition] = useState({ x: 0, y: 0 })
-  const [servicesImgPosition, setServicesImgPosition] = useState({ x: 0, y: 0 })
+  const womanBgRef = useRef<HTMLImageElement>(null);
 
-  const [womanBgTargetPosition, setWomanBgTargetPosition] = useState({ x: 0, y: 0 })
-  const [uniqImgTargetPosition, setUniqImgTargetPosition] = useState({ x: 0, y: 0 })
-  const [servicesImgTargetPosition, setServicesImgTargetPosition] = useState({ x: 0, y: 0 })
+  const [womanBgPosition, setWomanBgPosition] = useState({ x: 0, y: 0 });
+  const [womanBgTargetPosition, setWomanBgTargetPosition] = useState({ x: 0, y: 0 });
 
   const handleEnteredAcoins = (e: ChangeEvent<HTMLInputElement>) => {
     const value = parseInt(e.target.value, 10) || 0
@@ -75,9 +67,9 @@ const Main: FC<ITabChange> = ({ onTabChange }) => {
 
   const createMouseMoveHandler = (ref: React.RefObject<HTMLImageElement>, setPosition: React.Dispatch<React.SetStateAction<{ x: number; y: number }>>, setTargetPosition: React.Dispatch<React.SetStateAction<{ x: number; y: number }>>) => {
     return (e: MouseEvent) => {
-      const rect = ref.current!.getBoundingClientRect()
-      const x = e.clientX - rect.left - rect.width / 2
-      const y = e.clientY - rect.top - rect.height / 2
+      const rect = ref.current!.getBoundingClientRect();
+      const x = e.clientX - rect.left - rect.width / 2;
+      const y = e.clientY - rect.top - rect.height / 2;
 
       setTargetPosition({
         x: -Math.max(-maxOffset, Math.min(maxOffset, x)),
@@ -89,22 +81,21 @@ const Main: FC<ITabChange> = ({ onTabChange }) => {
   const createAnimationEffect = (position: { x: number; y: number }, targetPosition: { x: number; y: number }, setPosition: React.Dispatch<React.SetStateAction<{ x: number; y: number }>>) => {
     return () => {
       const animate = () => {
-        const xDiff = targetPosition.x - position.x
-        const yDiff = targetPosition.y - position.y
+        const xDiff = targetPosition.x - position.x;
+        const yDiff = targetPosition.y - position.y;
 
         setPosition({
           x: position.x + xDiff * 0.1,
           y: position.y + yDiff * 0.1,
         });
 
-        animationId = requestAnimationFrame(animate)
+        animationId = requestAnimationFrame(animate);
       };
 
-      requestAnimationFrame(animate)
-      
+      requestAnimationFrame(animate);
       return () => {
         if (animationId !== null) {
-          cancelAnimationFrame(animationId)
+          cancelAnimationFrame(animationId);
         }
       };
     };
@@ -120,38 +111,10 @@ const Main: FC<ITabChange> = ({ onTabChange }) => {
       if (womanBgContainer) {
         womanBgContainer.removeEventListener("mousemove", handleMouseMove);
       }
-    };
-  }, []);
-
-  useEffect(() => {
-    const handleMouseMove = createMouseMoveHandler(uniqImgRef, setUniqImgPosition, setUniqImgTargetPosition);
-    const uniqImgContainer = uniqImgRef.current?.parentElement;
-    if (uniqImgContainer) {
-      uniqImgContainer.addEventListener("mousemove", handleMouseMove);
     }
-    return () => {
-      if (uniqImgContainer) {
-        uniqImgContainer.removeEventListener("mousemove", handleMouseMove);
-      }
-    };
-  }, []);
-
-  useEffect(() => {
-    const handleMouseMove = createMouseMoveHandler(servicesImgRef, setServicesImgPosition, setServicesImgTargetPosition);
-    const servicesImgContainer = servicesImgRef.current?.parentElement;
-    if (servicesImgContainer) {
-      servicesImgContainer.addEventListener("mousemove", handleMouseMove);
-    }
-    return () => {
-      if (servicesImgContainer) {
-        servicesImgContainer.removeEventListener("mousemove", handleMouseMove);
-      }
-    };
-  }, []);
+  }, [])
 
   useEffect(createAnimationEffect(womanBgPosition, womanBgTargetPosition, setWomanBgPosition), [womanBgPosition, womanBgTargetPosition]);
-  useEffect(createAnimationEffect(uniqImgPosition, uniqImgTargetPosition, setUniqImgPosition), [uniqImgPosition, uniqImgTargetPosition]);
-  useEffect(createAnimationEffect(servicesImgPosition, servicesImgTargetPosition, setServicesImgPosition), [servicesImgPosition, servicesImgTargetPosition]);
 
   return(
     <>
@@ -236,15 +199,7 @@ const Main: FC<ITabChange> = ({ onTabChange }) => {
 
       <div className="block-three">
         <div className="block" id='one' onClick={() => onTabChange('vehicles')}>
-          <img
-            ref={uniqImgRef}
-            style={{
-              right: `calc(-2vw - ${uniqImgPosition.x}px)`,
-              bottom: `calc(-1vw - ${uniqImgPosition.y}px)`,
-            }}
-            src={Car_uniq} 
-            id='uniq-img' 
-          />
+          <img src={Car_uniq} id='uniq-img' />
           <div className="header-title">
             <span id="one-title">Уникальный</span>
             <span id="two-title">транспорт</span>
@@ -254,15 +209,7 @@ const Main: FC<ITabChange> = ({ onTabChange }) => {
           </button>
         </div>
         <div className="block" id='two' onClick={() => onTabChange('services')}>
-          <img
-            ref={servicesImgRef}
-            style={{
-              right: `calc(-5vw - ${servicesImgPosition.x}px)`,
-              bottom: `calc(-1.5vw - ${servicesImgPosition.y}px)`,
-            }}
-            src={Services_img}
-            id='services-img' 
-          />
+          <img src={Services_img} id='services-img' />
           <div className="header-title">
             <span id="one-title">Полезные</span>
             <span id="two-title">услуги</span>

@@ -1,0 +1,259 @@
+$Montserrat: "Montserrat", sans-serif
+  
+.sets
+  display: flex
+  flex-direction: row
+  align-items: center
+  justify-content: space-between
+  width: 100%
+  height: 100%
+
+  #Phoenix
+    background: rgba(10, 148, 249, 0.2)
+    border: 0.071vw solid rgba(10, 148, 249, 0.65)
+
+    .header-set
+      .title
+        .name-vip
+          background: linear-gradient(90deg, #45e7fd 0%, #1d6afe 100%)
+          background-clip: text
+          -webkit-background-clip: text
+          -webkit-text-fill-color: transparent
+
+      .advantage
+        box-shadow: 0 0 45px 3px rgba(0, 102, 255, 0.25)
+        background: linear-gradient(90deg, #13c6ff 0%, #06f 100%)
+
+    .buy-set
+      background: linear-gradient(90deg, #13c6ff 0%, #06f 100%)
+
+      &::before
+        background: linear-gradient(90deg, #06f 0%, #13c6ff 100%)
+  
+  #Maestro
+    background: rgba(0, 202, 81, 0.2)
+    border: 1px solid rgba(0, 202, 81, 0.65)
+
+    .header-set
+      .title
+        .name-vip
+          background: linear-gradient(90deg, #adff00 0%, #61ff00 100%)
+          background-clip: text
+          -webkit-background-clip: text
+          -webkit-text-fill-color: transparent
+
+      .advantage
+        box-shadow: 0 0 45px 3px rgba(0, 202, 81, 0.25)
+        background: linear-gradient(90deg, #95da02 0%, #00ca51 100%)
+
+    .buy-set
+      background: linear-gradient(90deg, #9ae202 0%, #5ce209 100%)
+
+      &::before
+        background: linear-gradient(90deg, #5ce209  0%, #9ae202 100%)
+
+      .price
+        color: #089358
+
+  #Vanguard
+    background: rgba(254, 57, 55, 0.2)
+    border: 1px solid rgba(254, 57, 55, 0.65)
+
+    .header-set
+      .title
+        .name-vip
+          background: linear-gradient(90deg, #fd8745 0%, #ff002e 100%)
+          background-clip: text
+          -webkit-background-clip: text
+          -webkit-text-fill-color: transparent
+
+      .advantage
+        box-shadow: 0 0 45px 3px rgba(255, 0, 46, 0.25)
+        background: linear-gradient(90deg, #fd8745 0%, #ff002e 100%)
+
+    .buy-set
+      background: linear-gradient(90deg, #fd8745 0%, #ff002e 100%)
+
+      &::before
+        background: linear-gradient(90deg, #ff002e  0%, #fd8745 100%)
+
+
+  .set
+    position: relative
+    overflow: hidden
+    background: #000
+    height: 62.5vh
+    width: 30.5vw
+    box-sizing: border-box
+    padding: 2.5vh 2vw
+    border-radius: 0.6vw
+
+    .content-inside
+      display: flex
+      flex-direction: column
+      justify-content: space-between
+      height: 100%
+
+      .header-set
+        display: flex
+        flex-direction: column
+        gap: 1vh
+
+        .main-titles
+          display: flex
+          flex-direction: row
+          align-items: flex-start
+          gap: 3vh
+
+          .title
+            display: flex
+            flex-direction: column
+            gap: 0.6vh
+            font-family: $Montserrat
+            text-transform: uppercase
+
+            .name-vip
+              font-size: 1.7vw
+              font-weight: 700
+
+            .bottom-title
+              font-size: 1.4vw
+              font-weight: 700
+              background: linear-gradient(90deg, #fff 0%, #c2bbbb 100%)
+              background-clip: text
+              -webkit-background-clip: text
+              -webkit-text-fill-color: transparent
+
+          .advantage
+            padding: 0.5vw 0.8vw
+            background: #000
+            border-radius: 5vw
+            font-size: 0.8vw
+            font-weight: 600
+            text-transform: uppercase
+            margin-top: 0.1vw
+
+        .price-title
+          display: flex
+          flex-direction: row
+          align-items: center
+          gap: 1vw
+
+          .main-price
+            font-family: $Montserrat
+            font-weight: 600
+            font-size: 1.3vw
+            text-transform: uppercase
+            color: #1dff77
+
+            img
+              margin-left: 0.3vw
+
+          .no-price
+            opacity: 0.5
+            text-decoration: line-through
+            font-family: $Montserrat
+            font-size: 1vw
+
+            img
+              margin-left: 0.3vw
+
+      .list-items
+        display: flex
+        flex-direction: column
+        gap: 0.8vh
+        padding: 0 0
+        list-style: none
+        width: 100%
+
+        li
+          width: 100%
+          border-radius: 0.3vw
+          background: rgba(255, 255, 255, 0.06)
+
+        .car-block
+          display: flex
+          flex-direction: row
+          justify-content: space-between
+          align-items: center
+          box-sizing: border-box
+          padding: 1.5vh 1vw
+
+          .left-content
+            display: flex
+            flex-direction: column
+            justify-content: flex-start
+
+            .name-car
+              font-family: $Montserrat
+              font-weight: 600
+              font-size: 1vw
+              text-transform: uppercase
+              color: #fff
+
+            .type-car
+              font-weight: 500
+              font-size: 0.8vw
+              color: rgba(255, 255, 255, 0.8)
+
+            .characteristics
+              display: flex
+              flex-direction: column
+              gap: 0.2vw
+              padding: 0 0
+              list-style: none
+              margin-top: 0.3vw
+              
+              li
+                font-weight: 500
+                font-size: 0.85vw
+                background: none
+
+          .car-img
+            width: 17vh
+
+        .item
+          display: flex
+          flex-direction: row
+          align-items: center
+          justify-content: space-between
+          font-size: 0.9vw
+          font-weight: 500
+          box-sizing: border-box
+          height: 5vh
+          padding: 0 1vw
+
+      .buy-set
+        position: relative
+        cursor: pointer
+        outline: none
+        border: none
+        padding: 1.15vh 0
+        height: 5vw
+        border-radius: 0.3vw
+        font-family: $Montserrat
+        font-weight: 600
+        font-size: 1.5vh
+        text-transform: uppercase
+        color: #fff
+        z-index: 1000
+
+        &::before
+          content: ""
+          display: block
+          opacity: 0
+          position: absolute
+          top: 0
+          left: 0
+          width: 100%
+          height: 100%
+          z-index: -1000
+          border-radius: 0.354vw
+          transition: opacity 0.3s ease-in-out
+
+        &:hover
+          &::before
+            opacity: 1
+
+        .price
+          color: #0cffb6
