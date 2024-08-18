@@ -1,15 +1,52 @@
+import { useEffect, useRef, useState } from 'react'
 import './assets/styles/compiled-css/VIP.css'
 import { vipsData } from "../../../store/Donat/vips.data"
 
 import Acoins_green from './assets/img/VIP/acoins-green.svg'
 
 const VIP = () => {
+  const [soundHover, setSoundHover] = useState<Howl | null>(null)
+  const [soundBtn, setSoundBtn] = useState<Howl | null>(null)
+  const soundRefHover = useRef<Howl | null>(null)
+  const soundRefClick = useRef<Howl | null>(null)
+
+  useEffect(() => {
+    soundRefHover.current = new Howl({
+      src: ['src/views/Donat/pages/assets/audio/sound-hover.wav']
+    })
+
+    soundRefClick.current = new Howl({
+      src: ['src/views/Donat/pages/assets/audio/sound-btn.wav']
+    })
+
+    setSoundHover(soundRefHover.current)
+    setSoundBtn(soundRefClick.current)
+  }, [])
+
+  const handleMouseHover = () => {
+    if(soundHover) {
+      soundHover.volume(0.5)
+      soundHover.play()
+    }
+  }
+
+  const handleMouseClick = () => {
+    if(soundBtn) {
+      soundBtn.volume(0.5)
+      soundBtn.play()
+    }
+  }
+  
+  const handleBuy = () => {
+    handleMouseClick()
+  }
+
   return(
     <>
       <div className="vips">
         { vipsData.map((vip, index) => (
 
-          <div className="vip" id={vip.shortName} key={index}>
+          <div className="vip" id={vip.shortName} key={index} onMouseEnter={handleMouseHover}>
             <img 
               className='person-img'
               src={`src/assets/img/donat/vip.persons/${vip.shortName}.png`}
@@ -35,7 +72,7 @@ const VIP = () => {
                   )) }
                 </ul>
               </div>
-              <button className="buy-vip">Приобрести за {vip.price} AC</button>
+              <button className="buy-vip" onClick={handleBuy}>Приобрести за {vip.price} AC</button>
             </div>
           </div>
 

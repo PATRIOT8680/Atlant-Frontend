@@ -1,0 +1,113 @@
+$Montserrat: "Montserrat", sans-serif
+
+.vehicles
+  display: flex
+  flex-direction: row
+  justify-content: space-between
+  flex-wrap: wrap
+  gap: 1.6vw
+  height: 64vh
+  overflow: auto
+  list-style: none
+  padding: 0 0
+  padding-right: 0.8vw
+  scroll-behavior: smooth
+  border-radius: 0.6vw
+  outline: none
+
+  &::-webkit-scrollbar
+    width: 0.5vw
+
+  &::-webkit-scrollbar-track
+    opacity: 1
+    background-color: #cdcdcd2a
+    border-radius: 100px
+
+  &::-webkit-scrollbar-thumb
+    cursor: grabbing
+    background-color: #cdcdcd2a
+    border-radius: 100px
+
+    &:hover
+      background-color: #cdcdcd5a
+
+  .vehicle
+    cursor: pointer
+    display: flex
+    height: 24vh
+    width: 30vw
+    overflow: hidden
+    border-radius: 0.4vw
+    transition: all 0.3s
+    animation: fadeInVehicles 0.5s ease
+
+    &:hover
+      transition: all 0.3s
+      transform: scale(1.02)
+
+    .left-block
+      display: flex
+      justify-content: space-between
+      align-items: flex-start
+      flex-direction: column
+      box-sizing: border-box
+      padding: 1.5vh 1.1vw
+      height: 100%
+      width: 15vw
+      background: rgba(255, 255, 255, 0.1)
+
+      .header-title
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+        gap: 0.2vh
+
+        .veh-name
+          font-family: $Montserrat
+          font-weight: 600
+          font-size: 1vw
+
+        .type-veh
+          opacity: 0.85
+          font-family: $Montserrat
+          font-weight: 500
+          font-size: 0.8vw
+
+      .characteristics
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+        gap: 0.8vh
+        list-style: none
+        padding: 0 0
+
+        li
+          font-family: $Montserrat
+          font-weight: 500
+          font-size: 0.9vw
+
+      .price
+        cursor: pointer
+        outline: none
+        border: none
+        height: 4.5vh
+        width: 10vw
+        border-radius: 0.3vw
+        background: linear-gradient(109deg, #49f483 0%, #0affa7 100%)
+        font-family: $Montserrat
+        font-weight: 700
+        font-size: 0.8vw
+        text-transform: uppercase
+        color: #131c33
+        transition: all 0.3s
+
+        &:hover
+          transition: all 0.3s
+          box-shadow: 0 0 25px 3px rgba(73, 244, 131, 0.2)
+
+
+@keyframes fadeInVehicles
+  0%
+    transform: scale(0.8)
+  100%
+    transform: scale(1)

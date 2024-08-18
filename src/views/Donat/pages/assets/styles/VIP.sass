@@ -120,6 +120,7 @@ $Montserrat: "Montserrat", sans-serif
   #sapfire
     background: rgba(0, 255, 240, 0.1)
     border: 0.071vw solid rgba(0, 255, 240, 0.65)
+    animation: fadeInBlockOne 0.7s ease
 
     .name-vip
       color: #00fff0
@@ -143,6 +144,7 @@ $Montserrat: "Montserrat", sans-serif
   #lazurit
     background: rgba(61, 162, 255, 0.15)
     border: 1px solid rgba(61, 162, 255, 0.65)
+    animation: fadeInBlockTwo 0.7s ease
 
     .person-img
       width: 37vh
@@ -170,6 +172,7 @@ $Montserrat: "Montserrat", sans-serif
   #ametist
     background: rgba(198, 106, 255, 0.15)
     border: 1px solid rgba(198, 106, 255, 0.65)
+    animation: fadeInBlockThree 0.7s ease
 
     .person-img
       width: 58vh
@@ -193,3 +196,21 @@ $Montserrat: "Montserrat", sans-serif
         color: #131C33
         background: rgb(198, 106, 255)
         transition: all 0.3s
+
+@keyframes fadeInBlockOne
+  0%
+    transform: translateX(-85%)
+  100%
+    transform: translateX(0)
+
+@keyframes fadeInBlockTwo
+  0%
+    transform: translateY(-85%)
+  100%
+    transform: translateX(0)
+
+@keyframes fadeInBlockThree
+  0%
+    transform: translateX(85%)
+  100%
+    transform: translateX(0)

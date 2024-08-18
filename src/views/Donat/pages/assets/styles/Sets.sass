@@ -11,6 +11,7 @@ $Montserrat: "Montserrat", sans-serif
   #Phoenix
     background: rgba(10, 148, 249, 0.2)
     border: 0.071vw solid rgba(10, 148, 249, 0.65)
+    animation: fadeInBlockOne 0.7s ease
 
     .header-set
       .title
@@ -33,6 +34,7 @@ $Montserrat: "Montserrat", sans-serif
   #Maestro
     background: rgba(0, 202, 81, 0.2)
     border: 1px solid rgba(0, 202, 81, 0.65)
+    animation: fadeInBlockTwo 0.7s ease
 
     .header-set
       .title
@@ -58,6 +60,7 @@ $Montserrat: "Montserrat", sans-serif
   #Vanguard
     background: rgba(254, 57, 55, 0.2)
     border: 1px solid rgba(254, 57, 55, 0.65)
+    animation: fadeInBlockThree 0.7s ease
 
     .header-set
       .title
@@ -84,7 +87,7 @@ $Montserrat: "Montserrat", sans-serif
     height: 62.5vh
     width: 30.5vw
     box-sizing: border-box
-    padding: 2.5vh 2vw
+    padding: 3vh 2vw
     border-radius: 0.6vw
 
     .content-inside
@@ -256,3 +259,21 @@ $Montserrat: "Montserrat", sans-serif
 
         .price
           color: #0cffb6
+
+@keyframes fadeInBlockOne
+  0%
+    transform: translateX(-85%)
+  100%
+    transform: translateX(0)
+
+@keyframes fadeInBlockTwo
+  0%
+    transform: translateY(-85%)
+  100%
+    transform: translateX(0)
+
+@keyframes fadeInBlockThree
+  0%
+    transform: translateX(85%)
+  100%
+    transform: translateX(0)

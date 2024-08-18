@@ -18,6 +18,8 @@
 .sets #Phoenix {
   background: rgba(10, 148, 249, 0.2);
   border: 0.071vw solid rgba(10, 148, 249, 0.65);
+  -webkit-animation: fadeInBlockOne 0.7s ease;
+          animation: fadeInBlockOne 0.7s ease;
 }
 .sets #Phoenix .header-set .title .name-vip {
   background: -webkit-gradient(linear, left top, right top, from(#45e7fd), to(#1d6afe));
@@ -43,6 +45,8 @@
 .sets #Maestro {
   background: rgba(0, 202, 81, 0.2);
   border: 1px solid rgba(0, 202, 81, 0.65);
+  -webkit-animation: fadeInBlockTwo 0.7s ease;
+          animation: fadeInBlockTwo 0.7s ease;
 }
 .sets #Maestro .header-set .title .name-vip {
   background: -webkit-gradient(linear, left top, right top, from(#adff00), to(#61ff00));
@@ -71,6 +75,8 @@
 .sets #Vanguard {
   background: rgba(254, 57, 55, 0.2);
   border: 1px solid rgba(254, 57, 55, 0.65);
+  -webkit-animation: fadeInBlockThree 0.7s ease;
+          animation: fadeInBlockThree 0.7s ease;
 }
 .sets #Vanguard .header-set .title .name-vip {
   background: -webkit-gradient(linear, left top, right top, from(#fd8745), to(#ff002e));
@@ -100,7 +106,7 @@
   width: 30.5vw;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  padding: 2.5vh 2vw;
+  padding: 3vh 2vw;
   border-radius: 0.6vw;
 }
 .sets .set .content-inside {
@@ -341,4 +347,66 @@
 }
 .sets .set .content-inside .buy-set .price {
   color: #0cffb6;
+}
+
+@-webkit-keyframes fadeInBlockOne {
+  0% {
+    -webkit-transform: translateX(-85%);
+            transform: translateX(-85%);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@keyframes fadeInBlockOne {
+  0% {
+    -webkit-transform: translateX(-85%);
+            transform: translateX(-85%);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+@-webkit-keyframes fadeInBlockTwo {
+  0% {
+    -webkit-transform: translateY(-85%);
+            transform: translateY(-85%);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+@keyframes fadeInBlockTwo {
+  0% {
+    -webkit-transform: translateY(-85%);
+            transform: translateY(-85%);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+@-webkit-keyframes fadeInBlockThree {
+  0% {
+    -webkit-transform: translateX(85%);
+            transform: translateX(85%);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+@keyframes fadeInBlockThree {
+  0% {
+    -webkit-transform: translateX(85%);
+            transform: translateX(85%);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
 }

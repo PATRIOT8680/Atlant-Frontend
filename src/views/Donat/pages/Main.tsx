@@ -1,6 +1,7 @@
 //import { useNavigate } from 'react-router-dom'
 import { useState, ChangeEvent, useRef, useEffect, FC } from 'react'
 import { useNotify } from '../../../components/Notify/NotificationProvider'
+import { Howl } from 'howler'
 import './assets/styles/compiled-css/Main.css'
 
 import Next_svg from './assets/img/Main/next.svg'
@@ -21,10 +22,14 @@ const Main: FC<ITabChange> = ({ onTabChange }) => {
   const sendNotify = useNotify()
   const [enteredAcoins, setEnteredAcoins] = useState<number | null>(null)
   const [resultDollars, setResultDollars] = useState(0)
+  const [soundHover, setSoundHover] = useState<Howl | null>(null)
+  const [soundBtn, setSoundBtn] = useState<Howl | null>(null)
   const maxOffset = 7;
   let animationId: number | null = null;
 
-  const womanBgRef = useRef<HTMLImageElement>(null);
+  const womanBgRef = useRef<HTMLImageElement>(null)
+  const soundRefHover = useRef<Howl | null>(null)
+  const soundRefClick = useRef<Howl | null>(null)
 
   const [womanBgPosition, setWomanBgPosition] = useState({ x: 0, y: 0 });
   const [womanBgTargetPosition, setWomanBgTargetPosition] = useState({ x: 0, y: 0 });
@@ -40,6 +45,8 @@ const Main: FC<ITabChange> = ({ onTabChange }) => {
 
   const handleClickTrade = async () => {
     try {
+      handleMouseClick()
+
       if (enteredAcoins === null || enteredAcoins < 1 || enteredAcoins > 1000000) {
         return sendNotify({type: 'ERROR', message: 'Допустимый обмен: от 1 AC до 1.000.000 ACoins!', timer: 5000})
       }
@@ -89,17 +96,45 @@ const Main: FC<ITabChange> = ({ onTabChange }) => {
           y: position.y + yDiff * 0.1,
         });
 
-        animationId = requestAnimationFrame(animate);
+        animationId = requestAnimationFrame(animate)
       };
 
-      requestAnimationFrame(animate);
+      requestAnimationFrame(animate)
       return () => {
         if (animationId !== null) {
-          cancelAnimationFrame(animationId);
+          cancelAnimationFrame(animationId)
         }
-      };
-    };
-  };
+      }
+    }
+  }
+
+  useEffect(() => {
+
+    soundRefHover.current = new Howl({
+      src: ['src/views/Donat/pages/assets/audio/sound-hover.wav']
+    })
+
+    soundRefClick.current = new Howl({
+      src: ['src/views/Donat/pages/assets/audio/sound-btn.wav']
+    })
+
+    setSoundHover(soundRefHover.current)
+    setSoundBtn(soundRefClick.current)
+  }, [])
+
+  const handleMouseHover = () => {
+    if(soundHover) {
+      soundHover.volume(0.5)
+      soundHover.play()
+    }
+  }
+
+  const handleMouseClick = () => {
+    if(soundBtn) {
+      soundBtn.volume(0.5)
+      soundBtn.play()
+    }
+  }
 
   useEffect(() => {
     const handleMouseMove = createMouseMoveHandler(womanBgRef, setWomanBgPosition, setWomanBgTargetPosition);
@@ -119,7 +154,7 @@ const Main: FC<ITabChange> = ({ onTabChange }) => {
   return(
     <>
       <div className="block-column-one">
-        <div className="top-balance" onClick={() => sendNotify({type: 'INFO', message: 'Перейдите в браузер, свернув игру на ALT + TAB', timer: 4000})}>
+        <div className="top-balance" onClick={() => sendNotify({type: 'INFO', message: 'Перейдите в браузер, свернув игру на ALT + TAB', timer: 4000})} onMouseEnter={handleMouseHover}>
           <div className="title">
             <span className="top">Пополнить</span>
             <span className="bottom">баланс</span>
@@ -151,7 +186,7 @@ const Main: FC<ITabChange> = ({ onTabChange }) => {
         </div>
       </div>
 
-      <div className="vip-block">
+      <div className="vip-block" onMouseEnter={handleMouseHover}>
         <img
           ref={womanBgRef}
           style={{
@@ -190,7 +225,7 @@ const Main: FC<ITabChange> = ({ onTabChange }) => {
               </li>
             </ul>
           </div>
-          <div className="more-detail" onClick={() =>onTabChange('vip')}>
+          <div className="more-detail" onClick={() => {onTabChange('vip'); handleMouseClick()}}>
             <button className="title-btn">Подробнее</button>
             <img className='next-vip' src={Next_vip} />
           </div>
@@ -198,7 +233,7 @@ const Main: FC<ITabChange> = ({ onTabChange }) => {
       </div>
 
       <div className="block-three">
-        <div className="block" id='one' onClick={() => onTabChange('vehicles')}>
+        <div className="block" id='one' onClick={() => {onTabChange('vehicles'); handleMouseClick()}} onMouseEnter={handleMouseHover}>
           <img src={Car_uniq} id='uniq-img' />
           <div className="header-title">
             <span id="one-title">Уникальный</span>
@@ -208,7 +243,7 @@ const Main: FC<ITabChange> = ({ onTabChange }) => {
             <img src={Next_uniq} />
           </button>
         </div>
-        <div className="block" id='two' onClick={() => onTabChange('services')}>
+        <div className="block" id='two' onClick={() => {onTabChange('services'); handleMouseClick()}} onMouseEnter={handleMouseHover}>
           <img src={Services_img} id='services-img' />
           <div className="header-title">
             <span id="one-title">Полезные</span>

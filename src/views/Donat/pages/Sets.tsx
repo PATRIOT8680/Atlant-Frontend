@@ -1,3 +1,4 @@
+import { useEffect, useRef, useState } from 'react'
 import './assets/styles/compiled-css/Sets.css'
 import { setsData } from "../../../store/Donat/sets.data"
 
@@ -5,12 +6,48 @@ import Acoins_green from './assets/img/Sets/acoins-green.svg'
 import Acoins_white from './assets/img/Sets/acoins-white.svg'
 
 const Sets = () => {
+  const [soundHover, setSoundHover] = useState<Howl | null>(null)
+  const [soundBtn, setSoundBtn] = useState<Howl | null>(null)
+  const soundRefHover = useRef<Howl | null>(null)
+  const soundRefClick = useRef<Howl | null>(null)
+
+  useEffect(() => {
+    soundRefHover.current = new Howl({
+      src: ['src/views/Donat/pages/assets/audio/sound-hover.wav']
+    })
+
+    soundRefClick.current = new Howl({
+      src: ['src/views/Donat/pages/assets/audio/sound-btn.wav']
+    })
+
+    setSoundHover(soundRefHover.current)
+    setSoundBtn(soundRefClick.current)
+  }, [])
+
+  const handleMouseHover = () => {
+    if(soundHover) {
+      soundHover.volume(0.5)
+      soundHover.play()
+    }
+  }
+
+  const handleMouseClick = () => {
+    if(soundBtn) {
+      soundBtn.volume(0.5)
+      soundBtn.play()
+    }
+  }
+  
+  const handleBuy = () => {
+    handleMouseClick()
+  }
+
   return(
     <>
       <div className="sets">
         { setsData.map((set, index) => (
 
-          <div className="set" id={set.nameVip} key={index}>
+          <div className="set" id={set.nameVip} key={index} onMouseEnter={handleMouseHover}>
             <div className="content-inside">
               <div className="header-set">
                 <div className="main-titles">
@@ -53,7 +90,7 @@ const Sets = () => {
                   </li>
                 )) }
               </ul>
-              <button className="buy-set">
+              <button className="buy-set" onClick={handleBuy}>
                 <span className="text">Приобрести за </span>
                 <span className="price">{set.price} AC</span>
               </button>
