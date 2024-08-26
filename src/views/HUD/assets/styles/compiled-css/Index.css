@@ -1,0 +1,24 @@
+body {
+  width: 100%;
+  height: 100%;
+}
+
+.hud {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 97%;
+  height: 95%;
+}
+.hud .effects .e-right-content {
+  opacity: 0.9;
+  -webkit-filter: blur(13vw);
+          filter: blur(13vw);
+  position: absolute;
+  right: -20vw;
+  top: -18vw;
+  width: 50vw;
+}

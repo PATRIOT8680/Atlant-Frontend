@@ -1,0 +1,98 @@
+$Montserrat: "Montserrat", sans-serif
+
+#Обычный
+  .img-block
+    .effect
+      background: rgba(249, 250, 249, 0.2)
+
+#Редкий
+  .img-block
+    .effect
+      background: rgba(255, 134, 22, 0.2)
+
+#Легендарный
+  .img-block
+    .effect
+      background: rgba(144, 76, 255, 0.2)
+
+.case-item
+  cursor: pointer
+  position: relative
+  overflow: hidden
+  width: 20vw
+  height: 12vw
+  background: #132030
+  border: 0.071vw solid rgba(255, 255, 255, 0.1)
+  border-radius: 0.6vw
+  transition: all 0.3s
+
+  &:hover
+    transition: all 0.3s
+    background: #172537
+    border: 0.071vw solid rgba(255, 255, 255, 0.18)
+
+  .content-inside
+    height: 100%
+    width: 100%
+    box-sizing: border-box
+    padding: 1vw 1.2vw
+
+    .img-block
+      .effect
+        position: absolute
+        top: 55%
+        left: 50%
+        transform: translate(-50%, -50%)
+        filter: blur(4vw)
+        width: 10vw
+        height: 10vw
+        border-radius: 100%
+        z-index: 1
+
+      .item-img
+        width: 12vw
+        position: absolute
+        top: 55%
+        left: 50%
+        transform: translate(-50%, -50%)
+        z-index: 2
+
+    .header-title
+      display: flex
+      flex-direction: row
+      justify-content: space-between
+      align-items: flex-start
+      position: relative
+      z-index: 3
+
+      .left-title
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+        gap: 0.3vw
+
+        .name-item
+          font-family: $Montserrat
+          font-weight: 600
+          font-size: 0.95vw
+          text-transform: uppercase
+          color: #fff
+
+        .type-item
+          font-family: $Montserrat
+          font-weight: 500
+          font-size: 0.8vw
+          color: rgba(255, 255, 255, 0.41)
+
+      .price
+        display: flex
+        flex-direction: row
+        align-items: center
+        gap: 0.3vw
+        color: #11ffd4
+        font-family: $Montserrat
+        font-weight: 600
+        font-size: 1.1vw
+
+        img
+          width: 1.6vw

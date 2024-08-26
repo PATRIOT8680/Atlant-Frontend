@@ -12,10 +12,11 @@ import Skins from '../pages/Skins'
 
 interface IContent {
   selectedTab: string,
-  onTabChange: (tab: string) => void
+  onTabChange: (tab: string) => void,
+  onNavigationVisible: (isVisible: boolean) => void
 }
 
-const Content: FC<IContent> = ({ selectedTab, onTabChange }) => {
+const Content: FC<IContent> = ({ selectedTab, onTabChange, onNavigationVisible }) => {
   switch (selectedTab) {
     case 'main':
       return <Main onTabChange={onTabChange} />
@@ -30,9 +31,9 @@ const Content: FC<IContent> = ({ selectedTab, onTabChange }) => {
     case 'clothes':
       return <Clothes />
     case 'games':
-      return <Games />
+      return <Main onTabChange={onTabChange} />
     case 'cases':
-      return <Cases />
+      return <Cases onNavigationVisible={onNavigationVisible} />
     case 'skins':
       return <Skins />
     default:

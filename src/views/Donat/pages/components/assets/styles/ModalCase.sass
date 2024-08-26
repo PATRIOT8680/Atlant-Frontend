@@ -1,0 +1,150 @@
+$Montserrat: "Montserrat", sans-serif
+
+.window-modal
+  position: absolute
+  box-shadow: inset 0 0 250px 213px rgba(19, 28, 51, 0.95)
+  background: rgba(19, 28, 51, 0.9)
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  z-index: 1000
+
+  .modal-overley
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    background: #213361
+    border-radius: 0.6vw
+    width: 37vw
+    height: 45vw
+
+    .content-inside
+      display: flex
+      flex-direction: column
+      align-items: flex-start
+      justify-content: space-between
+      width: 100%
+      height: 100%
+      box-sizing: border-box
+      padding: 2vw 2vw
+
+      .title-block
+        display: flex
+        flex-direction: column
+        gap: 0.5vw
+
+        .title
+          .shadow
+            position: absolute
+            background: #3278ff
+            border-radius: 0.4vw
+            top: 1.4vw
+            left: 1.2vw
+            width: 5vw
+            height: 1.5vw
+            z-index: 1
+          
+          .text
+            position: relative
+            font-family: $Montserrat
+            font-weight: 700
+            font-size: 1.3vw
+            text-transform: uppercase
+            color: #fff
+            z-index: 2
+
+        .description
+          width: 18vw
+          font-family: $Montserrat
+          font-weight: 500
+          font-size: 1vw
+          line-height: 137%
+          color: rgba(255, 255, 255, 0.8)
+
+      .prize-block
+        .title-prize
+          display: flex
+          flex-direction: column
+          gap: 0.5vw
+          margin-bottom: 23vw
+
+          .name-prize
+            font-family: $Montserrat
+            font-weight: 600
+            font-size: 1.7vw
+            text-transform: uppercase
+            color: #fff
+
+          .type-prize
+            font-family: $Montserrat
+            font-weight: 500
+            font-size: 1vw
+
+          #Обычный
+            color: #BFBFBF
+
+          #Редкий
+            color: #FF4D00
+
+          #Легендарный
+            color: #BB29FF
+
+        .image-block
+          .bg-effect
+            position: absolute
+            top: 50%
+            left: 50%
+            width: 31vw
+            transform: translate(-50%, -50%)
+            margin-top: 2vw
+
+          .img-prize
+            position: absolute
+            top: 50%
+            left: 50%
+            width: 25vw
+            transform: translate(-50%, -50%)
+            margin-top: 2vw
+
+      .btns-block
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+        width: 100%
+
+        button
+          cursor: pointer
+          outline: none
+          border: none
+          height: 3.5vw
+          border-radius: 0.4vw
+
+        .take-prize
+          width: 35%
+          background: #3970ff
+          font-family: $Montserrat
+          font-weight: 600
+          font-size: 0.9vw
+          text-transform: uppercase
+          color: #fff
+          transition: all 0.3s
+
+          &:hover
+            transition: all 0.3s
+            box-shadow: 0 0 1.771vw 0.425vw rgba(57, 112, 255, 0.25)
+
+        .sell-prize
+          width: 60%
+          background: #0cffb6
+          font-family: $Montserrat
+          font-weight: 600
+          font-size: 0.95vw
+          text-transform: uppercase
+          color: #131c33
+          transition: all 0.3s
+
+          &:hover
+            transition: all 0.3s
+            box-shadow: 0 0 25px 6px rgba(12, 255, 182, 0.25)

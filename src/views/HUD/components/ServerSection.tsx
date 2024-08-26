@@ -1,0 +1,60 @@
+import { useState } from 'react'
+import '../assets/styles/compiled-css/ServerSection.css'
+import { questsData } from '../../../store/HUD/quests.data'
+import { weaponsData } from '../../../store/HUD/weapons.data'
+
+import SVG_online from '../assets/img/ServerSection/online.svg'
+import SVG_sid from '../assets/img/ServerSection/sid.svg'
+import SVG_logotype from '../assets/img/ServerSection/logotype.svg'
+
+const ServerSection = () => {
+  const [online, setOnline] = useState<number>(140)
+  const [sid, setSid] = useState<string>('3H92L')
+  const [activeQuest, setActiveQuest] = useState<string | null>('start-quest')
+  const [allAmmo, setAllAmmo] = useState<number>(340)
+  const [clipAmmo, setClipAmmo] = useState<number>(70)
+  const [activeWeapon, setActiveWeapon] = useState<string | null>('0x84D6FAFD')
+
+  const selectedQuestData = questsData.find(quest => quest.id === activeQuest)
+  const selectedWeaponData = weaponsData.find(weapon => weapon.hash === activeWeapon)
+
+  return(
+    <>
+      <div className="server-section">
+        <div className="server-info">
+          <div className="statistics">
+            <div className="block-stat">
+              <div className="icon"><img src={SVG_online} /></div>
+              <span className="text">{online}</span>
+            </div>
+            <div className="block-stat">
+              <div className="icon"><img src={SVG_sid} /></div>
+              <span className="text">{sid}</span>
+            </div>
+          </div>
+          <img src={SVG_logotype} className="logotype-project" />
+        </div>
+        { activeQuest && (
+          <div className="quests">
+            <span className="title-quest">{selectedQuestData?.name}</span>
+            <span className="description-quest">{selectedQuestData?.description}</span>
+          </div>
+        ) }
+        { activeWeapon && (
+          <div className="weapon">
+            <div className="ammo-block">
+              <span className="clip-ammo">{clipAmmo}</span>
+              <span className="all-ammo">{allAmmo}</span>
+            </div>
+            <div className="img-block">
+              <div className="effect"></div>
+              <img src={`src/assets/img/weapons/${selectedWeaponData?.hash}.webp`} className="weapon-img" />
+            </div>
+          </div>
+        ) }
+      </div>
+    </>
+  )
+}
+
+export default ServerSection

@@ -1,0 +1,51 @@
+$Montserrat: "Montserrat", sans-serif
+
+.case-content
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  gap: 5vw
+  height: 81vh
+  padding: 0 0
+  margin-top: 1vw
+
+  .items
+    display: flex
+    flex-direction: column
+    height: 21vw
+    gap: 0.2vw
+
+    .title-item
+      font-family: $Montserrat
+      font-weight: 700
+      font-size: 1.2vw
+      text-transform: uppercase
+      background: linear-gradient(180deg, #9f9c9c 0%, #c1c1c1 55.73%, #fff 100%)
+      background-clip: text
+      -webkit-background-clip: text
+      -webkit-text-fill-color: transparent
+
+    .items-list
+      display: flex
+      flex-direction: row
+      flex-wrap: wrap
+      overflow: auto
+      gap: 2vw 4vw
+      list-style: none
+      padding: 0 0
+
+      &::-webkit-scrollbar
+        width: 0.5vw
+
+      &::-webkit-scrollbar-track
+        opacity: 1
+        background-color: #cdcdcd2a
+        border-radius: 100px
+
+      &::-webkit-scrollbar-thumb
+        cursor: grabbing
+        background-color: #cdcdcd2a
+        border-radius: 100px
+
+        &:hover
+          background-color: #cdcdcd5a

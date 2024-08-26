@@ -1,0 +1,26 @@
+.case-list
+  display: flex
+  flex-direction: row
+  flex-wrap: wrap
+  overflow: auto
+  outline: none
+  gap: 1.5vw
+  height: 64vh
+  padding: 0 0
+  margin-top: 1vw
+
+  &::-webkit-scrollbar
+    width: 0.5vw
+
+  &::-webkit-scrollbar-track
+    opacity: 1
+    background-color: #cdcdcd2a
+    border-radius: 100px
+
+  &::-webkit-scrollbar-thumb
+    cursor: grabbing
+    background-color: #cdcdcd2a
+    border-radius: 100px
+
+    &:hover
+      background-color: #cdcdcd5a

@@ -10,10 +10,15 @@ import Blob from './assets/img/blob.svg'
 
 const DonatMenu = () => {
   const [selectedTab, setSelectedTab] = useState('main')
+  const [isNavigationVisible, setIsNavigationVisible] = useState<boolean>(true)
   const navigate = useNavigate()
 
   const handleChangeTab = (tab: string) => {
     setSelectedTab(tab)
+  }
+
+  const handleNavigationVisible = (isVisible: boolean) => {
+    setIsNavigationVisible(isVisible)
   }
 
   useEffect(() => {
@@ -41,12 +46,18 @@ const DonatMenu = () => {
         </div>
 
         <div className="content">
-          <Content selectedTab={selectedTab} onTabChange={handleChangeTab} />
+          <Content 
+            selectedTab={selectedTab}
+            onTabChange={handleChangeTab}
+            onNavigationVisible={handleNavigationVisible}
+          />
         </div>
 
-        <div className="navigation-menu">
-          <Navigation onTabChange={handleChangeTab} selectedTab={selectedTab} />
-        </div>
+        { isNavigationVisible && (
+          <div className="navigation-menu">
+            <Navigation onTabChange={handleChangeTab} selectedTab={selectedTab} />
+          </div>
+        ) }
 
       </div>
     </>

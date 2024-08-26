@@ -1,0 +1,120 @@
+$Montserrat: "Montserrat", sans-serif
+
+.skins-content
+  display: flex
+  flex-direction: row
+  flex-wrap: wrap
+  overflow: auto
+  outline: none
+  gap: 3.8vw
+  height: 99%
+
+  &::-webkit-scrollbar
+    width: 0.5vw
+
+  &::-webkit-scrollbar-track
+    opacity: 1
+    background-color: #cdcdcd2a
+    border-radius: 100px
+
+  &::-webkit-scrollbar-thumb
+    cursor: grabbing
+    background-color: #cdcdcd2a
+    border-radius: 100px
+
+    &:hover
+      background-color: #cdcdcd5a
+
+  .skin
+    cursor: pointer
+    position: relative
+    display: flex
+    align-items: center
+    justify-content: center
+    background: rgba(50, 169, 255, 0.12)
+    border-radius: 0.6vw
+    width: 20vw
+    height: 20vw
+
+    &:hover
+      transition: all 0.3s
+      .skin-img
+        border-radius: 0.3vw
+        box-shadow: 0 0 0 0.3vw rgba(255, 255, 255, 0.07)
+
+    .content-inside
+      display: flex
+      flex-direction: column
+      justify-content: space-between
+      box-sizing: border-box
+      padding: 2vh 1.4vw 2vh 1.4vw
+      width: 100%
+      height: 100%
+
+      .header-title
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+        align-items: flex-start
+
+        .name-block
+          display: flex
+          flex-direction: column
+          gap: 0.4vw
+
+          .text
+            font-family: $Montserrat
+            font-weight: 600
+            font-size: 0.8vw
+            text-transform: uppercase
+            color: #fff
+
+          .name-skin
+            font-family: $Montserrat
+            font-weight: 600
+            font-size: 1vw
+            text-transform: uppercase
+            color: #fff
+
+        .price
+          display: flex
+          flex-direction: row
+          margin-top: 0.5vw
+          gap: 0.3vw
+          font-family: $Montserrat
+          font-weight: 600
+          font-size: 1.1vw
+          text-transform: uppercase
+          color: #11ffd4
+
+          img
+            width: 1.7vw
+
+      .skin-img
+        position: absolute
+        top: 54%
+        left: 50%
+        transform: translate(-50%, -50%)
+        width: 17vw
+        transition: all 0.3s
+
+      .buy-skin
+        cursor: pointer
+        position: relative
+        outline: none
+        height: 2.5vw
+        background: #1A4968
+        border: 1px solid rgba(50, 169, 255, 0.54)
+        border-radius: 0.3vw
+        z-index: 1
+        font-family: $Montserrat
+        font-weight: 600
+        font-size: 0.85vw
+        text-transform: uppercase
+        color: #61d0ff
+        transition: all 0.3s
+
+        &:hover
+          transition: all 0.3s
+          color: #131C33
+          background: rgb(50, 170, 255)

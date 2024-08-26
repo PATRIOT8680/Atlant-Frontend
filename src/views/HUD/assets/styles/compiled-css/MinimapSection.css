@@ -1,0 +1,34 @@
+.minimap-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  color: red;
+}
+.minimap-section .minimap-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.minimap-section .minimap-block .minimap {
+  -webkit-backdrop-filter: blur(4.249vw);
+          backdrop-filter: blur(4.249vw);
+  background: rgba(38, 46, 65, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 0.6vw;
+  width: 19vw;
+  height: 13vw;
+}

@@ -1,0 +1,210 @@
+.server-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  gap: 1.5vw;
+  position: absolute;
+  right: 0;
+}
+.server-section .server-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1.5vw;
+}
+.server-section .server-info .statistics {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 0.7vw;
+  height: 2.337vw;
+}
+.server-section .server-info .statistics .block-stat {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.3vw;
+  height: 100%;
+}
+.server-section .server-info .statistics .block-stat:nth-child(2) .icon img {
+  width: 1vw;
+}
+.server-section .server-info .statistics .block-stat .icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100%;
+  width: 2.337vw;
+  background: rgba(20, 22, 20, 0.9);
+  border: 0.035vw solid rgba(255, 255, 255, 0.18);
+  border-radius: 0.567vw;
+}
+.server-section .server-info .statistics .block-stat .icon img {
+  width: 1.2vw;
+  height: 1.2vw;
+}
+.server-section .server-info .statistics .block-stat .text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100%;
+  padding: 0 1vw;
+  background: rgba(20, 22, 20, 0.9);
+  border: 0.035vw solid rgba(255, 255, 255, 0.18);
+  border-radius: 0.567vw;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 1vw;
+  text-transform: uppercase;
+}
+.server-section .server-info .logotype-project {
+  width: 7vw;
+}
+.server-section .quests {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  overflow: hidden;
+  gap: 0.3vw;
+  width: 20vw;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0.8vw 1vw;
+  background: rgba(20, 22, 20, 0.9);
+  border-right: 0.4vw solid #1372ff;
+  border-radius: 0.567vw 0 0 0.567vw;
+}
+.server-section .quests .title-quest {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 1vw;
+  text-transform: uppercase;
+  color: #4f95ff;
+  text-shadow: 0 0 27px rgba(79, 149, 255, 0.4);
+}
+.server-section .quests .description-quest {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 0.85vw;
+  line-height: 138%;
+  color: #fff;
+}
+.server-section .weapon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  overflow: hidden;
+  gap: 1vw;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 1.2vw 1.5vw;
+  background: rgba(20, 22, 20, 0.9);
+  border-right: 0.4vw solid #1372ff;
+  border-radius: 0.567vw 0 0 0.567vw;
+}
+.server-section .weapon .ammo-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  gap: 0.15vw;
+}
+.server-section .weapon .ammo-block .clip-ammo {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 1.5vw;
+  text-transform: uppercase;
+  color: #fff;
+}
+.server-section .weapon .ammo-block .all-ammo {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 1vw;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.6);
+}
+.server-section .weapon .img-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.server-section .weapon .img-block .effect {
+  position: absolute;
+  width: 4vw;
+  height: 3vw;
+  background: rgba(19, 114, 255, 0.5);
+  -webkit-filter: blur(2vw);
+          filter: blur(2vw);
+  border-radius: 3vw;
+}
+.server-section .weapon .img-block .weapon-img {
+  position: relative;
+  -webkit-transform: scale(-1, 1);
+      -ms-transform: scale(-1, 1);
+          transform: scale(-1, 1);
+  width: 7vw;
+}
