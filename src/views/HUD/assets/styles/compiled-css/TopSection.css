@@ -1,0 +1,152 @@
+.top-section {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+      -ms-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+}
+.top-section .effect img {
+  position: absolute;
+  -webkit-filter: blur(8vw);
+          filter: blur(8vw);
+  top: -15vw;
+  width: 35vw;
+  z-index: -1;
+}
+.top-section .level-blocks {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1.5vw;
+}
+.top-section .level-blocks .active-level {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 1.2vw;
+  color: #fff;
+  width: 3.5vw;
+  height: 3.5vw;
+  -webkit-box-shadow: 0 0 0 0.354vw rgba(19, 114, 255, 0.25);
+          box-shadow: 0 0 0 0.354vw rgba(19, 114, 255, 0.25);
+  background: #1372ff;
+  border-radius: 0.5vw;
+}
+.top-section .level-blocks .progress-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.5vw;
+}
+.top-section .level-blocks .progress-text .text {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 0.9vw;
+  text-transform: uppercase;
+  color: #fff;
+}
+.top-section .level-blocks .progress-text .progress-bar {
+  width: 18vw;
+  height: 0.7vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.top-section .level-blocks .progress-text .progress-bar svg {
+  width: 18vw;
+  height: 0.7vw;
+  border-radius: 1vw;
+}
+.top-section .level-blocks .progress-text .progress-bar svg rect {
+  width: 100%;
+  height: 100%;
+}
+.top-section .level-blocks .next-level {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 1.2vw;
+  color: #fff;
+  width: 3.5vw;
+  height: 3.5vw;
+  -webkit-box-shadow: 0 0 0 0.354vw rgba(255, 255, 255, 0.08);
+          box-shadow: 0 0 0 0.354vw rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.21);
+  border-radius: 0.5vw;
+}
+.top-section .level-blocks .next-level.level-up {
+  -webkit-animation: levelUp 1s ease;
+          animation: levelUp 1s ease;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  background: #1372ff;
+  -webkit-box-shadow: 0 0 0 0.354vw rgba(19, 114, 255, 0.25);
+          box-shadow: 0 0 0 0.354vw rgba(19, 114, 255, 0.25);
+}
+
+@-webkit-keyframes levelUp {
+  0% {
+    -webkit-box-shadow: 0 0 0 0.354vw rgba(19, 114, 255, 0.25);
+            box-shadow: 0 0 0 0.354vw rgba(19, 114, 255, 0.25);
+  }
+  50% {
+    -webkit-box-shadow: 0 0 0 0.604vw rgba(19, 114, 255, 0.25);
+            box-shadow: 0 0 0 0.604vw rgba(19, 114, 255, 0.25);
+  }
+  100% {
+    -webkit-box-shadow: 0 0 0 0.354vw rgba(19, 114, 255, 0.25);
+            box-shadow: 0 0 0 0.354vw rgba(19, 114, 255, 0.25);
+  }
+}
+
+@keyframes levelUp {
+  0% {
+    -webkit-box-shadow: 0 0 0 0.354vw rgba(19, 114, 255, 0.25);
+            box-shadow: 0 0 0 0.354vw rgba(19, 114, 255, 0.25);
+  }
+  50% {
+    -webkit-box-shadow: 0 0 0 0.604vw rgba(19, 114, 255, 0.25);
+            box-shadow: 0 0 0 0.604vw rgba(19, 114, 255, 0.25);
+  }
+  100% {
+    -webkit-box-shadow: 0 0 0 0.354vw rgba(19, 114, 255, 0.25);
+            box-shadow: 0 0 0 0.354vw rgba(19, 114, 255, 0.25);
+  }
+}

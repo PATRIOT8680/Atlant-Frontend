@@ -1,5 +1,5 @@
 import { FC, useState, useRef } from "react";
-import { IItem } from "../../../../store/Donat/cases.data";
+import { IItem } from "../../../../configs/Donat/cases.data";
 import "./assets/styles/compiled-css/RouletteCase.css";
 
 interface IRouletteCase {

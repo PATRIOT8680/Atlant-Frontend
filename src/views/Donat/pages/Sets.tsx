@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import './assets/styles/compiled-css/Sets.css'
-import { setsData } from "../../../store/Donat/sets.data"
+import { setsData } from "../../../configs/Donat/sets.data"
 
 import Acoins_green from './assets/img/Sets/acoins-green.svg'
 import Acoins_white from './assets/img/Sets/acoins-white.svg'

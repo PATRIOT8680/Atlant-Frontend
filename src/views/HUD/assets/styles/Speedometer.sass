@@ -1,0 +1,120 @@
+$Montserrat: "Montserrat", sans-serif
+
+.speedometer
+  display: flex
+  position: relative
+  align-items: center
+  margin: 8vw
+
+  .speed-rpm-petrol
+    position: absolute
+    display: flex
+    align-items: center
+    justify-content: center
+    margin-right: 7vw
+
+    .speed
+      position: absolute
+
+      .speed-value
+        //stroke-dasharray: 100
+        stroke-dasharray: 1012
+
+      svg
+        width: 15vw
+        height: 14.7vw
+        overflow: visible
+        margin-bottom: 1vw
+        margin-left: -1vw
+
+    .rpm
+      position: absolute
+
+      svg
+        width: 16vw
+        height: 16.8vw
+        stroke-width: 0.3vw
+        overflow: visible
+        margin-top: 0.2vw
+
+    .petrol-in-veh
+      display: flex
+      flex-direction: column
+      align-items: center
+      position: absolute
+      width: 5vw
+      left: 4.8vw
+      top: -4.4vw
+
+      svg
+        width: 14vw
+        height: 10vw
+        overflow: visible
+        margin-top: 0.3vw
+        margin-right: 0.3vw
+        -webkit-transform: rotate(4deg)
+        -ms-transform: rotate(3deg)
+        transform: rotate(5deg)
+        stroke-width: 0.8vw
+
+      .icon
+        margin-right: 5vw
+        width: 0.8vw
+
+  .center-section
+    display: flex
+    position: absolute
+    background: rgba(20, 22, 20, 0.33)
+    border-radius: 100%
+    width: 13.1vw
+    height: 13.1vw
+    top: 50%
+    left: 50%
+    transform: translate(-44%, -50%)
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    gap: 0.8vw
+
+    .speed-text
+      display: flex
+      flex-direction: row
+      align-items: flex-end
+      gap: 0.2vw
+
+      .speed
+        font-family: $Montserrat
+        font-size: 3vw
+        font-weight: 600
+
+      .measurement
+        font-size: 0.7vw
+        font-weight: 600
+        text-transform: uppercase
+        margin-bottom: 0.7vw
+        color: #75bcff
+
+    .func-veh
+      display: flex
+      flex-direction: row
+      align-items: center
+      gap: 0.5vw
+
+      .icon
+        path
+          fill: #FF1C45
+
+      .icon.active
+        path
+          fill: #1DFF77
+
+      svg
+        width: 0.9vw
+
+      .petrol-veh
+        font-size: 1vw
+
+    .mileage
+      font-size: 0.8vw
+      font-weight: 600
+      opacity: 0.8

@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { skinsData } from "../../../store/Donat/skins.data"
+import { skinsData } from "../../../configs/Donat/skins.data"
 import './assets/styles/compiled-css/Skins.css'
 
 import SkinsContent from "./components/SkinsContent"

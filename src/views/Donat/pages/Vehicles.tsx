@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import './assets/styles/compiled-css/Vehicles.css'
-import { vehiclesData } from "../../../store/Donat/vehicles.data"
+import { vehiclesData } from "../../../configs/Donat/vehicles.data"
 
 const Vehicles = () => {
   const [soundHover, setSoundHover] = useState<Howl | null>(null)

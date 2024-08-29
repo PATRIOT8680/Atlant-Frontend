@@ -1,6 +1,6 @@
 import { FC, useState, useEffect, useRef } from 'react'
 import './assets/styles/compiled-css/SkinsContent.css'
-import { skinsData } from '../../../../store/Donat/skins.data'
+import { skinsData } from '../../../../configs/Donat/skins.data'
 
 import Acoins_green from './assets/img/SkinContent/acoins.svg'
 

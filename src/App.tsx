@@ -1,4 +1,6 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { Provider } from 'react-redux'
+import { store } from './store/store'
 
 import './assets/styles/compiled-css/App.css'
 import './assets/fonts/Montserrat/stylesheet.css'
@@ -11,13 +13,16 @@ import HUD from './views/HUD/Index'
 const App = () => {
   return(
     <>
-      <BrowserRouter>
-        <Routes>
-          <Route path='/petrol' element={<Petrol />} />
-          <Route path='/donat' element={<DonatMenu />} />
-          <Route path='/hud' element={<HUD />} />
-        </Routes>
-      </BrowserRouter>
+      <Provider store={store}>
+        <BrowserRouter>
+          <Routes>
+            <Route path='/petrol' element={<Petrol />} />
+            <Route path='/donat' element={<DonatMenu />} />
+            <Route path='/hud' element={<HUD />} />
+          </Routes>
+        </BrowserRouter>
+      </Provider>
+      
     </>
   )
 }

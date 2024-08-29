@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import './assets/styles/compiled-css/Index.css'
 
 import Help from './components/Help'
@@ -9,6 +10,8 @@ import TopSection from './components/TopSection'
 import Effect_right from './assets/img/Index/blur-server-section.svg'
 
 const HUD = () => {
+  const [activeSpeedometer, setActiveSpeedometer] = useState<boolean>(true)
+
   return(
     <>
       <div className="hud">
@@ -19,7 +22,9 @@ const HUD = () => {
           <div className="right-content">
             <ServerSection />
             <Help />
-            <Speedometer />
+            { activeSpeedometer && (
+              <Speedometer />
+            ) }
           </div>
           <MinimapSection />
           <TopSection />

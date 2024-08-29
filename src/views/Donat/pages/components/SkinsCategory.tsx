@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState, FC } from 'react'
-import { skinsData } from '../../../../store/Donat/skins.data'
+import { skinsData } from '../../../../configs/Donat/skins.data'
 import './assets/styles/compiled-css/SkinsCategory.css'
 
 interface ISkinsCategory {

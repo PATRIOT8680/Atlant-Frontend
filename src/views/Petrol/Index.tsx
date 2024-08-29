@@ -4,7 +4,7 @@ import './assets/styles/compiled-css/Index.css'
 
 import Petrol from './elements/Petrol'
 import Shop from './elements/Shop'
-import { petrolsName } from '../../store/Petrol/petrols.data'
+import { petrolsName } from '../../configs/Petrol/petrols.data'
 
 export const PetrolIndexContext = createContext({
   selectedPetrolName: '',

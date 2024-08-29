@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import './assets/styles/compiled-css/Clothes.css'
-import { clothesData } from '../../../store/Donat/clothes.data'
+import { clothesData } from '../../../configs/Donat/clothes.data'
 
 import Acoins_green from './assets/img/Clothes/acoins.svg'
 

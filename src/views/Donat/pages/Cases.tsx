@@ -1,6 +1,6 @@
 import { useState, FC } from 'react'
 import './assets/styles/compiled-css/Cases.css'
-import { ICasesData } from '../../../store/Donat/cases.data'
+import { ICasesData } from '../../../configs/Donat/cases.data'
 
 import CasesList from './pages/CasesList'
 import CaseContent from './pages/CaseContent'

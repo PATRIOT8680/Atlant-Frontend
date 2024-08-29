@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { IItem } from "../../../../store/Donat/cases.data";
+import { IItem } from "../../../../configs/Donat/cases.data";
 import { useNotify } from "../../../../components/Notify/NotificationProvider";
 import './assets/styles/compiled-css/ModalCase.css';
 

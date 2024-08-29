@@ -1,0 +1,158 @@
+.speedometer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 8vw;
+}
+.speedometer .speed-rpm-petrol {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-right: 7vw;
+}
+.speedometer .speed-rpm-petrol .speed {
+  position: absolute;
+}
+.speedometer .speed-rpm-petrol .speed .speed-value {
+  stroke-dasharray: 1012;
+}
+.speedometer .speed-rpm-petrol .speed svg {
+  width: 15vw;
+  height: 14.7vw;
+  overflow: visible;
+  margin-bottom: 1vw;
+  margin-left: -1vw;
+}
+.speedometer .speed-rpm-petrol .rpm {
+  position: absolute;
+}
+.speedometer .speed-rpm-petrol .rpm svg {
+  width: 16vw;
+  height: 16.8vw;
+  stroke-width: 0.3vw;
+  overflow: visible;
+  margin-top: 0.2vw;
+}
+.speedometer .speed-rpm-petrol .petrol-in-veh {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  width: 5vw;
+  left: 4.8vw;
+  top: -4.4vw;
+}
+.speedometer .speed-rpm-petrol .petrol-in-veh svg {
+  width: 14vw;
+  height: 10vw;
+  overflow: visible;
+  margin-top: 0.3vw;
+  margin-right: 0.3vw;
+  -webkit-transform: rotate(4deg);
+  -ms-transform: rotate(3deg);
+  transform: rotate(5deg);
+  stroke-width: 0.8vw;
+}
+.speedometer .speed-rpm-petrol .petrol-in-veh .icon {
+  margin-right: 5vw;
+  width: 0.8vw;
+}
+.speedometer .center-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  background: rgba(20, 22, 20, 0.33);
+  border-radius: 100%;
+  width: 13.1vw;
+  height: 13.1vw;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-44%, -50%);
+      -ms-transform: translate(-44%, -50%);
+          transform: translate(-44%, -50%);
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.8vw;
+}
+.speedometer .center-section .speed-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  gap: 0.2vw;
+}
+.speedometer .center-section .speed-text .speed {
+  font-family: "Montserrat", sans-serif;
+  font-size: 3vw;
+  font-weight: 600;
+}
+.speedometer .center-section .speed-text .measurement {
+  font-size: 0.7vw;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 0.7vw;
+  color: #75bcff;
+}
+.speedometer .center-section .func-veh {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.5vw;
+}
+.speedometer .center-section .func-veh .icon path {
+  fill: #FF1C45;
+}
+.speedometer .center-section .func-veh .icon.active path {
+  fill: #1DFF77;
+}
+.speedometer .center-section .func-veh svg {
+  width: 0.9vw;
+}
+.speedometer .center-section .func-veh .petrol-veh {
+  font-size: 1vw;
+}
+.speedometer .center-section .mileage {
+  font-size: 0.8vw;
+  font-weight: 600;
+  opacity: 0.8;
+}

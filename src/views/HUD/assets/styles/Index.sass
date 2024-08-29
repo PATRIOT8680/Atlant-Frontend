@@ -9,6 +9,7 @@ body
   transform: translate(-50%, -50%)
   width: 97%
   height: 95%
+  animation: fadeInHud 1.5s ease
 
   .effects
     .e-right-content
@@ -18,3 +19,20 @@ body
       right: -20vw
       top: -18vw
       width: 50vw
+
+  .content-inside
+    height: 100%
+
+    .right-content
+      display: flex
+      align-items: flex-end
+      justify-content: space-between
+      flex-direction: column
+      height: 100%
+
+
+@keyframes fadeInHud
+  from
+    opacity: 0
+  to
+    opacity: 1

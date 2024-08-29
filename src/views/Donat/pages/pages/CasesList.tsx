@@ -1,6 +1,6 @@
 import { FC } from "react"
 import CaseBlock from "../components/CaseBlock"
-import { casesData, ICasesData } from "../../../../store/Donat/cases.data"
+import { casesData, ICasesData } from "../../../../configs/Donat/cases.data"
 import './assets/styles/compiled-css/CasesList.css'
 
 interface ICasesList {

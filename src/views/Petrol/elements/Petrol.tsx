@@ -2,8 +2,8 @@ import { useState, useRef, useEffect, useContext } from 'react'
 import { useNotify } from '../../../components/Notify/NotificationProvider'
 import '../assets/styles/compiled-css/Petrol.css'
 
-import { vehiclesData } from '../../../store/Petrol/vehicles.data'
-import { selectPetrolData } from '../../../store/Petrol/selectPetrol.data'
+import { vehiclesData } from '../../../configs/Petrol/vehicles.data'
+import { selectPetrolData } from '../../../configs/Petrol/selectPetrol.data'
 import { PetrolIndexContext } from '../Index'
 
 import { ElipseBG } from './FilterBG'
@@ -80,26 +80,45 @@ const Petrol = () => {
   }
 
   /* Получение имени транспорта */
-  //useEffect(() => {
-  //  fetch('api/vehicles', {
-  //    method: 'GET'
-  //  })
-  //    .then((response) => response.json())
-  //    .then((data) => {
-  //      const validVehicle = vehiclesData.find(
-  //        (vehicle) => vehicle.shortName === data.shortName
-  //      )
+  useEffect(() => {
+    fetch('api/vehicles', {
+      method: 'GET'
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        const validVehicle = vehiclesData.find(
+          (vehicle) => vehicle.shortName === data.shortName
+        )
 
-  //      if(validVehicle) {
-  //        setSelectedVeh(validVehicle.shortName)
-  //      } else {
-  //        console.error(`Ошибка в получении имени транспорта ${data.shortName} с базы данных (shortName)`)
-  //      }
-  //    })
-  //    .catch((error) => {
-  //      console.error(`Ошибка при получении данных с сервера (api/vehicles): ${error}`)
-  //    })
-  //}, [])
+        if(validVehicle) {
+          setSelectedVeh(validVehicle.shortName)
+        } else {
+          console.error(`Ошибка в получении имени транспорта ${data.shortName} с базы данных (shortName)`)
+        }
+      })
+      .catch((error) => {
+        console.error(`Ошибка при получении данных с сервера (api/vehicles): ${error}`)
+      })
+
+    fetch('api/petrol/price', {
+      method: 'GET'
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        const validVehicle = vehiclesData.find(
+          (vehicle) => vehicle.shortName === data.shortName
+        )
+
+        if(validVehicle) {
+          setSelectedVeh(validVehicle.shortName)
+        } else {
+          console.error(`Ошибка в получении имени транспорта ${data.shortName} с базы данных (shortName)`)
+        }
+      })
+      .catch((error) => {
+        console.error(`Ошибка при получении данных с сервера (api/vehicles): ${error}`)
+      })
+  }, [])
 
   return(
     <>

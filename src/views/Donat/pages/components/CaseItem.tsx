@@ -1,6 +1,6 @@
 import { FC } from 'react'
 import './assets/styles/compiled-css/CaseItem.css'
-import { IItem } from '../../../../store/Donat/cases.data'
+import { IItem } from '../../../../configs/Donat/cases.data'
 
 import Acoins_green from './assets/img/CaseItem/acoins-green.svg'
 

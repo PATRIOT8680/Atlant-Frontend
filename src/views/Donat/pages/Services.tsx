@@ -1,6 +1,6 @@
 import { useEffect, useState, useRef } from 'react'
 import './assets/styles/compiled-css/Services.css'
-import { servicesData } from "../../../store/Donat/services.data"
+import { servicesData } from "../../../configs/Donat/services.data"
 
 const Services = () => {
   const [soundHover, setSoundHover] = useState<Howl | null>(null)

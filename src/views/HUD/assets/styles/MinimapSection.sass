@@ -1,15 +1,18 @@
+$Montserrat: "Montserrat", sans-serif
+
 .minimap-section
   display: flex
   flex-direction: row
   align-items: flex-end
   position: absolute
+  gap: 1vw
   left: 0
   bottom: 0
-  color: red
 
   .minimap-block
     display: flex
     flex-direction: column
+    width: 19vw
 
     .needs
 
@@ -18,5 +21,218 @@
       background: rgba(38, 46, 65, 0.2)
       border: 1px solid rgba(255, 255, 255, 0.1)
       border-radius: 0.6vw
-      width: 19vw
+      width: 100%
       height: 13vw
+
+    .needs
+      display: flex
+      flex-direction: row
+      justify-content: space-between
+      gap: 0.6vw
+      width: 100%
+      height: 2.2vw
+      margin-bottom: 0.5vw
+      
+      .block-need
+        display: flex
+        flex-direction: row
+        align-items: center
+        gap: 0.3vw
+
+        .icon
+          display: flex
+          align-items: center
+          justify-content: center
+          border-radius: 0.4vw
+          width: 2.2vw
+          height: 100%
+
+          img
+            width: 1vw
+
+        .progress-bar
+          display: flex
+          align-items: center
+          justify-content: center
+          height: 100%
+          width: 6.7vw
+          border-radius: 0.4vw
+          box-sizing: border-box
+          padding: 0 0.7vw
+
+          svg
+            width: 6vw
+            height: 0.7vw
+            border-radius: 1vw
+
+            rect
+              height: 0.7vw
+
+      #water
+        .icon
+          background: rgba(37, 164, 255, 0.25)
+
+          img
+            width: 0.8vw
+
+        .progress-bar
+          background: rgba(37, 164, 255, 0.25)
+
+
+      #eat
+        .icon
+          background: rgba(255, 142, 60, 0.25)
+        
+        .progress-bar
+          background: rgba(255, 142, 60, 0.25)
+
+
+  .player-info
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+    gap: 1vw
+
+    .zone
+      display: flex
+      align-items: center
+      justify-content: center
+      overflow: hidden
+      padding: 0 1.4vw
+      height: 3vw
+      background: rgba(20, 22, 20, 0.9)
+      border: 0.50px solid rgba(255, 255, 255, 0.18)
+      text-shadow: 0 0 1.2vw rgba(255, 9, 53, 0.8)
+      border-radius: 0.5vw
+      font-family: $Montserrat
+      font-weight: 700
+      font-size: 0.9vw
+      text-transform: uppercase
+      color: #ff0935
+
+    .cash-micro
+      display: flex
+      flex-direction: row
+      align-items: center
+      gap: 1vw
+      height: 3vw
+
+      .cash
+        display: flex
+        flex-direction: row
+        align-items: center
+        gap: 0.5vw
+        height: 100%
+
+        .icon
+          display: flex
+          align-items: center
+          justify-content: center
+          background: rgba(20, 22, 20, 0.9)
+          border: 0.50px solid rgba(255, 255, 255, 0.18)
+          border-radius: 0.5vw
+          width: 3vw
+          height: 100%
+
+          img
+            width: 0.9vw
+
+        .text
+          display: flex
+          align-items: center
+          justify-content: center
+          padding: 0 1.25vw
+          height: 100%
+          background: rgba(20, 22, 20, 0.9)
+          border: 0.50px solid rgba(255, 255, 255, 0.18)
+          border-radius: 0.5vw
+          font-family: $Montserrat
+          font-weight: 600
+          font-size: 1.1vw
+          text-transform: uppercase
+          color: #fff
+
+      .microphone
+        display: flex
+        align-items: center
+        justify-content: center
+        width: 3vw
+        height: 100%
+        overflow: hidden
+        background: rgba(20, 22, 20, 0.9)
+        border: 0.50px solid rgba(255, 255, 255, 0.18)
+        animation: fadeInMicrophone 0.9s ease
+        border-radius: 0.5vw
+        
+
+        img
+          position: absolute
+          width: 1.05vw
+          z-index: 2
+        
+        .effect
+          position: absolute
+          width: 1.05vw
+          height: 1.05vw
+          filter: blur(0.8vw)
+          background: rgba(29, 255, 119, 0.7)
+          animation: activeMicrophone 2s infinite
+          z-index: 1
+
+    .location
+      display: flex
+      flex-direction: row
+      height: 3vw
+      gap: 0.5vw
+
+      .icon
+        display: flex
+        align-items: center
+        justify-content: center
+        width: 3vw
+        height: 100%
+        background: rgba(20, 22, 20, 0.9)
+        border: 0.50px solid rgba(255, 255, 255, 0.18)
+        border-radius: 0.5vw
+
+        img
+          width: 1.05vw
+
+      .block-text
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+        justify-content: center
+        background: rgba(20, 22, 20, 0.9)
+        border: 0.50px solid rgba(255, 255, 255, 0.18)
+        border-radius: 0.5vw
+        height: 100%
+        padding: 0 1.25vw
+
+        .district
+          font-family: $Montserrat
+          font-weight: 600
+          font-size: 0.9vw
+          text-transform: uppercase
+          color: #fff
+
+        .street
+          font-family: $Montserrat
+          font-weight: 500
+          font-size: 0.8vw
+          text-transform: uppercase
+          color: rgba(255, 255, 255, 0.8)
+
+@keyframes activeMicrophone
+  0%
+    transform: scale(0.6)
+  50%
+    transform: scale(1.1)
+  100%
+    transform: scale(0.6)
+
+@keyframes fadeInMicrophone
+  from
+    opacity: 0
+  to
+    opacity: 1

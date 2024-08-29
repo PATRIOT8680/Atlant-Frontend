@@ -1,7 +1,7 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import '../assets/styles/compiled-css/ServerSection.css'
-import { questsData } from '../../../store/HUD/quests.data'
-import { weaponsData } from '../../../store/HUD/weapons.data'
+import { questsData } from '../../../configs/HUD/quests.data'
+import { weaponsData } from '../../../configs/HUD/weapons.data'
 
 import SVG_online from '../assets/img/ServerSection/online.svg'
 import SVG_sid from '../assets/img/ServerSection/sid.svg'
@@ -17,6 +17,36 @@ const ServerSection = () => {
 
   const selectedQuestData = questsData.find(quest => quest.id === activeQuest)
   const selectedWeaponData = weaponsData.find(weapon => weapon.hash === activeWeapon)
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch('api/hud', {
+          method: 'GET',
+          headers: {
+            'Content-Type': 'application/json'
+          }
+        })
+
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+
+        const data = await response.json()
+
+        setOnline(data.online)
+        setSid(data.sid)
+        setActiveQuest(data.activeQuest)
+        setAllAmmo(data.allAmmo)
+        setClipAmmo(data.clipAmmo)
+        setActiveWeapon(data.activeWeapon)
+      } catch (err) {
+        console.error(`Ошибка [HUD - ServerSection.tsx]: ${err}`)
+      }
+    }
+
+    fetchData()
+  })
 
   return(
     <>

@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import './assets/styles/compiled-css/VIP.css'
-import { vipsData } from "../../../store/Donat/vips.data"
+import { vipsData } from "../../../configs/Donat/vips.data"
 
 import Acoins_green from './assets/img/VIP/acoins-green.svg'
 

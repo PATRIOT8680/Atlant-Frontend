@@ -5,7 +5,7 @@ import CaseItem from "../components/CaseItem";
 import RouletteCase from "../components/RouletteCase";
 import ModalCase from "../components/ModalCase";
 
-import { ICasesData, IItem } from "../../../../store/Donat/cases.data";
+import { ICasesData, IItem } from "../../../../configs/Donat/cases.data";
 
 interface ICaseContent {
   cases: ICasesData;

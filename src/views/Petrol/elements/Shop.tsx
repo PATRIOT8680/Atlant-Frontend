@@ -2,7 +2,7 @@ import { useContext } from 'react'
 import '../assets/styles/compiled-css/Shop.css'
 
 import { PetrolIndexContext } from '../Index'
-import { productsData } from '../../../store/Petrol/products.data'
+import { productsData } from '../../../configs/Petrol/products.data'
 
 import Blob from '../assets/img/blob.svg'
 import Shop_logo from '../assets/img/shop-logo.svg'

@@ -1,0 +1,93 @@
+$Montserrat: "Montserrat", sans-serif
+
+.top-section
+  position: absolute
+  top: 0
+  left: 50%
+  transform: translate(-50%, 0)
+
+  .effect
+    img
+      position: absolute
+      filter: blur(8vw)
+      top: -15vw
+      width: 35vw
+      z-index: -1
+
+  .level-blocks
+    display: flex
+    flex-direction: row
+    align-items: center
+    gap: 1.5vw
+
+    .active-level
+      display: flex
+      align-items: center
+      justify-content: center
+      font-family: $Montserrat
+      font-weight: 700
+      font-size: 1.2vw
+      color: #fff
+      width: 3.5vw
+      height: 3.5vw
+      box-shadow: 0 0 0 0.354vw rgba(19, 114, 255, 0.25)
+      background: #1372ff
+      border-radius: 0.5vw
+
+    .progress-text
+      display: flex
+      flex-direction: column
+      align-items: center
+      gap: 0.5vw
+
+      .text
+        font-family: $Montserrat
+        font-weight: 600
+        font-size: 0.9vw
+        text-transform: uppercase
+        color: #fff
+
+      .progress-bar
+        width: 18vw
+        height: 0.7vw
+        display: flex
+        align-items: center
+        justify-content: center
+
+        svg
+          width: 18vw
+          height: 0.7vw
+          border-radius: 1vw
+
+          rect
+            width: 100%
+            height: 100%
+
+    .next-level
+      display: flex
+      align-items: center
+      justify-content: center
+      font-family: $Montserrat
+      font-weight: 700
+      font-size: 1.2vw
+      color: #fff
+      width: 3.5vw
+      height: 3.5vw
+      box-shadow: 0 0 0 0.354vw rgba(255, 255, 255, 0.08)
+      background: rgba(255, 255, 255, 0.21)
+      border-radius: 0.5vw
+
+    .next-level.level-up
+      animation: levelUp 1s ease
+      transition: all 1s
+      background: #1372ff
+      box-shadow: 0 0 0 0.354vw rgba(19, 114, 255, 0.25)
+
+
+@keyframes levelUp
+  0%
+    box-shadow: 0 0 0 0.354vw rgba(19, 114, 255, 0.25)
+  50%
+    box-shadow: 0 0 0 0.604vw rgba(19, 114, 255, 0.25)
+  100%
+    box-shadow: 0 0 0 0.354vw rgba(19, 114, 255, 0.25)

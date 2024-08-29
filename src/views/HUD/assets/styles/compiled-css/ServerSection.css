@@ -14,7 +14,7 @@
       -ms-user-select: none;
           user-select: none;
   gap: 1.5vw;
-  position: absolute;
+  position: relative;
   right: 0;
 }
 .server-section .server-info {
