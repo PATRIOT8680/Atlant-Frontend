@@ -1,33 +1,14 @@
-export interface ICashState {
-  cash: number;
-}
+import { addCash, decrementCash } from "../actions/cash";
 
-const defaultState = {
-  cash: 10000,
-};
-
-type CashAction = {
-  type: 'ADD_CASH';
-  payload: number;
-};
-
-// Добавьте функцию addCash
-export const addCash = (payload: number) => ({
-  type: 'ADD_CASH',
-  payload,
-});
-
-export const cashReducer = (
-  state: ICashState = defaultState,
-  action: CashAction
-) => {
+export const cashReducer = (state = 10000, action: any) => {
   switch (action.type) {
     case 'ADD_CASH':
-      return { ...state, cash: state.cash + action.payload };
-
+      return state + action.payload;
+    case 'DECREMENT_CASH':
+      return state - action.payload;
+    case 'GET_CASH':
+      return state;
     default:
       return state;
   }
 };
-
-export type RootState = ReturnType<typeof cashReducer>;

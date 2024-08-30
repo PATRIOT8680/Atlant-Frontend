@@ -1,15 +1,19 @@
 import { useState } from 'react';
+import { useSelector } from 'react-redux';
+import { RootState } from '../../../reducer/rootReducer';
 import '../assets/styles/compiled-css/Speedometer.css'
 
 import SVG_petrol from '../assets/img/Speedometer/petrol.svg'
 
 const Speedometer = () => {
-  const [speed, setSpeed] = useState<number>(20)
+  //const [speed, setSpeed] = useState<number>(20)
   const [petrol, setPetrol] = useState<number>(126)
   const [mileage, setMileage] = useState<number>(1450)
   const [activeEngine, setActiveEngine] = useState<boolean>(true)
   const [activeLock, setActiveLock] = useState<boolean>(false)
   const [activeSeatbelt, setActiveSeatbelt] = useState<boolean>(false)
+
+  const speed = useSelector((state: RootState) => state.speedReducer)
 
   const mathSpeed = () => {
     return 1012 + (speed * 2.3) * (-1)

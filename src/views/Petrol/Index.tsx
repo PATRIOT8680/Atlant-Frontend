@@ -1,5 +1,5 @@
 import { useEffect, useState, createContext } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { showHud } from '../../actions/hud'
 import './assets/styles/compiled-css/Index.css'
 
 import Petrol from './elements/Petrol'
@@ -12,20 +12,19 @@ export const PetrolIndexContext = createContext({
 })
 
 const IndexPetrol = () => {
-  const navigate = useNavigate()
   const [selectedPetrolName, setSelectedPetrolName] = useState('Xero Gas') 
   const [selectedPetrolShortName, setSelectedPetrolShortName] = useState('ron')
 
   useEffect(() => {
     const handleCloseMenu = (event: KeyboardEvent) => {
       if (event.key === 'Escape') {
-        navigate('/hud')
+        showHud()
       }
     }
 
     window.addEventListener('keydown', handleCloseMenu)
     return () => window.removeEventListener('keydown', handleCloseMenu)
-  }, [navigate])
+  }, [])
 
   /* Получение типа заправки с backend */
   //useEffect(() => {
@@ -54,7 +53,7 @@ const IndexPetrol = () => {
   return(
     <>
       <div className="index-petrol">
-        <span className='esc' onClick={() => navigate('/hud')}>ESC</span>
+        <span className='esc' onClick={() => showHud()}>ESC</span>
         <div className="containers">
           <PetrolIndexContext.Provider 
             value={{

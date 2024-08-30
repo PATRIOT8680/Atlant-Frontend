@@ -1,6 +1,7 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { useDispatch, useSelector } from 'react-redux'
 import { Provider } from 'react-redux'
 import { store } from './store/store'
+import { RootState } from './reducer/rootReducer'
 
 import './assets/styles/compiled-css/App.css'
 import './assets/fonts/Montserrat/stylesheet.css'
@@ -11,17 +12,15 @@ import DonatMenu from './views/Donat/Index'
 import HUD from './views/HUD/Index'
 
 const App = () => {
+  const hudVisible = useSelector((state: RootState) => state.hudReducer)
+  const petrolVisible = useSelector((state: RootState) => state.petrolReducer)
+
   return(
     <>
-      <Provider store={store}>
-        <BrowserRouter>
-          <Routes>
-            <Route path='/petrol' element={<Petrol />} />
-            <Route path='/donat' element={<DonatMenu />} />
-            <Route path='/hud' element={<HUD />} />
-          </Routes>
-        </BrowserRouter>
-      </Provider>
+        {/*<DonatMenu />*/}
+        
+        { petrolVisible && (<Petrol />) }
+        { hudVisible && (<HUD />) }
       
     </>
   )

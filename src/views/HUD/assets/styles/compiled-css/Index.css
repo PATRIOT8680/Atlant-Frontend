@@ -14,6 +14,8 @@ body {
   height: 95%;
   -webkit-animation: fadeInHud 1.5s ease;
           animation: fadeInHud 1.5s ease;
+  color: white;
+  font-family: "Montserrat", sans-serif;
 }
 .hud .effects .e-right-content {
   opacity: 0.9;

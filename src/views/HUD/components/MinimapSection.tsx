@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
-import { RootState } from '../../../reducer/cash'
+import { cashReducer } from '../../../reducer/cash'
+import { RootState } from '../../../reducer/rootReducer'
 import '../assets/styles/compiled-css/MinimapSection.css'
 
 import SVG_water from '../assets/img/MinimapSection/water.svg'
@@ -10,16 +11,21 @@ import SVG_microphone from '../assets/img/MinimapSection/microphone.svg'
 import SVG_location from '../assets/img/MinimapSection/location.svg'
 
 const MinimapSection = () => {
-  const [water, setWater] = useState<number>(50)
-  const [eat, setEat] = useState<number>(90)
-  const [zone, setZone] = useState<string>('danger zone')
+  //const [water, setWater] = useState<number>(50)
+  //const [eat, setEat] = useState<number>(90)
+  //const [zone, setZone] = useState<string>('danger')
   //const [cash, setCash] = useState<number>(8750)
-  const [microphoneActive, setMicrophoneActive] = useState<boolean>(true)
-  const [district, setDistrict] = useState<string>('Ричман')
-  const [street, setStreet] = useState<string>('Норт-Рокфорд-Драйв')
+  //const [microphoneActive, setMicrophoneActive] = useState<boolean>(true)
+  //const [district, setDistrict] = useState<string>('Ричман')
+  //const [street, setStreet] = useState<string>('Норт-Рокфорд-Драйв')
 
-  const dispatch = useDispatch()
-  const cash = useSelector((state: RootState) => state.cash)
+  const eat = useSelector((state: RootState) => state.eatReducer)
+  const water = useSelector((state: RootState) => state.waterReducer)
+  const cash = useSelector((state: RootState) => state.cashReducer)
+  const zone = useSelector((state: RootState) => state.inZoneReducer)
+  const district = useSelector((state: RootState) => state.inDistrictReducer)
+  const street = useSelector((state: RootState) => state.inStreetReducer)
+  const microphoneActive = useSelector((state: RootState) => state.microphoneActive)
 
   return(
     <>
@@ -48,7 +54,7 @@ const MinimapSection = () => {
           <div className="minimap"></div>
         </div>
         <div className="player-info">
-          <span className="zone">{zone}</span>
+          <span className="zone" id={zone}>{zone} ZONE</span>
           <div className="cash-micro">
             <div className="cash">
               <div className="icon">

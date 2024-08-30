@@ -1,4 +1,6 @@
 import { useState, useEffect } from 'react'
+import { useSelector } from 'react-redux'
+import { RootState } from '../../../reducer/rootReducer'
 import '../assets/styles/compiled-css/ServerSection.css'
 import { questsData } from '../../../configs/HUD/quests.data'
 import { weaponsData } from '../../../configs/HUD/weapons.data'
@@ -8,45 +10,49 @@ import SVG_sid from '../assets/img/ServerSection/sid.svg'
 import SVG_logotype from '../assets/img/ServerSection/logotype.svg'
 
 const ServerSection = () => {
-  const [online, setOnline] = useState<number>(140)
-  const [sid, setSid] = useState<string>('3H92L')
-  const [activeQuest, setActiveQuest] = useState<string | null>('start-quest')
+  //const [online, setOnline] = useState<number>(140)
+  //const [sid, setSid] = useState<string>('3H92L')
+  //const [activeQuest, setActiveQuest] = useState<string | null>('start-quest')
   const [allAmmo, setAllAmmo] = useState<number>(340)
   const [clipAmmo, setClipAmmo] = useState<number>(70)
   const [activeWeapon, setActiveWeapon] = useState<string | null>('0x84D6FAFD')
 
+  const online = useSelector((state: RootState) => state.onlineReducer)
+  const sid = useSelector((state: RootState) => state.sidReducer)
+  const activeQuest = useSelector((state: RootState) => state.activeQuestReducer)
+
   const selectedQuestData = questsData.find(quest => quest.id === activeQuest)
   const selectedWeaponData = weaponsData.find(weapon => weapon.hash === activeWeapon)
 
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await fetch('api/hud', {
-          method: 'GET',
-          headers: {
-            'Content-Type': 'application/json'
-          }
-        })
+  //useEffect(() => {
+  //  const fetchData = async () => {
+  //    try {
+  //      const response = await fetch('api/hud', {
+  //        method: 'GET',
+  //        headers: {
+  //          'Content-Type': 'application/json'
+  //        }
+  //      })
 
-        if (!response.ok) {
-          throw new Error(`HTTP error! status: ${response.status}`);
-        }
+  //      if (!response.ok) {
+  //        throw new Error(`HTTP error! status: ${response.status}`);
+  //      }
 
-        const data = await response.json()
+  //      const data = await response.json()
 
-        setOnline(data.online)
-        setSid(data.sid)
-        setActiveQuest(data.activeQuest)
-        setAllAmmo(data.allAmmo)
-        setClipAmmo(data.clipAmmo)
-        setActiveWeapon(data.activeWeapon)
-      } catch (err) {
-        console.error(`Ошибка [HUD - ServerSection.tsx]: ${err}`)
-      }
-    }
+  //      setOnline(data.online)
+  //      setSid(data.sid)
+  //      setActiveQuest(data.activeQuest)
+  //      setAllAmmo(data.allAmmo)
+  //      setClipAmmo(data.clipAmmo)
+  //      setActiveWeapon(data.activeWeapon)
+  //    } catch (err) {
+  //      console.error(`Ошибка [HUD - ServerSection.tsx]: ${err}`)
+  //    }
+  //  }
 
-    fetchData()
-  })
+  //  fetchData()
+  //})
 
   return(
     <>

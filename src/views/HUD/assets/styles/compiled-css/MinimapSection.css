@@ -147,13 +147,23 @@
   height: 3vw;
   background: rgba(20, 22, 20, 0.9);
   border: 0.5px solid rgba(255, 255, 255, 0.18);
-  text-shadow: 0 0 1.2vw rgba(255, 9, 53, 0.8);
   border-radius: 0.5vw;
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
   font-size: 0.9vw;
   text-transform: uppercase;
+}
+.minimap-section .player-info #danger {
   color: #ff0935;
+  text-shadow: 0 0 1.2vw rgba(255, 9, 53, 0.8);
+}
+.minimap-section .player-info #neutral {
+  color: #d3d3d3;
+  text-shadow: 0 0 1.2vw rgba(151, 151, 151, 0.8);
+}
+.minimap-section .player-info #safe {
+  color: #10ff64;
+  text-shadow: 0 0 1.2vw rgba(23, 255, 112, 0.8);
 }
 .minimap-section .player-info .cash-micro {
   display: -webkit-box;
