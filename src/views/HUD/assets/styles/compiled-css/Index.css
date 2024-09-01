@@ -10,8 +10,8 @@ body {
   -webkit-transform: translate(-50%, -50%);
       -ms-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  width: 97%;
-  height: 95%;
+  width: 97.5%;
+  height: 96.5%;
   -webkit-animation: fadeInHud 1.5s ease;
           animation: fadeInHud 1.5s ease;
   color: white;

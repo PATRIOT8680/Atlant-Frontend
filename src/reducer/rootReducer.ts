@@ -11,7 +11,10 @@ import { waterReducer } from './water';
 import { onlineReducer } from './online';
 import { sidReducer } from './sid';
 import { activeQuestReducer } from './activeQuest';
-import { speedReducer } from './speed';
+import { speedometerReducer } from './hud/speedometer';
+import { activeWeaponReducer } from './hud/weapon';
+import { paydayReducer } from './hud/payday';
+import { sendNotifyReducer } from './sendNotify';
 
 // Interface Reducer
 import { hudReducer } from '../reducer/hud/hud';
@@ -29,7 +32,10 @@ export type RootState = {
   onlineReducer: ReturnType<typeof onlineReducer>;
   sidReducer: ReturnType<typeof sidReducer>;
   activeQuestReducer: ReturnType<typeof activeQuestReducer>;
-  speedReducer: ReturnType<typeof speedReducer>;
+  speedometerReducer: ReturnType<typeof speedometerReducer>;
+  activeWeaponReducer: ReturnType<typeof activeWeaponReducer>;
+  paydayReducer: ReturnType<typeof paydayReducer>
+  sendNotifyReducer: ReturnType<typeof sendNotifyReducer>
 
   // Interface
   hudReducer: ReturnType<typeof hudReducer>;
@@ -48,7 +54,10 @@ export const rootReducer = combineReducers({
   onlineReducer,
   sidReducer,
   activeQuestReducer,
-  speedReducer,
+  speedometerReducer,
+  activeWeaponReducer,
+  paydayReducer,
+  sendNotifyReducer,
 
   // Interface
   hudReducer,

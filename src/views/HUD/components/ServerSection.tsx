@@ -10,53 +10,15 @@ import SVG_sid from '../assets/img/ServerSection/sid.svg'
 import SVG_logotype from '../assets/img/ServerSection/logotype.svg'
 
 const ServerSection = () => {
-  //const [online, setOnline] = useState<number>(140)
-  //const [sid, setSid] = useState<string>('3H92L')
-  //const [activeQuest, setActiveQuest] = useState<string | null>('start-quest')
-  const [allAmmo, setAllAmmo] = useState<number>(340)
-  const [clipAmmo, setClipAmmo] = useState<number>(70)
-  const [activeWeapon, setActiveWeapon] = useState<string | null>('0x84D6FAFD')
-
   const online = useSelector((state: RootState) => state.onlineReducer)
   const sid = useSelector((state: RootState) => state.sidReducer)
   const activeQuest = useSelector((state: RootState) => state.activeQuestReducer)
-
-  const selectedQuestData = questsData.find(quest => quest.id === activeQuest)
-  const selectedWeaponData = weaponsData.find(weapon => weapon.hash === activeWeapon)
-
-  //useEffect(() => {
-  //  const fetchData = async () => {
-  //    try {
-  //      const response = await fetch('api/hud', {
-  //        method: 'GET',
-  //        headers: {
-  //          'Content-Type': 'application/json'
-  //        }
-  //      })
-
-  //      if (!response.ok) {
-  //        throw new Error(`HTTP error! status: ${response.status}`);
-  //      }
-
-  //      const data = await response.json()
-
-  //      setOnline(data.online)
-  //      setSid(data.sid)
-  //      setActiveQuest(data.activeQuest)
-  //      setAllAmmo(data.allAmmo)
-  //      setClipAmmo(data.clipAmmo)
-  //      setActiveWeapon(data.activeWeapon)
-  //    } catch (err) {
-  //      console.error(`Ошибка [HUD - ServerSection.tsx]: ${err}`)
-  //    }
-  //  }
-
-  //  fetchData()
-  //})
+  const activeWeapon = useSelector((state: RootState) => state.activeWeaponReducer)
+  const activeWeaponHash = useSelector((state: RootState) => state.activeWeaponReducer.hashWeapon)
 
   return(
     <>
-      <div className="server-section">
+      <div style={{zoom: '88%'}} className="server-section">
         <div className="server-info">
           <div className="statistics">
             <div className="block-stat">
@@ -72,19 +34,21 @@ const ServerSection = () => {
         </div>
         { activeQuest && (
           <div className="quests">
-            <span className="title-quest">{selectedQuestData?.name}</span>
-            <span className="description-quest">{selectedQuestData?.description}</span>
+            <div className="header-block">
+              <span className="title-quest">{ activeQuest.nameQuest }</span>
+            </div>
+            <span className="description-quest">{ activeQuest.descriptionQuest }</span>
           </div>
         ) }
-        { activeWeapon && (
+        { activeWeaponHash && (
           <div className="weapon">
             <div className="ammo-block">
-              <span className="clip-ammo">{clipAmmo}</span>
-              <span className="all-ammo">{allAmmo}</span>
+              <span className="clip-ammo">{activeWeapon.clipAmmo}</span>
+              <span className="all-ammo">{activeWeapon.allAmmo}</span>
             </div>
             <div className="img-block">
               <div className="effect"></div>
-              <img src={`src/assets/img/weapons/${selectedWeaponData?.hash}.webp`} className="weapon-img" />
+              <img src={`src/assets/img/weapons/${activeWeapon.hashWeapon}.webp`} className="weapon-img" />
             </div>
           </div>
         ) }

@@ -1,7 +1,10 @@
-export const activeQuestReducer = (state = 'start-quest', action: any) => {
+export const activeQuestReducer = (state = { nameQuest: 'Начальный квест', descriptionQuest: 'Добро пожаловать в штат. Отправляйтесь в мерию и получите своё гражданство' }, action: any) => {
   switch (action.type) {
     case 'SET_ACTIVE_QUEST':
-      return action.payload;
+      return {
+        nameQuest: action.nameQuest,
+        descriptionQuest: action.descriptionQuest
+      }
     case 'GET_ACTIVE_QUEST':
       return state;
     default:

@@ -11,14 +11,6 @@ import SVG_microphone from '../assets/img/MinimapSection/microphone.svg'
 import SVG_location from '../assets/img/MinimapSection/location.svg'
 
 const MinimapSection = () => {
-  //const [water, setWater] = useState<number>(50)
-  //const [eat, setEat] = useState<number>(90)
-  //const [zone, setZone] = useState<string>('danger')
-  //const [cash, setCash] = useState<number>(8750)
-  //const [microphoneActive, setMicrophoneActive] = useState<boolean>(true)
-  //const [district, setDistrict] = useState<string>('Ричман')
-  //const [street, setStreet] = useState<string>('Норт-Рокфорд-Драйв')
-
   const eat = useSelector((state: RootState) => state.eatReducer)
   const water = useSelector((state: RootState) => state.waterReducer)
   const cash = useSelector((state: RootState) => state.cashReducer)
@@ -36,7 +28,7 @@ const MinimapSection = () => {
               <div className="icon"><img src={SVG_water} /></div>
               <div className="progress-bar">
                 <svg fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <rect style={{width: `100%`}} rx="4.5" fill="#25A4FF" fill-opacity="0.43"/>
+                  <rect style={{width: `100%`}} rx="4.5" fill="#25A4FF" fillOpacity="0.43"/>
                   <rect style={{width: `${water}%`, transition: 'all 1s'}} rx="4.5" fill="#25A4FF"/>
                 </svg>
               </div>
@@ -45,7 +37,7 @@ const MinimapSection = () => {
               <div className="icon"><img src={SVG_burger} /></div>
               <div className="progress-bar">
                 <svg fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <rect style={{width: `100%`}} rx="4.5" fill="#FF8E3C" fill-opacity="0.43"/>
+                  <rect style={{width: `100%`}} rx="4.5" fill="#FF8E3C" fillOpacity="0.43"/>
                   <rect style={{width: `${eat}%`, transition: 'all 1s'}} rx="4.5" fill="#FF8E3C"/>
                 </svg>
               </div>
@@ -54,7 +46,7 @@ const MinimapSection = () => {
           <div className="minimap"></div>
         </div>
         <div className="player-info">
-          <span className="zone" id={zone}>{zone} ZONE</span>
+          { zone && (<span className="zone" id={zone}>{zone} ZONE</span>) }
           <div className="cash-micro">
             <div className="cash">
               <div className="icon">

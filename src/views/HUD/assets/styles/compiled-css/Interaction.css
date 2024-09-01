@@ -1,0 +1,77 @@
+.interaction {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+      -ms-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+  height: 2.8vw;
+  gap: 0.3vw;
+  color: #6ca7ff;
+  -webkit-animation: fadeInInteraction 0.7s ease forwards;
+          animation: fadeInInteraction 0.7s ease forwards;
+}
+.interaction .key {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100%;
+  width: 2.7vw;
+  background: rgba(20, 22, 20, 0.9);
+  border: 0.03vw solid rgba(255, 255, 255, 0.1);
+  text-shadow: 0 0 1vw #4f95ff;
+  border-radius: 0.5vw;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 1.1vw;
+  overflow: hidden;
+}
+.interaction .text-interaction {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100%;
+  background: rgba(20, 22, 20, 0.9);
+  border: 0.03vw solid rgba(255, 255, 255, 0.1);
+  text-shadow: 0 0 1vw #4f95ff;
+  padding: 0 1.5vw;
+  border-radius: 0.5vw;
+  text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 0.9vw;
+  overflow: hidden;
+}
+
+@-webkit-keyframes fadeInInteraction {
+  from {
+    bottom: -5vw;
+  }
+  to {
+    bottom: 0;
+  }
+}
+
+@keyframes fadeInInteraction {
+  from {
+    bottom: -5vw;
+  }
+  to {
+    bottom: 0;
+  }
+}

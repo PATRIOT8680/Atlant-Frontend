@@ -6,11 +6,11 @@ import MinimapSection from './components/MinimapSection'
 import ServerSection from './components/ServerSection'
 import Speedometer from './components/Speedometer'
 import TopSection from './components/TopSection'
+import Interaction from './components/Interaction'
 
 import Effect_right from './assets/img/Index/blur-server-section.svg'
 
 const HUD = () => {
-  const [activeSpeedometer, setActiveSpeedometer] = useState<boolean>(true)
 
   return(
     <>
@@ -22,12 +22,11 @@ const HUD = () => {
           <div className="right-content">
             <ServerSection />
             <Help />
-            { activeSpeedometer && (
-              <Speedometer />
-            ) }
+            <Speedometer />
           </div>
           <MinimapSection />
           <TopSection />
+          <Interaction />
         </div>
       </div>
     </>

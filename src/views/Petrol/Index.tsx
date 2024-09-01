@@ -2,7 +2,7 @@ import { useEffect, useState, createContext } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { RootState } from '../../reducer/rootReducer'
 import { petrolReducer } from '../../reducer/petrol/petrol'
-import { hidePetrol } from '../../actions/petrol'
+import { hidePetrol } from '../../actions/petrol/petrol'
 import './assets/styles/compiled-css/Index.css'
 
 import Petrol from './elements/Petrol'

@@ -1,5 +1,5 @@
-export const setActiveQuest = (text: string) => {
-  return { type: 'SET_ACTIVE_QUEST', payload: text };
+export const setActiveQuest = (nameQuest: string, descriptionQuest: string) => {
+  return { type: 'SET_ACTIVE_QUEST', nameQuest, descriptionQuest };
 };
 
 export const getActiveQuest = () => {

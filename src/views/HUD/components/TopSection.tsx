@@ -1,22 +1,22 @@
 import { useState } from 'react'
+import { useSelector } from 'react-redux'
+import { RootState } from '../../../reducer/rootReducer'
 import '../assets/styles/compiled-css/TopSection.css'
 
 import SVG_effect from '../assets/img/TopSection/effect.svg'
 
 const TopSection = () => {
   const getAllExp = (level: number) => {
-    return Math.pow(2, level) * 4
+    return level * 3 + 3
   }
 
-  const [activeLevel, setActiveLevel] = useState<number>(10)
-  const [activeExp, setActiveExp] = useState<number>(4096)
+  const payday = useSelector((state: RootState) => state.paydayReducer)
+
+  const [activeLevel, setActiveLevel] = useState<number>(payday.playerLevel)
+  const [activeExp, setActiveExp] = useState<number>(payday.playerExp)
   const [allExp, setAllExp] = useState(getAllExp(activeLevel))
 
   const nextLevel = activeLevel + 1
-
-  if (activeExp === allExp) {
-
-  }
 
   const handleExpChange = (newExp: number) => {
     setActiveExp(newExp)
@@ -30,31 +30,35 @@ const TopSection = () => {
 
   return(
     <>
-      <div className="top-section">
-        <div className="effect">
-          <img src={SVG_effect} />
-        </div>
-        <div className="level-blocks">
-          <span className="active-level">{activeLevel}</span>
-          <div className="progress-text">
-            <span className="text">{activeExp} EXP / {allExp} EXP</span>
-            <div className="progress-bar">
-              <svg fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect rx="4" fill="white" fill-opacity="0.27"/>
-                <rect
-                  rx="4"
-                  fill="#1372FF"
-                  style={{
-                    width: `${(activeExp / allExp) * 100}%`,
-                    transition: 'all 1s'
-                  }}
-                />
-              </svg>
-            </div>
+      { payday.active && (
+
+        <div style={{ zoom: '88%' }} className="top-section">
+          <div className="effect">
+            <img src={SVG_effect} />
           </div>
-          <span className={`next-level ${isLevelUp ? 'level-up' : ''}`}>{nextLevel}</span>
+          <div className="level-blocks">
+            <span className="active-level">{activeLevel}</span>
+            <div className="progress-text">
+              <span className="text">{activeExp} EXP / {allExp} EXP</span>
+              <div className="progress-bar">
+                <svg fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect rx="4" fill="white" fill-opacity="0.27"/>
+                  <rect
+                    rx="4"
+                    fill="#1372FF"
+                    style={{
+                      width: `${(activeExp / allExp) * 100}%`,
+                      transition: 'all 1s'
+                    }}
+                  />
+                </svg>
+              </div>
+            </div>
+            <span className={`next-level ${isLevelUp ? 'level-up' : ''}`}>{nextLevel}</span>
+          </div>
         </div>
-      </div>
+
+      ) }
     </>
   )
 }

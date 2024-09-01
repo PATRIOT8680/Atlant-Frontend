@@ -1,4 +1,4 @@
-export const setZone = (text: string) => {
+export const setZone = (text: 'safe' | 'danger') => {
   return { type: 'SET_ZONE', payload: text };
 };
 

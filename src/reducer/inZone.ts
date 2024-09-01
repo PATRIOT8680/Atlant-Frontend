@@ -1,4 +1,4 @@
-export const inZoneReducer = (state = 'safe', action: any) => {
+export const inZoneReducer = (state = '', action: any) => {
   switch (action.type) {
     case 'SET_ZONE':
       return action.payload;

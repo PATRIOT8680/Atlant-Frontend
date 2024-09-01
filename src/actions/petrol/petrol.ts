@@ -3,5 +3,6 @@ export const showPetrol = (petrolType: 'ltd' | 'ron' | 'xero', vehName: string, 
 };
 
 export const hidePetrol = () => {
+  mp.trigger('client.close.petrol')
   return { type: 'HIDE_PETROL' };
 };

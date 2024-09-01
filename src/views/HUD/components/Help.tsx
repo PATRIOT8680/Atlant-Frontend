@@ -3,7 +3,7 @@ import '../assets/styles/compiled-css/Help.css'
 const Help = () => {
   return(
     <>
-      <div className="help">
+      <div style={{ zoom: '85%' }} className="help">
         <ul className="help-list">
           <li className="key">
             <span className="text">Чат</span>

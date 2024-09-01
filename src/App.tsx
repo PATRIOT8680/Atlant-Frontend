@@ -1,5 +1,7 @@
+import { useEffect } from 'react'
 import { useSelector } from 'react-redux'
 import { RootState } from './reducer/rootReducer'
+import { useNotify } from './components/Notify/NotificationProvider'
 
 import './assets/styles/compiled-css/App.css'
 import './assets/fonts/Montserrat/stylesheet.css'
@@ -12,6 +14,13 @@ import HUD from './views/HUD/Index'
 const App = () => {
   const hudVisible = useSelector((state: RootState) => state.hudReducer.isVisible)
   const petrolVisible = useSelector((state: RootState) => state.petrolReducer.isVisible)
+  const sendNotifyReducer = useSelector((state: RootState) => state.sendNotifyReducer)
+
+  const sendNotify = useNotify()
+
+  if (sendNotifyReducer.message) {
+    sendNotify({ type: sendNotifyReducer.typeNotify, message: sendNotifyReducer.message, timer: sendNotifyReducer.timer })
+  }
 
   return(
     <>

@@ -13,7 +13,7 @@
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
-  gap: 1.5vw;
+  gap: 1.2vw;
   position: relative;
   right: 0;
 }
@@ -39,7 +39,7 @@
       -ms-flex-direction: row;
           flex-direction: row;
   gap: 0.7vw;
-  height: 2.337vw;
+  height: 2vw;
 }
 .server-section .server-info .statistics .block-stat {
   display: -webkit-box;
@@ -56,7 +56,7 @@
   height: 100%;
 }
 .server-section .server-info .statistics .block-stat:nth-child(2) .icon img {
-  width: 1vw;
+  width: 0.8vw;
 }
 .server-section .server-info .statistics .block-stat .icon {
   display: -webkit-box;
@@ -69,14 +69,14 @@
       -ms-flex-pack: center;
           justify-content: center;
   height: 100%;
-  width: 2.337vw;
+  width: 2vw;
   background: rgba(20, 22, 20, 0.9);
   border: 0.035vw solid rgba(255, 255, 255, 0.18);
   border-radius: 0.567vw;
 }
 .server-section .server-info .statistics .block-stat .icon img {
-  width: 1.2vw;
-  height: 1.2vw;
+  width: 1vw;
+  height: 1vw;
 }
 .server-section .server-info .statistics .block-stat .text {
   display: -webkit-box;
@@ -91,15 +91,15 @@
   height: 100%;
   padding: 0 1vw;
   background: rgba(20, 22, 20, 0.9);
-  border: 0.035vw solid rgba(255, 255, 255, 0.18);
-  border-radius: 0.567vw;
+  border: 0.03vw solid rgba(255, 255, 255, 0.1);
+  border-radius: 0.5vw;
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
-  font-size: 1vw;
+  font-size: 0.9vw;
   text-transform: uppercase;
 }
 .server-section .server-info .logotype-project {
-  width: 7vw;
+  width: 6vw;
 }
 .server-section .quests {
   display: -webkit-box;
@@ -111,10 +111,10 @@
           flex-direction: column;
   overflow: hidden;
   gap: 0.3vw;
-  width: 20vw;
+  width: 17vw;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  padding: 0.8vw 1vw;
+  padding: 0.6vw 1vw;
   background: rgba(20, 22, 20, 0.9);
   border-right: 0.4vw solid #1372ff;
   border-radius: 0.567vw 0 0 0.567vw;
@@ -122,7 +122,7 @@
 .server-section .quests .title-quest {
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
-  font-size: 1vw;
+  font-size: 0.9vw;
   text-transform: uppercase;
   color: #4f95ff;
   text-shadow: 0 0 27px rgba(79, 149, 255, 0.4);
@@ -130,8 +130,8 @@
 .server-section .quests .description-quest {
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
-  font-size: 0.85vw;
-  line-height: 138%;
+  font-size: 0.7vw;
+  line-height: 145%;
   color: #fff;
 }
 .server-section .weapon {
@@ -149,7 +149,7 @@
   gap: 1vw;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  padding: 1.2vw 1.5vw;
+  padding: 1vw 1.5vw;
   background: rgba(20, 22, 20, 0.9);
   border-right: 0.4vw solid #1372ff;
   border-radius: 0.567vw 0 0 0.567vw;
@@ -170,14 +170,14 @@
 .server-section .weapon .ammo-block .clip-ammo {
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
-  font-size: 1.5vw;
+  font-size: 1.3vw;
   text-transform: uppercase;
   color: #fff;
 }
 .server-section .weapon .ammo-block .all-ammo {
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
-  font-size: 1vw;
+  font-size: 0.9vw;
   text-transform: uppercase;
   color: rgba(255, 255, 255, 0.6);
 }
@@ -194,8 +194,8 @@
 }
 .server-section .weapon .img-block .effect {
   position: absolute;
-  width: 4vw;
-  height: 3vw;
+  width: 3vw;
+  height: 2vw;
   background: rgba(19, 114, 255, 0.5);
   -webkit-filter: blur(2vw);
           filter: blur(2vw);
@@ -206,5 +206,5 @@
   -webkit-transform: scale(-1, 1);
       -ms-transform: scale(-1, 1);
           transform: scale(-1, 1);
-  width: 7vw;
+  width: 5vw;
 }

@@ -2,20 +2,24 @@ import { createStore } from "redux";
 import { rootReducer } from "../reducer/rootReducer";
 
 // Components
-import { addCash, decrementCash } from "../actions/cash";
+import { setCash, getCash } from "../actions/cash";
 import { setDistrict, getDistrict } from "../actions/inDisctrict";
 import { setStreet, getStreet } from "../actions/inStreet";
 import { microphoneEnable, microphoneDisable } from "../actions/microphone";
+import { setZone, getZone } from "../actions/inZone";
 import { setEat, getEat } from "../actions/eat";
 import { setWater, getWater } from "../actions/water";
 import { setOnline, getOnline } from "../actions/online";
 import { setSid, getSid } from "../actions/sid";
 import { setActiveQuest, getActiveQuest } from "../actions/activeQuest";
-import { setSpeed, getSpeed } from "../actions/speed";
+import { showSpeedometer, hideSpeedometer } from "../actions/hud/speedometer";
+import { showActiveWeapon, hideActiveWeapon } from "../actions/hud/weapon";
+import { showPayday, hidePayday } from "../actions/hud/payday";
+import { sendNotify } from "../actions/sendNotify";
 
 // Interfaces
-import { showHud, hideHud } from "../actions/hud";
-import { showPetrol, hidePetrol } from "../actions/petrol";
+import { showHud, hideHud } from "../actions/hud/hud";
+import { showPetrol, hidePetrol } from "../actions/petrol/petrol";
 
 export const store = createStore(rootReducer);
 
@@ -28,9 +32,12 @@ declare global {
 window.App = {
   // Components
   cashReducer: {
-    addCash: (amount: number) => store.dispatch(addCash(amount)),
-    decrementCash: (amount: number) => store.dispatch(decrementCash(amount)),
+    setCash: (amount: number) => store.dispatch(setCash(amount)),
     getCash: () => store.getState().cashReducer,
+  },
+  inZoneReducer: {
+    setZone: (text: 'safe' | 'danger') => store.dispatch(setZone(text)),
+    getZone: () => store.getState().inZoneReducer,
   },
   inDistrictReducer: {
     setDistrict: (text: string) => store.dispatch(setDistrict(text)),
@@ -61,12 +68,23 @@ window.App = {
     getSid: () => store.getState().sidReducer
   },
   activeQuestReducer: {
-    setActiveQuest: (text: string) => store.dispatch(setActiveQuest(text)),
+    setActiveQuest: (nameQuest: string, descriptionQuest: string) => store.dispatch(setActiveQuest(nameQuest, descriptionQuest)),
     getActiveQuest: () => store.getState().activeQuestReducer
   },
-  speedReducer: {
-    setSpeed: (amount: number) => store.dispatch(setSpeed(amount)),
-    getSpeed: () => store.getState().speedReducer
+  speedometerReducer: {
+    showSpeedometer: (speed: number, rpm: number, actEngine: boolean, actLock: boolean, actSeatbelt: boolean, amountPetrol: number, mileage: number) => store.dispatch(showSpeedometer(speed, rpm, actEngine, actLock, actSeatbelt, amountPetrol, mileage)),
+    hideSpeedometer: () => store.dispatch(hideSpeedometer()),
+  },
+  activeWeaponReducer: {
+    showActiveWeapon: (hashWeapon: string, clipAmmo: number, allAmmo: number) => store.dispatch(showActiveWeapon(hashWeapon, clipAmmo, allAmmo)),
+    hideActiveWeapon: () => store.dispatch(hideActiveWeapon()),
+  },
+  paydayReducer: {
+    showPayday: (playerLevel: number, playerExp: number) => store.dispatch(showPayday(playerLevel, playerExp)),
+    hidePayday: () => store.dispatch(hidePayday()),
+  },
+  sendNotifyReducer: {
+    sendNotify: (typeNotify: string, message: string, timer: number) => store.dispatch(sendNotify(typeNotify, message, timer)),
   },
 
   // Interfaces
