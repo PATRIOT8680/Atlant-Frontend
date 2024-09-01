@@ -1,6 +1,4 @@
-import { useDispatch, useSelector } from 'react-redux'
-import { Provider } from 'react-redux'
-import { store } from './store/store'
+import { useSelector } from 'react-redux'
 import { RootState } from './reducer/rootReducer'
 
 import './assets/styles/compiled-css/App.css'
@@ -12,8 +10,8 @@ import DonatMenu from './views/Donat/Index'
 import HUD from './views/HUD/Index'
 
 const App = () => {
-  const hudVisible = useSelector((state: RootState) => state.hudReducer)
-  const petrolVisible = useSelector((state: RootState) => state.petrolReducer)
+  const hudVisible = useSelector((state: RootState) => state.hudReducer.isVisible)
+  const petrolVisible = useSelector((state: RootState) => state.petrolReducer.isVisible)
 
   return(
     <>

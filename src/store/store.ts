@@ -75,7 +75,7 @@ window.App = {
     hideHud: () => store.dispatch(hideHud()),
   },
   petrolReducer: {
-    showPetrol: () => store.dispatch(showPetrol()),
+    showPetrol: (petrolType: 'ltd' | 'ron' | 'xero', vehName: string, vehFuel: number, maxFuelVeh: number, typePetrolVeh: string) => store.dispatch(showPetrol(petrolType, vehName, vehFuel, maxFuelVeh, typePetrolVeh)),
     hidePetrol: () => store.dispatch(hidePetrol()),
   },
 };

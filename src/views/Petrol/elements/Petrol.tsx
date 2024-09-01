@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect, useContext } from 'react'
+import { useState, useRef, useEffect, useContext, FC } from 'react'
 import { useNotify } from '../../../components/Notify/NotificationProvider'
 import '../assets/styles/compiled-css/Petrol.css'
 
@@ -11,14 +11,20 @@ import { FlashBG } from './FilterBG'
 
 import Select_svg from '../assets/img/select.svg'
 
-const Petrol = () => {
+interface IPetrol {
+  selectedVeh: string,
+  vehFuel: number,
+  maxFuel: number,
+  typePetrolVeh: string
+}
+
+const Petrol: FC<IPetrol> = ({ selectedVeh, vehFuel, maxFuel, typePetrolVeh }) => {
   const [selectedType, setSelectedType] = useState<string | null>(selectPetrolData[0].type)
-  const [selectedVeh, setSelectedVeh] = useState<string | null>('camry')
   const [selectedAmount, setSelectedAmount] = useState<number>(10)
   const [selectedPay, setSelectedPay] = useState<string>('cash')
-  const { selectedPetrolName, selectedPetrolShortName } = useContext(PetrolIndexContext)
+  const { selectedPetrolShortName } = useContext(PetrolIndexContext)
 
-  const sendNotify = useNotify()
+  let maxPetrolAmount = maxFuel - vehFuel
 
   const sliderRef = useRef<HTMLInputElement>(null)
   const handleAmountChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -40,7 +46,7 @@ const Petrol = () => {
   }
 
   const handleFullFuel = () => {
-    setSelectedAmount(selectedVehData?.maxFuel || 0)
+    setSelectedAmount(maxPetrolAmount)
   }
 
   const totalPrice = getSelectedPrice() * selectedAmount
@@ -49,76 +55,9 @@ const Petrol = () => {
     setSelectedPay(type)
   }
 
-  const handleSubmit = async () => {
-    /* Отправка данных при нажатии на кнопку 'Заправить / зарядить' */
-    //try {
-    //  if (selectedType !== selectedVehData?.typePetrol) {
-    //    return console.error(`Транспорт ${selectedVeh} не поддерживает заправку ${selectedType}`)
-    //  }
-
-    //  const response = await fetch('api/petrol', {
-    //    method: 'POST',
-    //    headers: { 'Content-Type': 'application/json' },
-    //    body: JSON.stringify({
-    //      selectedType,
-    //      selectedAmount,
-    //      totalPrice,
-    //      selectedPay
-    //    })
-    //  })
-
-    //  if (response.ok) {
-    //    sendNotify({type: 'SUCCESS', message: 'Вы успешно заправились!', timer: 4000})
-    //  } else {
-    //    const errorData = await response.json()
-    //    console.error(`Ошибка заправки / зарядки: ${errorData.error}`)
-    //  }
-
-    //} catch (error) {
-    //  console.error(`Ошибка при отправке данных: ${error}`)
-    //}
+  const handleSubmitPay = () => {
+    mp.trigger('client.close.petrol', selectedType, selectedAmount, selectedPay)
   }
-
-  /* Получение имени транспорта */
-  useEffect(() => {
-    fetch('api/vehicles', {
-      method: 'GET'
-    })
-      .then((response) => response.json())
-      .then((data) => {
-        const validVehicle = vehiclesData.find(
-          (vehicle) => vehicle.shortName === data.shortName
-        )
-
-        if(validVehicle) {
-          setSelectedVeh(validVehicle.shortName)
-        } else {
-          console.error(`Ошибка в получении имени транспорта ${data.shortName} с базы данных (shortName)`)
-        }
-      })
-      .catch((error) => {
-        console.error(`Ошибка при получении данных с сервера (api/vehicles): ${error}`)
-      })
-
-    fetch('api/petrol/price', {
-      method: 'GET'
-    })
-      .then((response) => response.json())
-      .then((data) => {
-        const validVehicle = vehiclesData.find(
-          (vehicle) => vehicle.shortName === data.shortName
-        )
-
-        if(validVehicle) {
-          setSelectedVeh(validVehicle.shortName)
-        } else {
-          console.error(`Ошибка в получении имени транспорта ${data.shortName} с базы данных (shortName)`)
-        }
-      })
-      .catch((error) => {
-        console.error(`Ошибка при получении данных с сервера (api/vehicles): ${error}`)
-      })
-  }, [])
 
   return(
     <>
@@ -144,7 +83,7 @@ const Petrol = () => {
                   <span className="car-name">{selectedVehData?.fullName}</span>
                   <div className="type-petrol">
                     <span className="info">Транспорт поддерживает:</span>
-                    <span className="type" id={selectedVehData?.typePetrol}>{selectedVehData?.typePetrol}</span>
+                    <span className="type" id={typePetrolVeh}>{typePetrolVeh}</span>
                   </div>
                 </div>
               </div>
@@ -189,7 +128,7 @@ const Petrol = () => {
                 </div>
                 <input 
                   className='range' type="range"
-                  min={1} max={selectedVehData?.maxFuel}
+                  min={1} max={maxPetrolAmount}
                   ref={sliderRef}
                   value={selectedAmount}
                   onChange={handleAmountChange}
@@ -217,7 +156,7 @@ const Petrol = () => {
             </div>
           </div>
 
-          <button className="pay-petrol" onClick={handleSubmit}>
+          <button className="pay-petrol" onClick={handleSubmitPay}>
             {selectedType === 'gas' || selectedType === 'diesel' ? 'Заправить' : 'Зарядить'} на ${totalPrice}
           </button>
           

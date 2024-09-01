@@ -1,9 +1,16 @@
-export const petrolReducer = (state = false, action: any) => {
+export const petrolReducer = (state = { isVisible: false, petrolType: 'ron', vehName: 'camry', vehFuel: 20, maxFuelVeh: 120, typePetrolVeh: 'gas' }, action: any) => {
   switch (action.type) {
     case 'SHOW_PETROL':
-      return true;
+      return {
+        isVisible: true,
+        petrolType: action.petrolType,
+        vehName: action.vehName,
+        vehFuel: action.vehFuel,
+        maxFuelVeh: action.maxFuelVeh,
+        typePetrolVeh: action.typePetrolVeh
+      }
     case 'HIDE_PETROL':
-      return false;
+      return { isVisible: false };
     default:
       return state;
   }

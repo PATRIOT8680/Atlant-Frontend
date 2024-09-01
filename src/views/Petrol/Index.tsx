@@ -1,24 +1,32 @@
 import { useEffect, useState, createContext } from 'react'
-import { showHud } from '../../actions/hud'
+import { useSelector, useDispatch } from 'react-redux'
+import { RootState } from '../../reducer/rootReducer'
+import { petrolReducer } from '../../reducer/petrol/petrol'
+import { hidePetrol } from '../../actions/petrol'
 import './assets/styles/compiled-css/Index.css'
 
 import Petrol from './elements/Petrol'
 import Shop from './elements/Shop'
-import { petrolsName } from '../../configs/Petrol/petrols.data'
 
 export const PetrolIndexContext = createContext({
-  selectedPetrolName: '',
   selectedPetrolShortName: ''
 })
 
 const IndexPetrol = () => {
-  const [selectedPetrolName, setSelectedPetrolName] = useState('Xero Gas') 
-  const [selectedPetrolShortName, setSelectedPetrolShortName] = useState('ron')
+  const petrolStates = useSelector((state: RootState) => state.petrolReducer)
+
+  const [selectedPetrolShortName, setSelectedPetrolShortName] = useState(petrolStates.petrolType)
+  const [selectedVeh, setSelectedVeh] = useState(petrolStates.vehName)
+  const [vehFuel, setVehFuel] = useState(petrolStates.vehFuel)
+  const [maxFuelVeh, setMaxFuel] = useState(petrolStates.maxFuelVeh)
+  const [typePetrolVeh, setTypePetrolVeh] = useState(petrolStates.typePetrolVeh)
+  const dispatch = useDispatch()
+  
 
   useEffect(() => {
     const handleCloseMenu = (event: KeyboardEvent) => {
       if (event.key === 'Escape') {
-        showHud()
+        dispatch(hidePetrol())
       }
     }
 
@@ -26,41 +34,16 @@ const IndexPetrol = () => {
     return () => window.removeEventListener('keydown', handleCloseMenu)
   }, [])
 
-  /* Получение типа заправки с backend */
-  //useEffect(() => {
-  //  fetch('api/petrol', {
-  //    method: 'GET'
-  //  })
-  //    .then((response) => response.json())
-  //    .then((data) => {
-  //      const validPetrol = petrolsName.find(
-  //        (petrol) => petrol.shortName === data.shortName
-  //      );
-  //      if (validPetrol) {
-  //        setSelectedPetrolName(validPetrol.name)
-  //        setSelectedPetrolShortName(data.shortName)
-  //      } else {
-  //        console.error(
-  //          'Данный тип заправки не существует в petrols.data.ts!'
-  //        );
-  //      }
-  //    })
-  //    .catch((err) => {
-  //      console.error(`Ошибка при получении данных с сервера: ${err}`)
-  //    })
-  //}, [])
-
   return(
     <>
       <div className="index-petrol">
-        <span className='esc' onClick={() => showHud()}>ESC</span>
+        <span className='esc' onClick={() => dispatch(hidePetrol())}>ESC</span>
         <div className="containers">
           <PetrolIndexContext.Provider 
             value={{
-              selectedPetrolName,
               selectedPetrolShortName
             }}>
-            <Petrol />
+            <Petrol selectedVeh={selectedVeh} vehFuel={vehFuel} maxFuel={maxFuelVeh} typePetrolVeh={typePetrolVeh} />
             <Shop />
           </PetrolIndexContext.Provider>
         </div>
