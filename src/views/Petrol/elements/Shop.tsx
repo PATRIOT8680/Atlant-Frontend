@@ -1,4 +1,4 @@
-import { useContext } from 'react'
+import { useContext, useState } from 'react'
 import '../assets/styles/compiled-css/Shop.css'
 
 import { PetrolIndexContext } from '../Index'
@@ -11,6 +11,12 @@ import Card_svg from '../assets/img/card-shop.svg'
 
 const Shop = () => {
   const { selectedPetrolShortName } = useContext(PetrolIndexContext)
+  const [selectedProduct, setSelectedProduct] = useState<string | null>()
+  const [paymentType, setPaymentType] = useState<string | null>()
+
+  const handlePayProduct = () => {
+    mp.trigger('buy.product.petrol', selectedProduct, paymentType)
+  }
 
   return(
     <>
@@ -33,18 +39,18 @@ const Shop = () => {
           </div>
           <div className="all-products">
             {productsData.map((product, index) => (
-              <div className="product" key={index} id={product.shortName}>
+              <div className="product" key={index} id={product.shortName} onClick={() => setSelectedProduct(product.shortName)}>
                 <div className="header">
                   <span className="name">{product.fullName}</span>
                   <span className="price">${product.price}</span>
                 </div>
                 <img className='product-img' src={`/src/assets/img/petrolShop/${product.shortName}.png`} />
                 <div className="pay-select">
-                  <div className='pay' id='cash'>
+                  <div className='pay' id='cash' onClick={() => {setPaymentType('cash'); handlePayProduct()}}>
                     <img className='icon' src={Cash_svg} />
                     <span className="title">Наличными</span>
                   </div>
-                  <div className='pay' id='card'>
+                  <div className='pay' id='card' onClick={() => {setPaymentType('card'); handlePayProduct()}}>
                     <img className='icon' src={Card_svg} />
                     <span className="title">Картой</span>
                   </div>

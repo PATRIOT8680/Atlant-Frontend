@@ -15,6 +15,7 @@ import { speedometerReducer } from './hud/speedometer';
 import { activeWeaponReducer } from './hud/weapon';
 import { paydayReducer } from './hud/payday';
 import { sendNotifyReducer } from './sendNotify';
+import { interactionActiveReducer } from './hud/interaction';
 
 // Interface Reducer
 import { hudReducer } from '../reducer/hud/hud';
@@ -36,6 +37,7 @@ export type RootState = {
   activeWeaponReducer: ReturnType<typeof activeWeaponReducer>;
   paydayReducer: ReturnType<typeof paydayReducer>
   sendNotifyReducer: ReturnType<typeof sendNotifyReducer>
+  interactionActiveReducer: ReturnType<typeof interactionActiveReducer>
 
   // Interface
   hudReducer: ReturnType<typeof hudReducer>;
@@ -58,6 +60,7 @@ export const rootReducer = combineReducers({
   activeWeaponReducer,
   paydayReducer,
   sendNotifyReducer,
+  interactionActiveReducer,
 
   // Interface
   hudReducer,

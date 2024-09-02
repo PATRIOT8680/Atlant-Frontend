@@ -16,6 +16,7 @@ import { showSpeedometer, hideSpeedometer, setSpeed, setRpm, setPetrol, setActEn
 import { showActiveWeapon, hideActiveWeapon } from "../actions/hud/weapon";
 import { showPayday, hidePayday } from "../actions/hud/payday";
 import { sendNotify } from "../actions/sendNotify";
+import { interactionEnable, interactionDisable } from "../actions/hud/interaction";
 
 // Interfaces
 import { showHud, hideHud } from "../actions/hud/hud";
@@ -92,6 +93,10 @@ window.App = {
   },
   sendNotifyReducer: {
     sendNotify: (typeNotify: string, message: string, timer: number) => store.dispatch(sendNotify(typeNotify, message, timer)),
+  },
+  interactionActiveReducer: {
+    interactionEnable: () => store.dispatch(interactionEnable()),
+    interactionDisable: () => store.dispatch(interactionDisable()),
   },
 
   // Interfaces
