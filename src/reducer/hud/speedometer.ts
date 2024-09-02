@@ -3,6 +3,7 @@ export interface ISpeedometer {
   speed: number,
   rpm: number,
   petrol: number,
+  maxPetrol: number,
   actEngine: boolean,
   actLock: boolean,
   actSeatbelt: boolean,
@@ -12,8 +13,9 @@ export interface ISpeedometer {
 const initialState: ISpeedometer = {
   isVisible: true,
   speed: 98,
-  rpm: 3,
-  petrol: 49,
+  rpm: 100,
+  petrol: 100,
+  maxPetrol: 150,
   actEngine: true,
   actLock: false,
   actSeatbelt: false,
@@ -31,6 +33,8 @@ export const speedometerReducer = (state: ISpeedometer = initialState, action: a
     case 'SET_RPM':
       return { ...state, rpm: action.payload }
     case 'SET_PETROL':
+      return { ...state, petrol: action.payload }
+    case 'SET_MAX_PETROL':
       return { ...state, petrol: action.payload }
     case 'SET_ACTIVE_ENGINE':
       return { ...state, actEngine: action.payload }

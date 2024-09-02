@@ -46,6 +46,9 @@
   overflow: visible;
   margin-top: 0.2vw;
 }
+.speedometer .speed-rpm-petrol .rpm svg .rpm-value {
+  stroke-dasharray: 1086;
+}
 .speedometer .speed-rpm-petrol .petrol-in-veh {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -72,6 +75,9 @@
   -ms-transform: rotate(3deg);
   transform: rotate(5deg);
   stroke-width: 0.8vw;
+}
+.speedometer .speed-rpm-petrol .petrol-in-veh svg .petrol-value {
+  stroke-dasharray: 136;
 }
 .speedometer .speed-rpm-petrol .petrol-in-veh .icon {
   margin-right: 5vw;

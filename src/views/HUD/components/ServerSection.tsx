@@ -37,7 +37,7 @@ const ServerSection = () => {
           <div className="quests">
             <div className="header-block">
               <span className="title-quest">{ activeQuest.nameQuest }</span>
-              <div className="to-location"><img src={SVG_location} /></div>
+              <div className="to-location" ><img src={SVG_location} /></div>
             </div>
             <span className="description-quest">{ activeQuest.descriptionQuest }</span>
           </div>

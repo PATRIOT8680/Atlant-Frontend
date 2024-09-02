@@ -12,7 +12,7 @@ import { setWater, getWater } from "../actions/water";
 import { setOnline, getOnline } from "../actions/online";
 import { setSid, getSid } from "../actions/sid";
 import { setActiveQuest, getActiveQuest } from "../actions/activeQuest";
-import { showSpeedometer, hideSpeedometer, setSpeed, setRpm, setPetrol, setActEngine, setActLock, setActSeatbelt, setMileage } from "../actions/hud/speedometer";
+import { showSpeedometer, hideSpeedometer, setSpeed, setRpm, setPetrol, setMaxPetrol, setActEngine, setActLock, setActSeatbelt, setMileage } from "../actions/hud/speedometer";
 import { showActiveWeapon, hideActiveWeapon } from "../actions/hud/weapon";
 import { showPayday, hidePayday } from "../actions/hud/payday";
 import { sendNotify } from "../actions/sendNotify";
@@ -78,6 +78,7 @@ window.App = {
     setSpeed: (amount: number) => store.dispatch(setSpeed(amount)),
     setRpm: (amount: number) => store.dispatch(setRpm(amount)),
     setPetrol: (amount: number) => store.dispatch(setPetrol(amount)),
+    setMaxPetrol: (amount: number) => store.dispatch(setMaxPetrol(amount)),
     setActEngine: (active: boolean) => store.dispatch(setActEngine(active)),
     setActLock: (active: boolean) => store.dispatch(setActLock(active)),
     setActSeatbelt: (active: boolean) => store.dispatch(setActSeatbelt(active)),

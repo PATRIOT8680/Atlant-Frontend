@@ -18,6 +18,10 @@ export const setPetrol = (petrol: number) => {
   return { type: 'SET_PETROL', payload: petrol }
 }
 
+export const setMaxPetrol = (petrol: number) => {
+  return { type: 'SET_MAX_PETROL', payload: petrol }
+}
+
 export const setActEngine = (actEngine: boolean) => {
   return { type: 'SET_ACTIVE_ENGINE', payload: actEngine }
 }
