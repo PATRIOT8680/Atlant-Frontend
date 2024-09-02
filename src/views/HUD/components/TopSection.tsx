@@ -26,7 +26,7 @@ const TopSection = () => {
     }
   }
 
-  const isLevelUp = activeExp >= allExp
+  const isLevelUp = payday.playerExp >= allExp
 
   return(
     <>
@@ -47,7 +47,7 @@ const TopSection = () => {
                     rx="4"
                     fill="#1372FF"
                     style={{
-                      width: `${(activeExp / allExp) * 100}%`,
+                      width: `${(payday.playerExp / allExp) * 100}%`,
                       transition: 'all 1s'
                     }}
                   />

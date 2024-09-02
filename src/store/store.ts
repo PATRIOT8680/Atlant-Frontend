@@ -12,7 +12,7 @@ import { setWater, getWater } from "../actions/water";
 import { setOnline, getOnline } from "../actions/online";
 import { setSid, getSid } from "../actions/sid";
 import { setActiveQuest, getActiveQuest } from "../actions/activeQuest";
-import { showSpeedometer, hideSpeedometer } from "../actions/hud/speedometer";
+import { showSpeedometer, hideSpeedometer, setSpeed, setRpm, setPetrol, setActEngine, setActLock, setActSeatbelt, setMileage } from "../actions/hud/speedometer";
 import { showActiveWeapon, hideActiveWeapon } from "../actions/hud/weapon";
 import { showPayday, hidePayday } from "../actions/hud/payday";
 import { sendNotify } from "../actions/sendNotify";
@@ -72,8 +72,15 @@ window.App = {
     getActiveQuest: () => store.getState().activeQuestReducer
   },
   speedometerReducer: {
-    showSpeedometer: (speed: number, rpm: number, actEngine: boolean, actLock: boolean, actSeatbelt: boolean, amountPetrol: number, mileage: number) => store.dispatch(showSpeedometer(speed, rpm, actEngine, actLock, actSeatbelt, amountPetrol, mileage)),
+    showSpeedometer: () => store.dispatch(showSpeedometer()),
     hideSpeedometer: () => store.dispatch(hideSpeedometer()),
+    setSpeed: (amount: number) => store.dispatch(setSpeed(amount)),
+    setRpm: (amount: number) => store.dispatch(setRpm(amount)),
+    setPetrol: (amount: number) => store.dispatch(setPetrol(amount)),
+    setActEngine: (active: boolean) => store.dispatch(setActEngine(active)),
+    setActLock: (active: boolean) => store.dispatch(setActLock(active)),
+    setActSeatbelt: (active: boolean) => store.dispatch(setActSeatbelt(active)),
+    setMileage: (amount: number) => store.dispatch(setMileage(amount)),
   },
   activeWeaponReducer: {
     showActiveWeapon: (hashWeapon: string, clipAmmo: number, allAmmo: number) => store.dispatch(showActiveWeapon(hashWeapon, clipAmmo, allAmmo)),

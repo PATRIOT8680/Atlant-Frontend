@@ -5,6 +5,7 @@ $Montserrat: "Montserrat", sans-serif
   position: relative
   align-items: center
   margin: 8vw
+  animation: fadeInSpeedometer 1.2s ease forwards
 
   .speed-rpm-petrol
     position: absolute
@@ -119,3 +120,9 @@ $Montserrat: "Montserrat", sans-serif
       font-size: 0.8vw
       font-weight: 600
       opacity: 0.8
+
+@keyframes fadeInSpeedometer
+  from
+    right: -20vw
+  to
+    right: 0

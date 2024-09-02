@@ -119,7 +119,57 @@
   border-right: 0.4vw solid #1372ff;
   border-radius: 0.567vw 0 0 0.567vw;
 }
-.server-section .quests .title-quest {
+.server-section .quests .header-block {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.server-section .quests .header-block .to-location {
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 1.6vw;
+  height: 1.6vw;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 0.3vw;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.server-section .quests .header-block .to-location:hover {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  background: rgba(255, 255, 255, 0.2);
+}
+.server-section .quests .header-block .to-location:hover img {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  opacity: 1;
+}
+.server-section .quests .header-block .to-location img {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  opacity: 0.8;
+  width: 0.6vw;
+}
+.server-section .quests .header-block .title-quest {
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
   font-size: 0.9vw;

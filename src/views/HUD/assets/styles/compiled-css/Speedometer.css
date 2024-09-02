@@ -7,6 +7,8 @@
       -ms-flex-align: center;
           align-items: center;
   margin: 8vw;
+  -webkit-animation: fadeInSpeedometer 1.2s ease forwards;
+          animation: fadeInSpeedometer 1.2s ease forwards;
 }
 .speedometer .speed-rpm-petrol {
   position: absolute;
@@ -156,4 +158,22 @@
   font-size: 0.8vw;
   font-weight: 600;
   opacity: 0.8;
+}
+
+@-webkit-keyframes fadeInSpeedometer {
+  from {
+    right: -20vw;
+  }
+  to {
+    right: 0;
+  }
+}
+
+@keyframes fadeInSpeedometer {
+  from {
+    right: -20vw;
+  }
+  to {
+    right: 0;
+  }
 }

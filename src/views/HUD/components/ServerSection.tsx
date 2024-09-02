@@ -8,6 +8,7 @@ import { weaponsData } from '../../../configs/HUD/weapons.data'
 import SVG_online from '../assets/img/ServerSection/online.svg'
 import SVG_sid from '../assets/img/ServerSection/sid.svg'
 import SVG_logotype from '../assets/img/ServerSection/logotype.svg'
+import SVG_location from '../assets/img/ServerSection/location.svg'
 
 const ServerSection = () => {
   const online = useSelector((state: RootState) => state.onlineReducer)
@@ -36,6 +37,7 @@ const ServerSection = () => {
           <div className="quests">
             <div className="header-block">
               <span className="title-quest">{ activeQuest.nameQuest }</span>
+              <div className="to-location"><img src={SVG_location} /></div>
             </div>
             <span className="description-quest">{ activeQuest.descriptionQuest }</span>
           </div>
