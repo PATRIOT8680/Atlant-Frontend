@@ -1,0 +1,145 @@
+#BOTTOM_LEFT {
+  bottom: 0;
+  left: 0;
+}
+#BOTTOM_LEFT .effect-bg {
+  left: -4vw;
+}
+#BOTTOM_LEFT .header-block {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+#BOTTOM_LEFT .dialog-text {
+  text-align: left;
+}
+#BOTTOM_LEFT .btns-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+#BOTTOM_CENTER {
+  bottom: 0;
+  left: 50%;
+  width: 50vw;
+  -webkit-transform: translate(-50%, 0);
+      -ms-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+}
+#BOTTOM_CENTER .effect-bg {
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+      -ms-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+}
+#BOTTOM_CENTER .header-block {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+#BOTTOM_RIGHT {
+  bottom: 0;
+  right: 0;
+}
+#BOTTOM_RIGHT .effect-bg {
+  right: -4vw;
+}
+#BOTTOM_RIGHT .header-block {
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+#BOTTOM_RIGHT .dialog-text {
+  text-align: right;
+}
+#BOTTOM_RIGHT .btns-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.dialog {
+  position: absolute;
+  width: 40vw;
+  color: red;
+}
+.dialog .effect-bg {
+  position: absolute;
+  width: 60vw;
+  height: 45vw;
+  bottom: -10vw;
+  background: rgba(19, 28, 51, 0.8);
+  -webkit-filter: blur(11vw);
+          filter: blur(11vw);
+  border-radius: 2vw;
+  z-index: 1;
+}
+.dialog .content-inside {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1vw;
+  position: relative;
+  margin: 1.5vw 1.5vw;
+  z-index: 2;
+}
+.dialog .content-inside .header-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-family: "Montserrat", sans-serif;
+  gap: 0.3vw;
+}
+.dialog .content-inside .header-block .npc-name {
+  font-size: 1.8vw;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #74abff;
+}
+.dialog .content-inside .header-block .npc-status {
+  font-size: 0.8vw;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: white;
+  background: rgba(255, 255, 255, 0.16);
+  border-radius: 0.3vw;
+  padding: 0.5vw 0.7vw;
+}
+.dialog .content-inside .dialog-text {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.1vw;
+  font-weight: 500;
+  color: white;
+  line-height: 145%;
+}
+.dialog .content-inside .btns-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  gap: 0.5vw;
+  width: 100%;
+}
+.dialog .content-inside .btns-block .btn {
+  height: 3.3vw;
+}

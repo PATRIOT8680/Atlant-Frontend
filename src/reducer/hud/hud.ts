@@ -1,4 +1,4 @@
-export const hudReducer = (state = { isVisible: true }, action: any) => {
+export const hudReducer = (state = { isVisible: false }, action: any) => {
   switch (action.type) {
     case 'SHOW_HUD':
       return { isVisible: true };

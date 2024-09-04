@@ -21,6 +21,9 @@ import { interactionEnable, interactionDisable } from "../actions/hud/interactio
 // Interfaces
 import { showHud, hideHud } from "../actions/hud/hud";
 import { showPetrol, hidePetrol } from "../actions/petrol/petrol";
+import { showDialog, hideDialog } from "../actions/dialog/dialog";
+
+import { DialogPosition } from "../actions/dialog/dialog";
 
 export const store = createStore(rootReducer);
 
@@ -109,4 +112,8 @@ window.App = {
     showPetrol: (petrolType: 'ltd' | 'ron' | 'xero', vehName: string, vehFuel: number, maxFuelVeh: number, typePetrolVeh: string) => store.dispatch(showPetrol(petrolType, vehName, vehFuel, maxFuelVeh, typePetrolVeh)),
     hidePetrol: () => store.dispatch(hidePetrol()),
   },
+  dialogReducer: {
+    showDialog: (npcName: string, npcStatus: string, dialogText: string, buttons: { text: string, id: string, onClick: () => void }[], position: DialogPosition) => store.dispatch(showDialog(npcName, npcStatus, dialogText, buttons, position)),
+    hideDialog: () => store.dispatch(hideDialog())
+  }
 };
