@@ -22,6 +22,7 @@ import { interactionEnable, interactionDisable } from "../actions/hud/interactio
 import { showHud, hideHud } from "../actions/hud/hud";
 import { showPetrol, hidePetrol } from "../actions/petrol/petrol";
 import { showDialog, hideDialog } from "../actions/dialog/dialog";
+import { showInteractionPlayer, hideInteractionPlayer } from "../actions/interactionPlayer/interactionPlayer";
 
 import { DialogPosition } from "../actions/dialog/dialog";
 
@@ -115,5 +116,9 @@ window.App = {
   dialogReducer: {
     showDialog: (npcName: string, npcStatus: string, dialogText: string, buttons: { text: string, id: string, onClick: () => void }[], position: DialogPosition) => store.dispatch(showDialog(npcName, npcStatus, dialogText, buttons, position)),
     hideDialog: () => store.dispatch(hideDialog())
+  },
+  interactionPlayerReducer: {
+    showInteractionPlayer: (inFraction: boolean, realtyStatus: boolean) => store.dispatch(showInteractionPlayer(inFraction, realtyStatus)),
+    hideInteractionPlayer: () => store.dispatch(hideInteractionPlayer())
   }
 };

@@ -21,6 +21,7 @@ import { interactionActiveReducer } from './hud/interaction';
 import { hudReducer } from '../reducer/hud/hud';
 import { petrolReducer } from './petrol/petrol';
 import { dialogReducer } from './dialog/dialog';
+import { interactionPlayerReducer } from './interactionPlayer/interactionPlayer';
 
 export type RootState = {
   // Components
@@ -43,7 +44,8 @@ export type RootState = {
   // Interface
   hudReducer: ReturnType<typeof hudReducer>;
   petrolReducer: ReturnType<typeof petrolReducer>;
-  dialogReducer: ReturnType<typeof dialogReducer>
+  dialogReducer: ReturnType<typeof dialogReducer>;
+  interactionPlayerReducer: ReturnType<typeof interactionPlayerReducer>
 };
 
 export const rootReducer = combineReducers({
@@ -67,5 +69,6 @@ export const rootReducer = combineReducers({
   // Interface
   hudReducer,
   petrolReducer,
-  dialogReducer
+  dialogReducer,
+  interactionPlayerReducer
 });

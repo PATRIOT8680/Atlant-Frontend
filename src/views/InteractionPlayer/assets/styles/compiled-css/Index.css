@@ -1,0 +1,334 @@
+.interaction-player {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+.interaction-player .hover-section {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.8vw;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.interaction-player .hover-section.act {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  color: #4892ff;
+}
+.interaction-player svg {
+  width: 35vw;
+  height: 35vw;
+}
+.interaction-player svg .center-circle {
+  cursor: pointer;
+}
+.interaction-player svg .center-circle circle {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  fill: #131C33;
+  stroke-width: 0.5vw;
+  stroke: #333d58;
+}
+.interaction-player svg .center-circle:hover circle {
+  fill: rgb(19, 28, 51);
+  stroke-width: 0.5vw;
+  stroke: #5197fe;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.interaction-player svg .center-circle.hover-sec circle {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  stroke-width: 0.5vw;
+  stroke: #1372ff;
+}
+.interaction-player svg .center-circle.hover-sec circle:hover {
+  background: none;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.interaction-player svg #interaction {
+  cursor: pointer;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.interaction-player svg #interaction:hover path {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  fill: #1372FF;
+}
+.interaction-player svg .title-interaction {
+  font-size: 77%;
+}
+.interaction-player svg .trade-items .text-icon {
+  -webkit-transform: translate(13.3%, 27.5%);
+      -ms-transform: translate(13.3%, 27.5%);
+          transform: translate(13.3%, 27.5%);
+}
+.interaction-player svg .trade-items .text-icon .icon-interaction {
+  width: 2vw;
+}
+.interaction-player svg .trade-items .text-icon .title-interaction {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  -webkit-transform: translate(1vw, 4.3vw);
+      -ms-transform: translate(1vw, 4.3vw);
+          transform: translate(1vw, 4.3vw);
+}
+.interaction-player svg .documents .text-icon {
+  -webkit-transform: translate(39.9%, 7%);
+      -ms-transform: translate(39.9%, 7%);
+          transform: translate(39.9%, 7%);
+}
+.interaction-player svg .documents .text-icon .icon-interaction {
+  width: 2vw;
+}
+.interaction-player svg .documents .text-icon .title-interaction {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  -webkit-transform: translate(0.8vw, 4.3vw);
+      -ms-transform: translate(0.8vw, 4.3vw);
+          transform: translate(0.8vw, 4.3vw);
+}
+.interaction-player svg .social .text-icon {
+  -webkit-transform: translate(71.4%, 12.5%);
+      -ms-transform: translate(71.4%, 12.5%);
+          transform: translate(71.4%, 12.5%);
+}
+.interaction-player svg .social .text-icon .icon-interaction {
+  width: 2vw;
+}
+.interaction-player svg .social .text-icon .title-interaction {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  -webkit-transform: translate(0.8vw, 4.3vw);
+      -ms-transform: translate(0.8vw, 4.3vw);
+          transform: translate(0.8vw, 4.3vw);
+}
+.interaction-player svg .cash .text-icon {
+  -webkit-transform: translate(86.4%, 42.5%);
+      -ms-transform: translate(86.4%, 42.5%);
+          transform: translate(86.4%, 42.5%);
+}
+.interaction-player svg .cash .text-icon .icon-interaction {
+  width: 2vw;
+}
+.interaction-player svg .cash .text-icon .title-interaction {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  -webkit-transform: translate(0.8vw, 4.3vw);
+      -ms-transform: translate(0.8vw, 4.3vw);
+          transform: translate(0.8vw, 4.3vw);
+}
+.interaction-player svg .acquaint .text-icon {
+  -webkit-transform: translate(72.4%, 71.5%);
+      -ms-transform: translate(72.4%, 71.5%);
+          transform: translate(72.4%, 71.5%);
+}
+.interaction-player svg .acquaint .text-icon .icon-interaction {
+  width: 2vw;
+}
+.interaction-player svg .acquaint .text-icon .title-interaction {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  -webkit-transform: translate(0.8vw, 4.3vw);
+      -ms-transform: translate(0.8vw, 4.3vw);
+          transform: translate(0.8vw, 4.3vw);
+}
+.interaction-player svg .home .text-icon {
+  -webkit-transform: translate(40.4%, 81.5%);
+      -ms-transform: translate(40.4%, 81.5%);
+          transform: translate(40.4%, 81.5%);
+}
+.interaction-player svg .home .text-icon .icon-interaction {
+  width: 2vw;
+}
+.interaction-player svg .home .text-icon .title-interaction {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  -webkit-transform: translate(0.8vw, 4.3vw);
+      -ms-transform: translate(0.8vw, 4.3vw);
+          transform: translate(0.8vw, 4.3vw);
+}
+.interaction-player svg .fraction .text-icon {
+  -webkit-transform: translate(14.4%, 59.5%);
+      -ms-transform: translate(14.4%, 59.5%);
+          transform: translate(14.4%, 59.5%);
+}
+.interaction-player svg .fraction .text-icon .icon-interaction {
+  width: 3.9%;
+}
+.interaction-player svg .fraction .text-icon .title-interaction {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  -webkit-transform: translate(0.8vw, 4.3vw);
+      -ms-transform: translate(0.8vw, 4.3vw);
+          transform: translate(0.8vw, 4.3vw);
+}
+.interaction-player .selections-interaction {
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 53vw;
+  height: 53vw;
+  border-radius: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.interaction-player .selections-interaction #docs {
+  -webkit-transform: translate(-13vw, -20.5vw);
+      -ms-transform: translate(-13vw, -20.5vw);
+          transform: translate(-13vw, -20.5vw);
+}
+.interaction-player .selections-interaction #socials {
+  -webkit-transform: translate(19vw, -21.5vw);
+      -ms-transform: translate(19vw, -21.5vw);
+          transform: translate(19vw, -21.5vw);
+}
+.interaction-player .selections-interaction #cash {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-transform: translate(32vw, -9.5vw);
+      -ms-transform: translate(32vw, -9.5vw);
+          transform: translate(32vw, -9.5vw);
+}
+.interaction-player .selections-interaction #home {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.interaction-player .selections-interaction .group-selection {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 1.3vw;
+  position: absolute;
+}
+.interaction-player .selections-interaction .group-selection span {
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0.8vw 1.5vw;
+  background: rgba(19, 28, 51, 0.98);
+  border-radius: 0.4vw;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.8vw;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.interaction-player .selections-interaction .group-selection span:hover {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  background: #1372FF;
+}
+.interaction-player .selections-interaction .group-selection .passport {
+  -webkit-transform: translate(5vw, 8vw);
+      -ms-transform: translate(5vw, 8vw);
+          transform: translate(5vw, 8vw);
+}
+.interaction-player .selections-interaction .group-selection .licenses {
+  -webkit-transform: translate(1vw, 3.5vw);
+      -ms-transform: translate(1vw, 3.5vw);
+          transform: translate(1vw, 3.5vw);
+}
+.interaction-player .selections-interaction .group-selection .cary-arms {
+  -webkit-transform: translate(-4vw, 4vw);
+      -ms-transform: translate(-4vw, 4vw);
+          transform: translate(-4vw, 4vw);
+}
+.interaction-player .selections-interaction .group-selection .pair-anim {
+  -webkit-transform: translate(-10vw, 8.5vw);
+      -ms-transform: translate(-10vw, 8.5vw);
+          transform: translate(-10vw, 8.5vw);
+}
+.interaction-player .selections-interaction .group-selection .money-one {
+  -webkit-transform: translate(-12vw, 8.5vw);
+      -ms-transform: translate(-12vw, 8.5vw);
+          transform: translate(-12vw, 8.5vw);
+}
+.interaction-player .selections-interaction .group-selection .money-two {
+  -webkit-transform: translate(-10.5vw, 8.5vw);
+      -ms-transform: translate(-10.5vw, 8.5vw);
+          transform: translate(-10.5vw, 8.5vw);
+}
+.interaction-player .selections-interaction .group-selection .money-three {
+  -webkit-transform: translate(-10vw, 8.5vw);
+      -ms-transform: translate(-10vw, 8.5vw);
+          transform: translate(-10vw, 8.5vw);
+}
+.interaction-player .selections-interaction .group-selection .money-four {
+  -webkit-transform: translate(-10vw, 8.5vw);
+      -ms-transform: translate(-10vw, 8.5vw);
+          transform: translate(-10vw, 8.5vw);
+}
+.interaction-player .selections-interaction .group-selection .money-five {
+  -webkit-transform: translate(-10vw, 8.5vw);
+      -ms-transform: translate(-10vw, 8.5vw);
+          transform: translate(-10vw, 8.5vw);
+}
+.interaction-player .selections-interaction .group-selection .invite-home {
+  -webkit-transform: translate(-8vw, 20.5vw);
+      -ms-transform: translate(-8vw, 20.5vw);
+          transform: translate(-8vw, 20.5vw);
+}
+.interaction-player .selections-interaction .group-selection .sell-home {
+  -webkit-transform: translate(-9vw, 17.5vw);
+      -ms-transform: translate(-9vw, 17.5vw);
+          transform: translate(-9vw, 17.5vw);
+}
+.interaction-player .selections-interaction .group-selection .invite-fraction {
+  -webkit-transform: translate(-22vw, 8.5vw);
+      -ms-transform: translate(-22vw, 8.5vw);
+          transform: translate(-22vw, 8.5vw);
+}
