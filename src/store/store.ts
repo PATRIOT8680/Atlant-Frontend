@@ -23,6 +23,7 @@ import { showHud, hideHud } from "../actions/hud/hud";
 import { showPetrol, hidePetrol } from "../actions/petrol/petrol";
 import { showDialog, hideDialog } from "../actions/dialog/dialog";
 import { showInteractionPlayer, hideInteractionPlayer } from "../actions/interactionPlayer/interactionPlayer";
+import { showAuth, hideAuth } from "../actions/auth/auth";
 
 import { DialogPosition } from "../actions/dialog/dialog";
 
@@ -120,5 +121,9 @@ window.App = {
   interactionPlayerReducer: {
     showInteractionPlayer: (inFraction: boolean, realtyStatus: boolean) => store.dispatch(showInteractionPlayer(inFraction, realtyStatus)),
     hideInteractionPlayer: () => store.dispatch(hideInteractionPlayer())
-  }
+  },
+  authReducer: {
+    showAuth: () => store.dispatch(showAuth()),
+    hideAuth: () => store.dispatch(hideAuth()),
+  },
 };

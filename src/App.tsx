@@ -12,6 +12,7 @@ import DonatMenu from './views/Donat/Index'
 import HUD from './views/HUD/Index'
 import DialogMenu from './views/Dialog/Index'
 import InteractionPlayer from './views/InteractionPlayer/Index'
+import Auth from './views/Auth/Index'
 
 const App = () => {
   const hudVisible = useSelector((state: RootState) => state.hudReducer.isVisible)
@@ -19,6 +20,7 @@ const App = () => {
   const dialogVisible = useSelector((state: RootState) => state.dialogReducer.isVisible)
   const interactionPlayerVisible = useSelector((state: RootState) => state.interactionPlayerReducer.isVisible)
   const sendNotifyReducer = useSelector((state: RootState) => state.sendNotifyReducer)
+  const authVisible = useSelector((state: RootState) => state.authReducer.isVisible)
 
   const sendNotify = useNotify()
 
@@ -34,6 +36,7 @@ const App = () => {
         { hudVisible && (<HUD />) }
         { dialogVisible && (<DialogMenu />) }
         { interactionPlayerVisible && (<InteractionPlayer />) }
+        { authVisible && (<Auth />) }
     </>
   )
 }

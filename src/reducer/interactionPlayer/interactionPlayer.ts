@@ -1,4 +1,4 @@
-export const interactionPlayerReducer = (state = { isVisible: true, inFraction: true, realtyStatus: true }, action: any) => {
+export const interactionPlayerReducer = (state = { isVisible: false, inFraction: true, realtyStatus: true }, action: any) => {
   switch (action.type) {
     case 'SHOW_INTERACTION_PLAYER':
       return {

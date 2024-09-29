@@ -12,7 +12,7 @@ export interface ISpeedometer {
 
 const initialState: ISpeedometer = {
   isVisible: true,
-  speed: 98,
+  speed: 202,
   rpm: 100,
   petrol: 100,
   maxPetrol: 150,

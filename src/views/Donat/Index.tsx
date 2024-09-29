@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react'
-import { useNavigate } from 'react-router-dom'
 import './assets/styles/compiled-css/Index.css'
 
 import Header from './components/Header'
@@ -11,7 +10,6 @@ import Blob from './assets/img/blob.svg'
 const DonatMenu = () => {
   const [selectedTab, setSelectedTab] = useState('main')
   const [isNavigationVisible, setIsNavigationVisible] = useState<boolean>(true)
-  const navigate = useNavigate()
 
   const handleChangeTab = (tab: string) => {
     setSelectedTab(tab)
@@ -24,13 +22,13 @@ const DonatMenu = () => {
   useEffect(() => {
     const handleCloseMenu = (event: KeyboardEvent) => {
       if (event.key === 'Escape') {
-        navigate('/hud')
+        
       }
     }
 
     window.addEventListener('keydown', handleCloseMenu)
     return () => window.removeEventListener('keydown', handleCloseMenu)
-  }, [navigate])
+  }, [])
 
   return(
     <>
