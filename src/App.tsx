@@ -7,6 +7,7 @@ import './assets/styles/compiled-css/App.css'
 import './assets/fonts/Montserrat/stylesheet.css'
 import './assets/fonts/MBF/stylesheet.css'
 
+// import DonatMenu from "./views/Donat/Index";
 import Petrol from './views/Petrol/Index'
 import HUD from './views/HUD/Index'
 import DialogMenu from './views/Dialog/Index'
