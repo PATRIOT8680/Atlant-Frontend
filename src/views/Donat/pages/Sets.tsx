@@ -81,7 +81,7 @@ const Sets = () => {
                       )) }
                     </ul>
                   </div>
-                  <img className='car-img' src={`src/assets/img/donat/vehicles.sets/${set.car.shortName}.png`} />
+                  <img className='car-img' src={`assets/img/donat/vehicles.sets/${set.car.shortName}.png`} />
                 </li>
                 { set.itemsSet.map((item, index) => (
                   <li className="item" key={index}>

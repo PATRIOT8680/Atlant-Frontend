@@ -57,7 +57,7 @@ const Vehicles = () => {
               </ul>
               <button className="price" onClick={handleBuy}>Купить • {vehicle.price} AC</button>
             </div>
-            <img src={`src/assets/img/donat/vehicles.image/${vehicle.shortName}.png`} className="img-block" />
+            <img src={`assets/img/donat/vehicles.image/${vehicle.shortName}.png`} className="img-block" />
           </li>
 
         )) }

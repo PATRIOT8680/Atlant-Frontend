@@ -8,11 +8,12 @@ import './assets/fonts/Montserrat/stylesheet.css'
 import './assets/fonts/MBF/stylesheet.css'
 
 import Petrol from './views/Petrol/Index'
-import DonatMenu from './views/Donat/Index'
 import HUD from './views/HUD/Index'
 import DialogMenu from './views/Dialog/Index'
 import InteractionPlayer from './views/InteractionPlayer/Index'
 import Auth from './views/Auth/Index'
+import SelectPerson from './views/SelectPerson/Index'
+import CreateChar from "./views/CreateChar/Index";
 
 const App = () => {
   const hudVisible = useSelector((state: RootState) => state.hudReducer.isVisible)
@@ -21,12 +22,16 @@ const App = () => {
   const interactionPlayerVisible = useSelector((state: RootState) => state.interactionPlayerReducer.isVisible)
   const sendNotifyReducer = useSelector((state: RootState) => state.sendNotifyReducer)
   const authVisible = useSelector((state: RootState) => state.authReducer.isVisible)
+  const selectPersonVisible = useSelector((state: RootState) => state.selectPersonReducer.isVisible)
+  const createCharVisible = useSelector((state: RootState) => state.createCharReducer.isVisible)
 
   const sendNotify = useNotify()
 
-  if (sendNotifyReducer.message) {
-    sendNotify({ type: sendNotifyReducer.typeNotify, message: sendNotifyReducer.message, timer: sendNotifyReducer.timer })
-  }
+  useEffect(() => {
+    if (sendNotifyReducer.message) {
+      sendNotify({ type: sendNotifyReducer.typeNotify, message: sendNotifyReducer.message, timer: sendNotifyReducer.timer })
+    }
+  }, [sendNotifyReducer, sendNotify])
 
   return(
     <>
@@ -37,6 +42,8 @@ const App = () => {
         { dialogVisible && (<DialogMenu />) }
         { interactionPlayerVisible && (<InteractionPlayer />) }
         { authVisible && (<Auth />) }
+        { selectPersonVisible && (<SelectPerson />) }
+        { createCharVisible && (<CreateChar />) }
     </>
   )
 }

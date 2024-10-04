@@ -141,7 +141,7 @@ const RouletteCase: FC<IRouletteCase> = ({
                   <div className="effect"></div>
                   <img
                     className="item-img"
-                    src={`src/assets/img/donat/case.items/${item.shortName}.png`}
+                    src={`assets/img/donat/case.items/${item.shortName}.png`}
                   />
                 </div>
               </div>

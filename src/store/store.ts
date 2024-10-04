@@ -1,6 +1,10 @@
 import { createStore } from "redux";
 import { rootReducer } from "../reducer/rootReducer";
 
+// interface
+import { oneTwoSelectPerson, threeSelectPerson } from "../actions/selectPerson/selectPerson";
+import { ICreateChar } from "../actions/createChar/createChar.ts";
+
 // Components
 import { setCash, getCash } from "../actions/cash";
 import { setDistrict, getDistrict } from "../actions/inDisctrict";
@@ -24,6 +28,8 @@ import { showPetrol, hidePetrol } from "../actions/petrol/petrol";
 import { showDialog, hideDialog } from "../actions/dialog/dialog";
 import { showInteractionPlayer, hideInteractionPlayer } from "../actions/interactionPlayer/interactionPlayer";
 import { showAuth, hideAuth } from "../actions/auth/auth";
+import { showSelectPerson, hideSelectPerson } from "../actions/selectPerson/selectPerson";
+import { showCreateChar, hideCreateChar } from "../actions/createChar/createChar.ts";
 
 import { DialogPosition } from "../actions/dialog/dialog";
 
@@ -126,4 +132,16 @@ window.App = {
     showAuth: () => store.dispatch(showAuth()),
     hideAuth: () => store.dispatch(hideAuth()),
   },
+  selectPersonReducer: {
+    showSelectPerson: (
+      onePerson: oneTwoSelectPerson[],
+      twoPerson: oneTwoSelectPerson[],
+      threePerson: threeSelectPerson[],
+    ) => store.dispatch(showSelectPerson(onePerson, twoPerson, threePerson)),
+    hideSelectPerson: () => store.dispatch(hideSelectPerson()),
+  },
+  createCharacterReducer: {
+    showCreateChar: (selecSlot: ICreateChar["selectSlot"]) => store.dispatch(showCreateChar(selecSlot)),
+    hideCreateChar: () => store.dispatch(hideCreateChar())
+  }
 };

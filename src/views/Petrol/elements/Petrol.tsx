@@ -73,12 +73,12 @@ const Petrol: FC<IPetrol> = ({ selectedVeh, vehFuel, maxFuel, typePetrolVeh }) =
         <div className="content-inside">
           <div className="header">
             <div className="logotype">
-              <img src={`/src/views/Petrol/assets/img/Petrols/${selectedPetrolShortName}.png`} className="logo" />
+              <img src={`assets/img/components/Petrols/${selectedPetrolShortName}.png`} className="logo" />
               <span className="description">The best gas station in the state</span>
             </div>
             { selectedVeh && (
               <div className='car-info'>
-                <img src={`/src/assets/img/vehicles/${selectedVehData?.shortName}.png`} className="car-img" />
+                <img src={`assets/img/vehicles/${selectedVehData?.shortName}.png`} className="car-img" />
                 <div className="text">
                   <span className="car-name">{selectedVehData?.fullName}</span>
                   <div className="type-petrol">

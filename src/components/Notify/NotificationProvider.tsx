@@ -26,23 +26,25 @@ type NotifyAction = IAddNotify | IRemoveNotify
 const NotificationContext = createContext<Dispatch<NotifyAction> | null>(null)
 
 const NotificationProvider: FC<{ children: ReactNode }> = ({ children }) => {
-  const [state, dispatch] = useReducer((state: INotificationState | null, action: NotifyAction) => 
+  const [state, dispatch] = useReducer((state: INotificationState[], action: NotifyAction) => 
     {
       switch (action.type) {
         case "ADD_NOTIFY":
-          return { ...action.payload };
+          return [...state, { ...action.payload }];
         case "REMOVE_NOTIFY":
-          return null;
+          return state.filter((el) => el.id !== action.id);
         default:
           return state;
       }
-    }, null);
+    }, []);
 
   return(
     <>
       <NotificationContext.Provider value={dispatch}>
         <div className="notification-wrapper">
-          {state && <Notification dispatch={dispatch} key={state.id} {...state} />}
+          {state.map((note) => {
+            return <Notification dispatch={dispatch} key={note.id} {...note} />
+          })}
         </div>
         {children}
       </NotificationContext.Provider>

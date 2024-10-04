@@ -64,7 +64,7 @@ const SkinsContent: FC<ISkinsContent> = ({ selectedCategory }) => {
                     <img src={Acoins_green} />
                   </span>
                 </div>
-                <img className='skin-img' src={`src/assets/img/donat/skins.content/${skin.shortName}.png`} />
+                <img className='skin-img' src={`assets/img/donat/skins.content/${skin.shortName}.png`} />
                 <button className="buy-skin" onClick={handleBuy}>Приобрести за {skin.price} AC</button>
               </div>
             </div>

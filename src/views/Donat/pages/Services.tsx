@@ -45,7 +45,7 @@ const Services = () => {
         { servicesData.map((service, index) => (
 
           <li className="service" id={service.shortName} key={index} onMouseEnter={handleMouseHover}>
-            <img className="service-img" src={`src/assets/img/donat/services.image/${service.shortName}.png`} />
+            <img className="service-img" src={`assets/img/donat/services.image/${service.shortName}.png`} />
             <div className="content-inside">
               <div className="left-block">
                 <div className="header-title">

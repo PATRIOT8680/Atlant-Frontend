@@ -44,7 +44,7 @@ const Shop = () => {
                   <span className="name">{product.fullName}</span>
                   <span className="price">${product.price}</span>
                 </div>
-                <img className='product-img' src={`/src/assets/img/petrolShop/${product.shortName}.png`} />
+                <img className='product-img' src={`assets/img/petrolShop/${product.shortName}.png`} />
                 <div className="pay-select">
                   <div className='pay' id='cash' onClick={() => {setPaymentType('cash'); handlePayProduct()}}>
                     <img className='icon' src={Cash_svg} />

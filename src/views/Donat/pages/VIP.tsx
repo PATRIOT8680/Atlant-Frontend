@@ -49,7 +49,7 @@ const VIP = () => {
           <div className="vip" id={vip.shortName} key={index} onMouseEnter={handleMouseHover}>
             <img 
               className='person-img'
-              src={`src/assets/img/donat/vip.persons/${vip.shortName}.png`}
+              src={`assets/img/donat/vip.persons/${vip.shortName}.png`}
             />
             <div className="content-inside">
               <div className="header-title">

@@ -14,7 +14,7 @@ const CaseBlock: FC<ICaseBlock> = ({ caseItem, onCaseSelect }) => {
     <>
       <div className='case-block' id={caseItem.id}>
         <div className="content-inside">
-          <img className="case-img" src={`src/assets/img/donat/case.image/${caseItem.id}.png`} />
+          <img className="case-img" src={`assets/img/donat/case.image/${caseItem.id}.png`} />
           <div className="header-title">
             <div className="name-block">
               <span className="top-title">{caseItem.name}</span>

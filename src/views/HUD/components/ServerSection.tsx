@@ -50,7 +50,7 @@ const ServerSection = () => {
             </div>
             <div className="img-block">
               <div className="effect"></div>
-              <img src={`src/assets/img/weapons/${activeWeapon.hashWeapon}.webp`} className="weapon-img" />
+              <img src={`assets/img/weapons/${activeWeapon.hashWeapon}.webp`} className="weapon-img" />
             </div>
           </div>
         ) }

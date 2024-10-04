@@ -15,7 +15,7 @@ const CaseItem: FC<ICaseItem> = ({ item }) => {
         <div className="content-inside">
           <div className="img-block">
             <div className="effect"></div>
-            <img className='item-img' src={`src/assets/img/donat/case.items/${item.shortName}.png`} />
+            <img className='item-img' src={`assets/img/donat/case.items/${item.shortName}.png`} />
           </div>
           <div className="header-title">
             <div className="left-title">

@@ -52,7 +52,7 @@ const Notification: FC<INotification> = ({id, type, message, dispatch, timer}) =
         onMouseLeave={handleStartTimer}
         onClick={handleCloseNotify}
         className={`notification-item ${exit ? 'exit' : ''}`} id={type.toLowerCase()}>
-        <img className="icon" src={`/src/components/assets/img/Notify/${type.toLowerCase()}.svg`} />
+        <img className="icon" src={`assets/img/components/Notify/${type.toLowerCase()}.svg`} />
         <span className="message">{message}</span>
       </div>
     </>

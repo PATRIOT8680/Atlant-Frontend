@@ -32,7 +32,7 @@ const SkinsCategory: FC<ISkinsCategory> = ({ category, selectedCategory, setSele
     <>
       <div onClick={handleClick} className={`category ${selectedCategory === category.id ? 'selected' : ''}`}>
         <div className="content-inside">
-          <img src={`src/assets/img/donat/skins.category/${category.id}.png`} />
+          <img src={`assets/img/donat/skins.category/${category.id}.png`} />
           <div className="text-block">
             <span className="name">{category.name}</span>
             <span className="descr">{category.description}</span>

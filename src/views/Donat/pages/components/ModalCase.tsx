@@ -50,7 +50,7 @@ const ModalCase: FC<IModalCase> = ({ isOpen, onClose, selectedPrize, isSpinning 
               </div>
               <div className="image-block">
                 <img className="bg-effect" src={BG_image} />
-                <img className="img-prize" src={`src/assets/img/donat/case.items/${selectedPrize.shortName}.png`} />
+                <img className="img-prize" src={`assets/img/donat/case.items/${selectedPrize.shortName}.png`} />
               </div>
             </div>
             <div className="btns-block">

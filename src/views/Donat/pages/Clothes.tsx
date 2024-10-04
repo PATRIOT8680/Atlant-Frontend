@@ -53,7 +53,7 @@ const Clothes = () => {
                 <span className="price">{cloth.price} <img src={Acoins_green} /></span>
               </div>
               <div className="image-block">
-                <img src={`src/assets/img/donat/clothes.image/${cloth.shortName}.png`} />
+                <img src={`assets/img/donat/clothes.image/${cloth.shortName}.png`} />
                 <div className="circle"></div>
               </div>
               <button className="buy-clothes" onClick={handleBuy}>Приобрести за {cloth.price} AC</button>
