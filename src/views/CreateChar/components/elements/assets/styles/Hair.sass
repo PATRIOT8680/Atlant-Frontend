@@ -1,0 +1,84 @@
+$Montserrat: "Montserrat", sans-serif
+
+.hair-create-char
+  display: flex
+  flex-direction: column
+  gap: 1rem
+
+  .section
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+    gap: 0.7rem
+
+    .title
+      font-family: $Montserrat
+      font-weight: 600
+      font-size: 0.85rem
+      color: #ffff
+      background: #ffffff16
+      text-transform: uppercase
+      padding: 0.2rem 0.5rem
+      border-radius: 0.3rem
+
+    .list
+      display: flex
+      flex-direction: row
+      flex-wrap: wrap
+      justify-content: space-between
+      margin-block-start: 0
+      margin-block-end: 0
+      padding: 0 0
+      gap: 0.5rem
+      width: 100%
+
+      .hair
+        .img-hair
+          pointer-events: none
+          user-select: none
+          width: 5.5rem
+          height: 5.5rem
+          border-radius: 0.3rem
+
+      .hair.active
+        .img-hair
+          box-shadow: 0 0 0 4px #3a72ff39
+
+  .colors
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+    gap: 0.5rem
+
+    .title
+      font-family: $Montserrat
+      font-weight: 600
+      font-size: 0.85rem
+      color: #ffff
+      background: #ffffff16
+      text-transform: uppercase
+      padding: 0.2rem 0.5rem
+      border-radius: 0.3rem
+
+    .squares
+      display: flex
+      flex-direction: row
+      justify-content: space-between
+      align-items: center
+      padding: 0 0
+      margin-block-start: 0
+      margin-block-end: 0
+      width: 100%
+      height: 2.2rem
+
+      .square
+        cursor: pointer
+        width: 2.2rem
+        height: 100%
+        border-radius: 0.2rem
+        border: 1px solid rgba(255, 255, 255, 0.08)
+
+      .square.active
+        border-bottom: 3px solid #3a72ff
+        transition: all 0.1s
+        transform: rotate(360deg)

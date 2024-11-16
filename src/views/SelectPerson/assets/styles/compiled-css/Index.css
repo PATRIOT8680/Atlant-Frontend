@@ -35,16 +35,29 @@
 }
 
 .select-person {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: flex-end;
-  flex-direction: column;
-  align-items: flex-end;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
   gap: 3vw;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   padding: 1.5vw 1.5vw;
   width: 100vw;
   height: 100vh;
-  user-select: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   zoom: 100%;
 }
 .select-person .bg-effect {
@@ -53,22 +66,36 @@
   height: 100%;
   right: -5vw;
   top: 50%;
-  transform: translate(0, -50%);
-  filter: blur(18vw);
+  -webkit-transform: translate(0, -50%);
+      -ms-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+  -webkit-filter: blur(18vw);
+          filter: blur(18vw);
   background: rgba(19, 28, 51, 0.85);
   z-index: -1;
 }
 .select-person .main-section .right-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   gap: 1.1vw;
   width: 28vw;
   height: 100%;
-  animation: fadeInSelectPerson 1.3s ease;
+  -webkit-animation: fadeInSelectPerson 1.3s ease;
+          animation: fadeInSelectPerson 1.3s ease;
 }
 .select-person .main-section .right-block .header-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   gap: 0.3vw;
 }
 .select-person .main-section .right-block .header-section .rp-name {
@@ -83,16 +110,26 @@
   font-weight: 500;
 }
 .select-person .main-section .right-block .list-persons {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   gap: 1vw;
   padding: 0 0;
   width: 100%;
 }
 .select-person .main-section .right-block .list-persons .person-act {
   cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   gap: 0.5vw;
   width: 100%;
   height: 9vw;
@@ -103,20 +140,36 @@
   background: rgba(133, 168, 255, 0.4);
 }
 .select-person .main-section .right-block .list-persons .person-act .selection-person {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: flex-start;
-  box-sizing: border-box;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   padding: 0 1.5vw;
   gap: 1.5vw;
   width: 100%;
   background: rgba(133, 168, 255, 0.4);
 }
 .select-person .main-section .right-block .list-persons .person-act .selection-person .left-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   width: 3.7vw;
   height: 3.7vw;
   background: rgba(124, 161, 255, 0.6);
@@ -130,8 +183,13 @@
   width: 1vw;
 }
 .select-person .main-section .right-block .list-persons .person-act .selection-person .right-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   gap: 0.5vw;
 }
 .select-person .main-section .right-block .list-persons .person-act .selection-person .right-content .title {
@@ -149,8 +207,13 @@
   width: 18vw;
 }
 .select-person .main-section .right-block .list-persons .person-act .selection-person .right-content .header-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 .select-person .main-section .right-block .list-persons .person-act .selection-person .right-content .header-title .rp-name {
   font-family: "Montserrat", sans-serif;
@@ -165,15 +228,29 @@
   opacity: 0.9;
 }
 .select-person .main-section .right-block .list-persons .person-act .selection-person .right-content .money-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   gap: 1.2vw;
 }
 .select-person .main-section .right-block .list-persons .person-act .selection-person .right-content .money-block .money {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   gap: 0.3vw;
 }
 .select-person .main-section .right-block .list-persons .person-act .selection-person .right-content .money-block .money .icon {
@@ -195,7 +272,8 @@
   color: #ffffff;
 }
 .select-person .main-section .right-block .list-persons .person-act.select {
-  animation: fadeInBlockAct 1.3s cubic-bezier(0.57, 0.27, 0.28, 1.14);
+  -webkit-animation: fadeInBlockAct 1.3s cubic-bezier(0.57, 0.27, 0.28, 1.14);
+          animation: fadeInBlockAct 1.3s cubic-bezier(0.57, 0.27, 0.28, 1.14);
 }
 .select-person .main-section .right-block .list-persons .person-act.select .line {
   background: #356eff;
@@ -221,23 +299,38 @@
   font-size: 0.9vw;
   font-weight: 600;
   text-transform: uppercase;
+  -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
 .select-person .main-section .right-block .select-person-btn:hover {
+  -webkit-transition: all 0.3s;
   transition: all 0.3s;
-  box-shadow: 0 0 3.4vw 0.5vw rgba(234, 211, 231, 0.49);
+  -webkit-box-shadow: 0 0 3.4vw 0.5vw rgba(234, 211, 231, 0.49);
+          box-shadow: 0 0 3.4vw 0.5vw rgba(234, 211, 231, 0.49);
 }
 .select-person .help-move {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   gap: 0.5vw;
   height: 2.5vw;
-  animation: fadeInSelectPerson 1.3s ease;
+  -webkit-animation: fadeInSelectPerson 1.3s ease;
+          animation: fadeInSelectPerson 1.3s ease;
 }
 .select-person .help-move .text {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   height: 100%;
   background: rgba(255, 255, 255, 0.2);
   border-radius: 0.3vw;
@@ -248,9 +341,15 @@
   text-transform: uppercase;
 }
 .select-person .help-move .icon-mouse {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   width: 2.5vw;
   height: 100%;
   background: rgba(255, 255, 255, 0.2);
@@ -258,6 +357,15 @@
 }
 .select-person .help-move .icon-mouse img {
   width: 0.9vw;
+}
+
+@-webkit-keyframes fadeInBlockAct {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes fadeInBlockAct {
@@ -268,15 +376,27 @@
     opacity: 1;
   }
 }
-@keyframes fadeInSelectPerson {
+@-webkit-keyframes fadeInSelectPerson {
   from {
     opacity: 0;
-    transform: translateX(70%);
+    -webkit-transform: translateX(70%);
+            transform: translateX(70%);
   }
   to {
     opacity: 1;
-    transform: translateX(0);
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
   }
 }
-
-/*# sourceMappingURL=Index.css.map */
+@keyframes fadeInSelectPerson {
+  from {
+    opacity: 0;
+    -webkit-transform: translateX(70%);
+            transform: translateX(70%);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}

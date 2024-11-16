@@ -1,0 +1,36 @@
+$Montserrat: "Montserrat", sans-serif
+
+.input
+  display: flex
+  flex-direction: column
+  gap: 0.5rem
+
+  .name-input
+    font-family: $Montserrat
+    font-weight: 600
+    font-size: 13px
+    text-transform: uppercase
+    color: #fff
+
+  input
+    outline: none
+    border: none
+    height: 2.95rem
+    border-radius: .27rem
+    background: #21315a
+    box-sizing: border-box
+    padding-left: 0.9rem
+    font-family: $Montserrat
+    font-weight: 600
+    font-size: 14px
+    color: #ffff
+
+    &::placeholder
+      color: rgba(255, 255, 255, 0.4)
+      font-weight: 500
+      font-size: 12px
+
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button
+    -webkit-appearance: none
+    margin: 0

@@ -15,6 +15,7 @@ import InteractionPlayer from './views/InteractionPlayer/Index'
 import Auth from './views/Auth/Index'
 import SelectPerson from './views/SelectPerson/Index'
 import CreateChar from "./views/CreateChar/Index";
+import DonatMenu from './views/Donat/Index'
 
 const App = () => {
   const hudVisible = useSelector((state: RootState) => state.hudReducer.isVisible)
@@ -37,7 +38,6 @@ const App = () => {
   return(
     <>
         {/*<DonatMenu />*/}
-        
         { petrolVisible && (<Petrol />) }
         { hudVisible && (<HUD />) }
         { dialogVisible && (<DialogMenu />) }

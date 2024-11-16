@@ -16,6 +16,8 @@ import { activeWeaponReducer } from './hud/weapon';
 import { paydayReducer } from './hud/payday';
 import { sendNotifyReducer } from './sendNotify';
 import { interactionActiveReducer } from './hud/interaction';
+import { genderReducer } from './gender.ts';
+import { characterReducer } from './createChar/char.ts';
 
 // Interface Reducer
 import { hudReducer } from '../reducer/hud/hud';
@@ -27,32 +29,34 @@ import { selectPersonReducer } from './selectPerson/selectPerson';
 import {createCharReducer} from "./createChar/createChar.ts";
 
 export type RootState = {
-  // Components
-  cashReducer: ReturnType<typeof cashReducer>;
-  inDistrictReducer: ReturnType<typeof inDistrictReducer>;
-  inStreetReducer: ReturnType<typeof inStreetReducer>;
-  inZoneReducer: ReturnType<typeof inZoneReducer>;
-  microphoneActive: ReturnType<typeof microphoneActive>;
-  eatReducer: ReturnType<typeof eatReducer>;
-  waterReducer: ReturnType<typeof waterReducer>;
-  onlineReducer: ReturnType<typeof onlineReducer>;
-  sidReducer: ReturnType<typeof sidReducer>;
-  activeQuestReducer: ReturnType<typeof activeQuestReducer>;
-  speedometerReducer: ReturnType<typeof speedometerReducer>;
-  activeWeaponReducer: ReturnType<typeof activeWeaponReducer>;
-  paydayReducer: ReturnType<typeof paydayReducer>
-  sendNotifyReducer: ReturnType<typeof sendNotifyReducer>
-  interactionActiveReducer: ReturnType<typeof interactionActiveReducer>
+	// Components
+	cashReducer: ReturnType<typeof cashReducer>
+	inDistrictReducer: ReturnType<typeof inDistrictReducer>
+	inStreetReducer: ReturnType<typeof inStreetReducer>
+	inZoneReducer: ReturnType<typeof inZoneReducer>
+	microphoneActive: ReturnType<typeof microphoneActive>
+	eatReducer: ReturnType<typeof eatReducer>
+	waterReducer: ReturnType<typeof waterReducer>
+	onlineReducer: ReturnType<typeof onlineReducer>
+	sidReducer: ReturnType<typeof sidReducer>
+	activeQuestReducer: ReturnType<typeof activeQuestReducer>
+	speedometerReducer: ReturnType<typeof speedometerReducer>
+	activeWeaponReducer: ReturnType<typeof activeWeaponReducer>
+	paydayReducer: ReturnType<typeof paydayReducer>
+	sendNotifyReducer: ReturnType<typeof sendNotifyReducer>
+	interactionActiveReducer: ReturnType<typeof interactionActiveReducer>
+	genderReducer: ReturnType<typeof genderReducer>
+  characterReducer: ReturnType<typeof characterReducer>
 
-  // Interface
-  hudReducer: ReturnType<typeof hudReducer>;
-  petrolReducer: ReturnType<typeof petrolReducer>;
-  dialogReducer: ReturnType<typeof dialogReducer>;
-  interactionPlayerReducer: ReturnType<typeof interactionPlayerReducer>;
-  authReducer: ReturnType<typeof authReducer>;
-  selectPersonReducer: ReturnType<typeof selectPersonReducer>
-  createCharReducer: ReturnType<typeof createCharReducer>;
-};
+	// Interface
+	hudReducer: ReturnType<typeof hudReducer>
+	petrolReducer: ReturnType<typeof petrolReducer>
+	dialogReducer: ReturnType<typeof dialogReducer>
+	interactionPlayerReducer: ReturnType<typeof interactionPlayerReducer>
+	authReducer: ReturnType<typeof authReducer>
+	selectPersonReducer: ReturnType<typeof selectPersonReducer>
+	createCharReducer: ReturnType<typeof createCharReducer>
+}
 
 export const rootReducer = combineReducers({
   // Components
@@ -71,6 +75,8 @@ export const rootReducer = combineReducers({
   paydayReducer,
   sendNotifyReducer,
   interactionActiveReducer,
+  genderReducer,
+  characterReducer,
 
   // Interface
   hudReducer,

@@ -1,4 +1,4 @@
-export const createCharReducer = (state = { isVisible: false, selectSlot: 'one' }, action: any) => {
+export const createCharReducer = (state = { isVisible: true, selectSlot: 'one' }, action: any) => {
   switch (action.type) {
     case 'SHOW_CREATE_CHAR':
       return {

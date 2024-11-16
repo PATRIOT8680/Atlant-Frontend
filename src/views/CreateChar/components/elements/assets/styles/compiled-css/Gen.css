@@ -1,0 +1,146 @@
+.gen-create-char {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  height: 100%;
+  gap: 1.5rem;
+}
+.gen-create-char .parents-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.gen-create-char .parents-section .parent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.5rem;
+}
+.gen-create-char .parents-section .parent .title {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #fff;
+}
+.gen-create-char .parents-section .parent .img-parent {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  width: 7.5rem;
+  height: 7.5rem;
+  border-radius: 0.3rem;
+}
+.gen-create-char .parents-section .parent .sliders {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.gen-create-char .parents-section .parent .sliders .slider {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 3.3rem;
+  height: 1.9rem;
+  background: #3a71ff;
+  border-radius: 0.2rem;
+}
+.gen-create-char .parents-section .parent .sliders .slider img {
+  width: 0.85rem;
+}
+.gen-create-char .sex-char {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 0.4rem;
+}
+.gen-create-char .sex-char .title {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 0.83rem;
+  color: white;
+  background: rgba(255, 255, 255, 0.0862745098);
+  text-transform: uppercase;
+  padding: 0.2rem 0.5rem;
+  border-radius: 0.3rem;
+}
+.gen-create-char .sex-char .btns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+}
+.gen-create-char .sex-char .btns .btn {
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 48%;
+  padding: 0.5rem 0;
+  background: rgba(255, 255, 255, 0.0823529412);
+  color: rgba(255, 255, 255, 0.6862745098);
+  border-radius: 0.3rem;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+.gen-create-char .sex-char .btns .btn.active {
+  color: white;
+  background: #3A71FF;
+}

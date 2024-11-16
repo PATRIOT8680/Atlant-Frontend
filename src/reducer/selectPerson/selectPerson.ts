@@ -1,7 +1,7 @@
 export const selectPersonReducer = (state = {
   isVisible: false,
   onePerson: {
-    rp_name: '',
+    rp_name: 'William Blade',
     lvl: 40,
     status: 'Гражданин',
     cash: 2000000,

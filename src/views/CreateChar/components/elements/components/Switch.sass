@@ -1,0 +1,45 @@
+$Montserrat: "Montserrat", sans-serif
+
+.switch
+  display: flex
+  flex-direction: row
+  justify-content: space-between
+  align-items: center
+  height: 2rem
+  width: 100%
+
+  .btn-switch
+    cursor: pointer
+    display: flex
+    align-items: center
+    justify-content: center
+    height: 100%
+    width: 2.8rem
+    background: #21315a
+    border-radius: 0.2rem
+
+    &:hover
+      background: #3a71ff
+
+      img
+        opacity: 1
+
+    img
+      user-select: none
+      opacity: 0.9
+      width: 0.85rem
+
+  .info-switch
+    display: flex
+    align-items: center
+    justify-content: center
+    height: 100%
+    width: 65%
+    background: #21315a
+    border-radius: 0.2rem
+    font-family: $Montserrat
+    font-weight: 500
+    font-size: 0.75rem
+    text-transform: uppercase
+    user-select: none
+    color: #ffff

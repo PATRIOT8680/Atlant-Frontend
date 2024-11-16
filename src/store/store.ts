@@ -21,6 +21,7 @@ import { showActiveWeapon, hideActiveWeapon } from "../actions/hud/weapon";
 import { showPayday, hidePayday } from "../actions/hud/payday";
 import { sendNotify } from "../actions/sendNotify";
 import { interactionEnable, interactionDisable } from "../actions/hud/interaction";
+import { setGender, getGender } from "../actions/gender.ts";
 
 // Interfaces
 import { showHud, hideHud } from "../actions/hud/hud";
@@ -109,6 +110,10 @@ window.App = {
   interactionActiveReducer: {
     interactionEnable: () => store.dispatch(interactionEnable()),
     interactionDisable: () => store.dispatch(interactionDisable()),
+  },
+  genderReducer: {
+    setGender: (gender: 'male' | 'female') => store.dispatch(setGender(gender)),
+    getGender: () => store.getState().genderReducer,
   },
 
   // Interfaces
