@@ -1,0 +1,27 @@
+.case-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  overflow: auto;
+  outline: none;
+  gap: 1.5vw;
+  height: 64vh;
+  padding: 0 0;
+  margin-top: 1vw;
+}
+.case-list::-webkit-scrollbar {
+  width: 0.5vw;
+}
+.case-list::-webkit-scrollbar-track {
+  opacity: 1;
+  background-color: rgba(205, 205, 205, 0.1647058824);
+  border-radius: 100px;
+}
+.case-list::-webkit-scrollbar-thumb {
+  cursor: grabbing;
+  background-color: rgba(205, 205, 205, 0.1647058824);
+  border-radius: 100px;
+}
+.case-list::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(205, 205, 205, 0.3529411765);
+}/*# sourceMappingURL=CasesList.css.map */

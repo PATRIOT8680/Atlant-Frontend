@@ -1,0 +1,515 @@
+.reports {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+  height: 100%;
+}
+.reports .header .number-reports {
+  padding: 4px 10px;
+  background: #3A71FF;
+  border-radius: 0.3125rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+}
+.reports .bottom-blocks {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 0.5rem;
+  width: 100%;
+  height: calc(100% - 4.3rem);
+}
+.reports .bottom-blocks .list-reports {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.8rem;
+  overflow: auto;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 1.5rem;
+  width: 85%;
+  height: 100%;
+  border-radius: 0.625rem;
+  background: rgb(19, 19, 19);
+}
+.reports .bottom-blocks .list-reports::-webkit-scrollbar {
+  width: 0.5rem;
+}
+.reports .bottom-blocks .list-reports::-webkit-scrollbar-track {
+  opacity: 1;
+  background-color: rgba(205, 205, 205, 0.0823529412);
+  border-radius: 100px;
+}
+.reports .bottom-blocks .list-reports::-webkit-scrollbar-thumb {
+  cursor: -webkit-grabbing;
+  cursor: grabbing;
+  background-color: rgba(205, 205, 205, 0.1098039216);
+  border-radius: 100px;
+}
+.reports .bottom-blocks .list-reports::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(205, 205, 205, 0.2392156863);
+}
+.reports .bottom-blocks .list-reports .report-item.selected {
+  background: #2e67fa;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+.reports .bottom-blocks .list-reports .report-item.selected .header-report .number-report {
+  color: white;
+}
+.reports .bottom-blocks .list-reports .report-item.selected .header-report .status {
+  font-weight: 500;
+}
+.reports .bottom-blocks .list-reports .report-item.selected:hover {
+  background: #2e67fa;
+}
+.reports .bottom-blocks .list-reports .report-item {
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  gap: 12px;
+  padding: 1rem;
+  background: #1D1D1D;
+  border-radius: 0.4rem;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+.reports .bottom-blocks .list-reports .report-item:hover {
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  background: #292929;
+}
+.reports .bottom-blocks .list-reports .report-item .header-report {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.reports .bottom-blocks .list-reports .report-item .header-report .number-report {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.6666666667);
+}
+.reports .bottom-blocks .list-reports .report-item .header-report .status.waiting {
+  color: #FFFF07;
+}
+.reports .bottom-blocks .list-reports .report-item .header-report .status.waiting ellipse {
+  -webkit-box-shadow: 0 0 10px 0 #FFFF07;
+          box-shadow: 0 0 10px 0 #FFFF07;
+  background: #FFFF07;
+}
+.reports .bottom-blocks .list-reports .report-item .header-report .status.reviewed {
+  color: #00FF73;
+}
+.reports .bottom-blocks .list-reports .report-item .header-report .status.reviewed ellipse {
+  -webkit-box-shadow: 0 0 10px 0 #00FF73;
+          box-shadow: 0 0 10px 0 #00FF73;
+  background: #00FF73;
+}
+.reports .bottom-blocks .list-reports .report-item .header-report .status {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: right;
+  gap: 0.625rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 0.875rem;
+}
+.reports .bottom-blocks .list-reports .report-item .header-report .status ellipse {
+  width: 8px;
+  height: 8px;
+  border-radius: 100%;
+}
+.reports .bottom-blocks .list-reports .report-item .msg {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+.reports .bottom-blocks .list-reports .report-item .info {
+  color: rgba(255, 255, 255, 0.5019607843);
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.75rem;
+  font-weight: 500;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.5rem;
+}
+.reports .bottom-blocks .list-reports .notFound-reports {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+  gap: 1.5rem;
+}
+.reports .bottom-blocks .list-reports .notFound-reports .icon {
+  width: 7rem;
+  opacity: 0.15;
+}
+.reports .bottom-blocks .list-reports .notFound-reports .text {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 1.3rem;
+}
+.reports .bottom-blocks .list-reports .notFound-reports .descr {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  text-align: center;
+  width: 23rem;
+  line-height: 145%;
+  opacity: 0.8;
+}
+.reports .bottom-blocks .chat-report {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 1.5rem;
+  width: 100%;
+  height: 100%;
+  border-radius: 0.625rem;
+  background: rgb(19, 19, 19);
+}
+.reports .bottom-blocks .chat-report .selected-report {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.5rem;
+}
+.reports .bottom-blocks .chat-report .selected-report .header-sel-rep {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: "Montserrat", sans-serif;
+}
+.reports .bottom-blocks .chat-report .selected-report .header-sel-rep .number-report {
+  font-weight: 500;
+  font-size: 1.2rem;
+}
+.reports .bottom-blocks .chat-report .selected-report .header-sel-rep .number-report span {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.7568627451);
+}
+.reports .bottom-blocks .chat-report .selected-report .header-sel-rep .btns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.8rem;
+  height: 2.4rem;
+}
+.reports .bottom-blocks .chat-report .selected-report .header-sel-rep .btns button {
+  cursor: pointer;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 0.8rem;
+  outline: none;
+  border: none;
+  border-radius: 0.4rem;
+  padding: 0 1rem;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+.reports .bottom-blocks .chat-report .selected-report .header-sel-rep .btns .back-report {
+  color: rgba(255, 255, 255, 0.45);
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+.reports .bottom-blocks .chat-report .selected-report .header-sel-rep .btns .back-report:hover {
+  color: #000;
+  background: white;
+}
+.reports .bottom-blocks .chat-report .selected-report .header-sel-rep .btns .close-report {
+  color: #e02c2c;
+  background: rgba(187, 50, 50, 0.1);
+  border: 1px solid #cd2d2d;
+}
+.reports .bottom-blocks .chat-report .selected-report .header-sel-rep .btns .close-report:hover {
+  color: white;
+  border: 1px solid #e02c2c;
+  background: #e02c2c;
+}
+.reports .bottom-blocks .chat-report .selected-report .list-chat {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  overflow-y: auto;
+  height: 84%;
+  gap: 1rem;
+  padding: 0;
+  padding-right: 1rem;
+  -webkit-margin-before: 0;
+          margin-block-start: 0;
+  -webkit-margin-after: 0;
+          margin-block-end: 0;
+}
+.reports .bottom-blocks .chat-report .selected-report .list-chat::-webkit-scrollbar {
+  width: 0.35rem;
+}
+.reports .bottom-blocks .chat-report .selected-report .list-chat::-webkit-scrollbar-track {
+  opacity: 1;
+  background-color: rgba(205, 205, 205, 0.0823529412);
+  border-radius: 100px;
+}
+.reports .bottom-blocks .chat-report .selected-report .list-chat::-webkit-scrollbar-thumb {
+  cursor: -webkit-grabbing;
+  cursor: grabbing;
+  background-color: rgba(205, 205, 205, 0.1098039216);
+  border-radius: 100px;
+}
+.reports .bottom-blocks .chat-report .selected-report .list-chat::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(205, 205, 205, 0.2392156863);
+}
+.reports .bottom-blocks .chat-report .selected-report .list-chat .player-msg {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 0.6rem;
+  max-width: 100%;
+}
+.reports .bottom-blocks .chat-report .selected-report .list-chat .player-msg .avatar {
+  width: 4rem;
+}
+.reports .bottom-blocks .chat-report .selected-report .list-chat .player-msg .main-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 0.5rem;
+  font-family: "Montserrat", sans-serif;
+}
+.reports .bottom-blocks .chat-report .selected-report .list-chat .player-msg .main-info .header-msg {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.7rem;
+}
+.reports .bottom-blocks .chat-report .selected-report .list-chat .player-msg .main-info .header-msg .nickname {
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+.reports .bottom-blocks .chat-report .selected-report .list-chat .player-msg .main-info .header-msg .date-time {
+  font-size: 0.85rem;
+  font-weight: 400;
+  opacity: 0.5;
+}
+.reports .bottom-blocks .chat-report .selected-report .list-chat .player-msg .main-info .msg-report {
+  max-width: 26vw;
+  font-size: 0.95rem;
+  font-weight: 400;
+  line-height: 140%;
+  padding: 0.7rem 0.85rem;
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 0.4rem;
+  overflow-wrap: break-word;
+  white-space: normal;
+  text-overflow: ellipsis;
+}
+.reports .bottom-blocks .chat-report .selected-report .list-chat .admin-msg {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  gap: 0.6rem;
+  max-width: 100%;
+}
+.reports .bottom-blocks .chat-report .selected-report .list-chat .admin-msg .avatar {
+  width: 4rem;
+}
+.reports .bottom-blocks .chat-report .selected-report .list-chat .admin-msg .main-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  gap: 0.5rem;
+  font-family: "Montserrat", sans-serif;
+}
+.reports .bottom-blocks .chat-report .selected-report .list-chat .admin-msg .main-info .header-msg {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.7rem;
+}
+.reports .bottom-blocks .chat-report .selected-report .list-chat .admin-msg .main-info .header-msg .nickname {
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+.reports .bottom-blocks .chat-report .selected-report .list-chat .admin-msg .main-info .header-msg .date-time {
+  font-size: 0.85rem;
+  font-weight: 400;
+  opacity: 0.5;
+}
+.reports .bottom-blocks .chat-report .selected-report .list-chat .admin-msg .main-info .msg-report {
+  max-width: 26vw;
+  font-size: 0.95rem;
+  font-weight: 400;
+  line-height: 140%;
+  padding: 0.7rem 0.85rem;
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 0.4rem;
+  overflow-wrap: break-word;
+  white-space: normal;
+  text-overflow: ellipsis;
+}
+.reports .bottom-blocks .chat-report .selected-report .send-msg {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 0.95rem;
+  background: #242323;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0 1rem;
+  border: none;
+  outline: none;
+  border-radius: 0.4rem;
+  height: 5vh;
+  margin-top: 3%;
+  color: white;
+}
+.reports .bottom-blocks .chat-report .selected-report .send-msg::-webkit-input-placeholder {
+  font-weight: 500;
+}
+.reports .bottom-blocks .chat-report .selected-report .send-msg::-moz-placeholder {
+  font-weight: 500;
+}
+.reports .bottom-blocks .chat-report .selected-report .send-msg:-ms-input-placeholder {
+  font-weight: 500;
+}
+.reports .bottom-blocks .chat-report .selected-report .send-msg::-ms-input-placeholder {
+  font-weight: 500;
+}
+.reports .bottom-blocks .chat-report .selected-report .send-msg::placeholder {
+  font-weight: 500;
+}
+.reports .bottom-blocks .chat-report .notSelected-report {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+  gap: 1.5rem;
+}
+.reports .bottom-blocks .chat-report .notSelected-report .icon {
+  width: 7rem;
+  opacity: 0.15;
+}
+.reports .bottom-blocks .chat-report .notSelected-report .text {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 1.3rem;
+}
+.reports .bottom-blocks .chat-report .notSelected-report .descr {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  text-align: center;
+  width: 23rem;
+  line-height: 145%;
+  opacity: 0.8;
+}

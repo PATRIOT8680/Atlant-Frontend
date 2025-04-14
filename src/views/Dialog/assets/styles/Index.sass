@@ -1,0 +1,108 @@
+$Montserrat: "Montserrat", sans-serif
+
+#BOTTOM_LEFT
+  bottom: 0
+  left: 0
+
+  .effect-bg
+    left: -4vw
+
+  .header-block
+    align-items: flex-start
+
+  .dialog-text
+    text-align: left
+
+  .btns-block
+    display: flex
+    justify-content: flex-start
+
+#BOTTOM_CENTER
+  bottom: 0
+  left: 50%
+  width: 50vw
+  transform: translate(-50%, 0)
+
+  .effect-bg
+    left: 50%
+    transform: translate(-50%, 0)
+
+  .header-block
+    align-items: flex-start
+
+#BOTTOM_RIGHT
+  bottom: 0
+  right: 0
+
+  .effect-bg
+    right: -4vw
+
+  .header-block
+    align-items: flex-end
+
+  .dialog-text
+    text-align: right
+
+  .btns-block
+    display: flex
+    justify-content: flex-end
+
+
+.dialog
+  position: absolute
+  width: 40vw
+  color: red
+
+  .effect-bg
+    position: absolute
+    width: 60vw
+    height: 45vw
+    bottom: -10vw
+    border-radius: 2vw
+    z-index: 1
+
+  .content-inside
+    display: flex
+    flex-direction: column
+    gap: 1vw
+    position: relative
+    margin: 1.5vw 1.5vw
+    z-index: 2
+
+    .header-block
+      display: flex
+      flex-direction: column
+      font-family: $Montserrat
+      gap: 0.3vw
+
+      .npc-name
+        font-size: 1.8vw
+        font-weight: 700
+        text-transform: uppercase
+        color: #74abff
+
+      .npc-status
+        font-size: 0.8vw
+        font-weight: 600
+        text-transform: uppercase
+        color: #ffff
+        background: rgba(255, 255, 255, 0.16)
+        border-radius: 0.3vw
+        padding: 0.5vw 0.7vw
+
+    .dialog-text
+      font-family: $Montserrat
+      font-size: 1.1vw
+      font-weight: 500
+      color: #ffff
+      line-height: 145%
+
+    .btns-block
+      display: flex
+      flex-wrap: wrap
+      justify-content: flex-start
+      gap: 0.5vw
+      width: 100%
+
+      .btn
+        height: 3.3vw

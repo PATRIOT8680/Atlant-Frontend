@@ -1,0 +1,52 @@
+.slider {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.slider .text-section {
+  display: flex;
+  justify-content: space-between;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+  text-transform: uppercase;
+  color: #fff;
+}
+.slider .range {
+  margin: 0 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+       appearance: none;
+  width: 100%;
+  cursor: pointer;
+  outline: none;
+  overflow: hidden;
+  border-radius: 0.1875rem;
+  background: rgba(255, 255, 255, 0.09);
+}
+.slider .range::-webkit-slider-runnable-track {
+  height: 0.8rem;
+}
+.slider .range::-moz-range-track {
+  height: 0.8rem;
+}
+.slider .range::-webkit-slider-thumb {
+  cursor: grabbing;
+  -webkit-appearance: none;
+  appearance: none;
+  height: 0.8rem;
+  width: 1.1rem;
+  background-color: white;
+  box-shadow: -407px 0 0 400px #3a71ff;
+  border-radius: 0.18rem;
+}
+.slider .range::-moz-range-thumb {
+  cursor: grabbing;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+       appearance: none;
+  height: 0.8rem;
+  width: 1rem;
+  background-color: white;
+  border-radius: 0.18rem;
+}/*# sourceMappingURL=Slider.css.map */

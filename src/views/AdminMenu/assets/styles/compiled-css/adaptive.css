@@ -1,0 +1,30 @@
+@media screen and (max-width: 1550px) {
+  .admin-menu {
+    zoom: 95%;
+  }
+}
+@media screen and (max-width: 1400px) {
+  .admin-menu {
+    zoom: 90%;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .admin-menu {
+    zoom: 80%;
+  }
+}
+@media screen and (min-width: 2200px) {
+  .admin-menu {
+    zoom: 110%;
+  }
+}
+@media screen and (min-width: 2800px) {
+  .admin-menu {
+    zoom: 115%;
+  }
+}
+@media screen and (min-width: 3400px) {
+  .admin-menu {
+    zoom: 120%;
+  }
+}

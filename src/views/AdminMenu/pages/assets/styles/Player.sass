@@ -1,0 +1,163 @@
+$Montserrat: "Montserrat", sans-serif
+
+.player
+  display: flex
+  flex-direction: column
+  gap: 0.5rem
+  width: 100%
+  height: 100%
+
+  .bottom-block
+    display: flex
+    flex-direction: column
+    gap: 0.4rem
+    overflow: hidden
+    box-sizing: border-box
+    padding: 1.5rem
+    height: 100%
+    border-radius: 0.625rem
+    background: rgb(19, 19, 19)
+
+    .search-section
+      display: flex
+      flex-direction: row
+      gap: 0.5rem
+      width: 100%
+      height: 3rem
+      
+      input
+        font-family: $Montserrat
+        font-size: 0.9rem
+        font-weight: 500
+        border: 0.0625rem solid #ffffff20
+        background: #242323
+        box-sizing: border-box
+        padding: 0 1rem
+        border-radius: 0.3rem
+        outline: none
+        width: 100%
+        color: #fff
+        transition: all 0.4s
+
+        &:focus
+          transition: all 0.4s
+          border: 0.0625rem solid rgba(255, 255, 255, 0.3)
+          background: #2b2929
+
+        &::placeholder
+          font-weight: 400
+          color: rgba(255, 255, 255, 0.35)
+
+      .btn-search
+        cursor: pointer
+        outline: none
+        border: none
+        width: 11rem
+        border-radius: 0.3rem
+        background: #ffff
+        font-family: $Montserrat
+        font-size: 0.9rem
+        font-weight: 500
+        transition: all 0.4s
+
+        &:hover
+          transition: all 0.4s
+          box-shadow: 0 0 28px 4px rgba(255, 255, 255, 0.25)
+
+    .emptyList-player
+      display: flex
+      align-items: center
+      justify-content: center
+      gap: 2rem
+      height: 100%
+      opacity: 0.4
+
+      img
+        width: 4.3rem
+
+      span
+        font-family: $Montserrat
+        font-weight: 500
+        font-size: 1rem
+        line-height: 145%
+
+    .list-param
+      display: flex
+      list-style: none
+      padding: 0
+      box-sizing: border-box
+      padding-right: 1rem
+      flex-direction: column
+      width: 100%
+      height: 100%
+      gap: 1rem
+      overflow: auto
+
+      &::-webkit-scrollbar
+        width: 0.5rem
+
+      &::-webkit-scrollbar-track
+        opacity: 1
+        background-color: #cdcdcd15
+        border-radius: 100px
+
+      &::-webkit-scrollbar-thumb
+        cursor: grabbing
+        background-color: #cdcdcd1c
+        border-radius: 100px
+
+        &:hover
+          background-color: #cdcdcd3d
+
+      .param
+        display: flex
+        justify-content: space-between
+        align-items: center
+        background: rgba(255, 255, 255, 0.05)
+        border-radius: 0.3rem
+        padding: 1rem
+        font-family: $Montserrat
+        font-size: 1rem
+
+        .param-name
+          font-weight: 400
+          opacity: 0.85
+
+        .param-value
+          font-weight: 500
+
+    .action-btns
+      display: flex
+      width: 100%
+      padding: 0
+      justify-content: space-between
+      align-items: center
+      margin-block-start: 0
+      margin-block-end: 0
+      list-style: none
+
+      .btn
+        cursor: pointer
+        font-family: $Montserrat
+        font-size: 0.9rem
+        color: rgba(255, 255, 255, 0.8)
+        font-weight: 500
+        background: rgba(255, 255, 255, 0.1)
+        border-radius: 0.3rem
+        padding: 0.5rem 1rem
+        transition: all 0.4s
+
+        &:hover
+          transition: all 0.4s
+          color: #ffff
+          background: #3A71FF
+
+
+    .no-found
+      display: flex
+      align-items: center
+      justify-content: center
+      height: 100%
+      font-family: $Montserrat
+      font-size: 1rem
+      font-weight: 400

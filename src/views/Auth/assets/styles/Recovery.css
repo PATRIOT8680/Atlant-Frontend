@@ -1,0 +1,16 @@
+.recovery {
+  display: flex;
+  flex-direction: column;
+  gap: 2vw;
+  width: 30vw;
+  animation: fadeInRecovery 1s ease;
+}
+
+@keyframes fadeInRecovery {
+  from {
+    transform: translateY(-30%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}/*# sourceMappingURL=Recovery.css.map */

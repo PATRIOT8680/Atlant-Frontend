@@ -1,0 +1,446 @@
+$Montserrat: "Montserrat", sans-serif
+
+.block-column-one
+  display: flex
+  flex-direction: column
+  gap: 1vw
+  padding: 1vw 0
+  animation: fadeInBlockOne 1s ease
+
+  .top-balance
+    cursor: pointer
+    display: flex
+    flex-direction: row
+    justify-content: center
+    align-items: center
+    gap: 8vw
+    background: rgba(12, 255, 182, 0.08)
+    border: 1px solid rgba(12, 255, 182, 0.34)
+    border-radius: 0.6vw
+    width: 26vw
+    height: 20vh
+
+    &:hover
+      .next
+        animation: hoverTopBalance 0.6s ease
+
+    .title
+      display: flex
+      flex-direction: column
+      align-items: flex-start
+      font-weight: 600
+      text-transform: uppercase
+      color: #fff
+      gap: 0.65vw
+
+      .top
+        font-family: $Montserrat
+        font-size: 1.5vw
+
+      .bottom
+        font-family: $Montserrat
+        font-size: 1.3vw
+
+    .next
+      width: 1.5vw
+      padding: 0.9vw 0.8vw
+      border: 1px solid #0cffb6
+      background: rgba(12, 255, 182, 0.08)
+      border-radius: 0.3vw
+
+  .trade-money
+    position: relative
+    width: 26vw
+    height: 43vh
+    background: rgba(0, 148, 255, 0.12)
+    border: 1px solid rgba(50, 169, 255, 0.54)
+    border-radius: 0.6vw
+
+    .content-inside
+      display: flex
+      flex-direction: column
+      gap: 2vh
+      position: absolute
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%)
+
+      .header-trade
+        display: flex
+        flex-direction: column
+        font-family: $Montserrat
+
+        .title
+          font-weight: 600
+          font-size: 1.3vw
+          text-transform: uppercase
+          color: #fff
+
+        .description
+          width: 15vw
+          margin-top: 0.2vw
+          font-size: 1vw
+          line-height: 150%
+          color: rgba(255, 255, 255, 0.75)
+
+          img
+            width: 1.7vw
+          
+      .inputs
+        display: flex
+        flex-direction: column
+        gap: 2vh
+
+        input[type='number']
+          &::-webkit-inner-spin-button, &::-webkit-outer-spin-button
+            -webkit-appearance: none
+            margin: 0
+
+        .inp-1
+          display: flex
+          align-items: center
+          gap: 1vw
+          height: 7.4vh
+
+          .acoins
+            height: 93%
+            width: 17vw
+            outline: none
+            background: rgba(0, 148, 255, 0.2)
+            border: 0.50px solid rgba(0, 148, 255, 0.54)
+            border-radius: 0.35vw
+            box-sizing: border-box
+            padding-left: 1vw
+            padding-right: 1vw
+            color: #ffff
+            text-transform: uppercase
+            font-family: $Montserrat
+            font-weight: 600
+            font-size: 1.2vw
+
+            &::placeholder
+              font-weight: 500
+              font-size: 0.850vw
+              color: rgba(255, 255, 255, 0.45)
+              text-transform: none
+
+        img
+          width: 4vh
+          height: 4vh
+          padding: 0.7vw 0.7vw
+          background: rgba(0, 148, 255, 0.2)
+          border: 0.50px solid rgba(0, 148, 255, 0.54)
+          border-radius: 0.35vw
+
+        .info-2
+          display: flex
+          align-items: center
+          gap: 1vw
+          height: 7.4vh
+
+          .dollar-text
+            display: flex
+            align-items: center
+            box-sizing: border-box
+            padding-left: 1vw
+            background: rgba(0, 148, 255, 0.2)
+            border-radius: 0.35vw
+            height: 93%
+            width: 17vw
+            font-weight: 600
+            font-size: 1.1vw
+            color: #fff
+
+      .trade-btn
+        position: relative
+        cursor: pointer
+        outline: none
+        border: none
+        height: 6vh
+        background: linear-gradient(90deg, rgba(29, 119, 255, 0.9) 0%, #11fff1 100%)
+        border-radius: 0.35vw
+        font-family: $Montserrat
+        font-weight: 600
+        font-size: 0.9vw
+        z-index: 1000
+        text-transform: uppercase
+        color: #fff
+
+        &::before
+          content: ""
+          display: block
+          opacity: 0
+          position: absolute
+          top: 0
+          left: 0
+          width: 100%
+          height: 6vh
+          z-index: -1000
+          border-radius: 0.354vw
+          background: linear-gradient(90deg, #11fff1 0%, rgba(29, 119, 255, 0.9) 100%)
+          transition: opacity 0.3s ease-in-out
+
+        &:hover
+          &::before
+            opacity: 1
+
+
+.vip-block
+  cursor: pointer
+  position: relative
+  overflow: hidden
+  background: rgba(0, 255, 240, 0.1)
+  border: 1px solid rgba(0, 255, 240, 0.54)
+  border-radius: 0.6vw
+  padding: 0 2.5vw
+  width: 25vw
+  height: 95%
+  animation: fadeInVipBlock 1s ease
+
+  &:hover
+    .woman-bg
+      mix-blend-mode: normal
+
+  .woman-bg
+    user-select: none
+    pointer-events: none
+    position: absolute
+    bottom: -0.5vw
+    right: -6.5vw
+    opacity: 0.3
+    mix-blend-mode: luminosity
+    z-index: 1
+    width: 62vh
+
+  .content-inside
+    position: relative
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+    justify-content: space-between
+    height: 100%
+    z-index: 2
+
+    .header-title
+      display: flex
+      flex-direction: column
+      gap: 0.5vw
+      margin-top: 2.1vw
+      font-family: $Montserrat
+      font-weight: 600
+      font-size: 1.6vw
+      text-transform: uppercase
+
+      .sale-title
+        font-weight: 700
+        background: linear-gradient(90deg, #fff 0%, #c1c1c1 76.05%, #9f9c9c 100%)
+        background-clip: text
+        -webkit-background-clip: text
+        -webkit-text-fill-color: transparent
+
+      .name-vip
+        font-weight: 600
+        color: #00fff0
+        text-shadow: 0 0 51px rgba(0, 255, 240, 0.6)
+    
+    .privileges
+      display: flex
+      flex-direction: column
+      width: 100%
+
+      .title
+        font-family: $Montserrat
+        font-weight: 500
+        font-size: 0.98vw
+        width: 6.6vw
+        margin-top: 0.4vw
+        padding-bottom: 0.2vw
+        border-bottom: 0.15vw solid
+
+      .list-privileges
+        display: flex
+        flex-direction: column
+        gap: 1vh
+        list-style: none
+        padding: 0 0
+
+        li
+          display: flex
+          flex-direction: row
+          justify-content: space-between
+          align-items: center
+          background: rgba(255, 255, 255, 0.09)
+          border-radius: 0.3vw
+          height: 6vh
+          box-sizing: border-box
+          padding: 0 1.3vw
+
+          span
+            font-size: 0.9vw
+
+          .pr-name
+            font-weight: 500
+
+          .meaning
+            font-weight: 600
+            color: #00fff0
+
+    .more-detail
+      display: flex
+      flex-direction: row
+      justify-content: space-between
+      margin-bottom: 2vh
+      width: 100%
+
+      &:hover
+        .next-vip
+          animation: hoverTopBalance 0.6s ease
+
+      .title-btn
+        cursor: pointer
+        border: none
+        outline: none
+        height: 6.5vh
+        width: 21vw
+        background: rgba(0, 255, 240, 0.2)
+        border: 1px solid rgba(0, 255, 240, 0.54)
+        border-radius: 0.3vw
+        font-family: $Montserrat
+        font-weight: 600
+        font-size: 0.9vw
+        text-transform: uppercase
+        color: #00fff0
+
+      .next-vip
+        background: rgba(0, 255, 240, 0.2)
+        border: 1px solid rgba(0, 255, 240, 0.54)
+        border-radius: 0.3vw
+        width: 1.2vw
+        padding: 0 1vw
+
+
+.block-three
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  height: 95%
+  width: 36.7%
+
+  .block
+    position: relative
+    overflow: hidden
+    cursor: pointer
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    width: 100%
+    height: 32vh
+    border-radius: 0.6vw
+    box-sizing: border-box
+    padding: 4vh 2vw
+
+    &:hover
+      .next-btn
+        animation: hoverTopBalance 0.6s ease
+
+    .header-title
+      display: flex
+      flex-direction: column
+      align-items: flex-start
+      gap: 1.3vh
+      font-family: $Montserrat
+      font-weight: 700
+      text-transform: uppercase
+
+      #one-title
+        background: linear-gradient(90deg, #fff 0%, #c1c1c1 76.05%, #9f9c9c 100%)
+        background-clip: text
+        -webkit-background-clip: text
+        -webkit-text-fill-color: transparent
+        font-size: 1.6vw
+
+      #two-title
+        font-size: 1.4vw
+        padding-bottom: 1.5vh
+        color: #D6D1D1
+
+    .next-btn
+      display: flex
+      justify-content: center
+      align-items: center
+      outline: none
+      width: 6vh
+      height: 6vh
+      border-radius: 0.3vw
+      cursor: pointer
+
+      img
+        width: 1.2vw
+
+  #one
+    background: rgba(161, 87, 255, 0.12)
+    border: 0.071vw solid rgba(161, 87, 255, 0.65)
+    animation: fadeInBlockThree 1.5s ease
+
+    #uniq-img
+      position: absolute
+      width: 30vw
+      right: -2vw
+      bottom: -1vw
+      user-select: none
+      pointer-events: none
+
+    #two-title
+      width: 5vw
+      border-bottom: 0.3vw #a157ff solid
+
+    .next-btn
+      border: 0.035vw solid rgba(161, 87, 255, 0.77)
+      background: rgba(161, 87, 255, 0.2)
+
+  #two
+    background: rgba(0, 255, 41, 0.12)
+    border: 1px solid rgba(0, 255, 41, 0.54)
+    animation: fadeInBlockThree 0.8s ease
+
+    #services-img
+      position: absolute
+      width: 49vh
+      right: -5vw
+      bottom: -1.5vw
+      user-select: none
+      pointer-events: none
+
+    #two-title
+      width: 4vw
+      border-bottom: 0.3vw #00ff29 solid
+
+    .next-btn
+      border: 0.50px solid rgba(0, 255, 41, 0.77)
+      background: rgba(0, 255, 41, 0.2)
+
+@keyframes hoverTopBalance
+  0%
+    transform: translateX(0)
+  50%
+    transform: translateX(20%)
+  100%
+    transform: translateX(0)
+
+@keyframes fadeInBlockOne
+  0%
+    transform: translateX(-85%)
+  100%
+    transform: translateX(0)
+
+@keyframes fadeInVipBlock
+  0%
+    transform: translateY(-85%)
+  100%
+    transform: translateX(0)
+
+@keyframes fadeInBlockThree
+  0%
+    transform: translateX(85%)
+  100%
+    transform: translateX(0)

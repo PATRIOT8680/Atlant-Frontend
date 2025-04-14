@@ -1,0 +1,616 @@
+$Montserrat: "Montserrat", sans-serif
+
+#ltd
+  .blobs
+    #one
+      fill: rgba(255, 57, 57, 0.3)
+    
+    #two
+      fill: rgba(255, 57, 57, 0.3)
+
+  .content-inside
+    .select-petrol
+      .type.selected
+        .header
+          .select-svg
+            background: #fe2d53
+
+    .amount-petrol
+      .input-btn
+        .select-amount
+          .range
+            &::-webkit-slider-thumb
+              box-shadow: -407px 0 0 400px #f20d37dd
+
+              &:active
+                box-shadow: -407px 0 0 400px #F20D36
+
+    .select-pay
+      .btns
+        .btn.cash
+          color: #ffff
+          background: #f46
+
+          svg
+            fill: #ffff
+
+    .pay-petrol
+      background: linear-gradient(90deg, #f46 0%, #ff103a 100%)
+
+      &::before
+        background: linear-gradient(90deg, #ff103a 0%, #f46 100%)
+
+#ron
+  .blobs
+    #one
+      fill: rgba(255, 95, 26, 0.3)
+    
+    #two
+      fill: rgba(255, 95, 26, 0.3)
+
+  .content-inside
+    .select-petrol
+      .type.selected
+        .header
+          .select-svg
+            background: #fdaa04
+
+    .amount-petrol
+      .input-btn
+        .select-amount
+          .range
+            &::-webkit-slider-thumb
+              box-shadow: -407px 0 0 400px #ffb82e
+
+              &:active
+                box-shadow: -407px 0 0 400px #ff961c
+
+    .select-pay
+      .btns
+        .btn.cash
+          background: #ffb82e
+
+    .pay-petrol
+      background: linear-gradient(90deg, #ffb82e 0%, #ff961c 100%)
+
+      &::before
+        background: linear-gradient(90deg, #ff961c 0%, #ffb82e 100%)
+
+
+#xero
+  .blobs
+    #one
+      fill: rgba(42, 140, 255, 0.3)
+    
+    #two
+      fill: rgba(42, 140, 255, 0.3)
+
+  .content-inside
+    .select-petrol
+      .type.selected
+        .header
+          .select-svg
+            background: #4fb1f7
+
+    .amount-petrol
+      .input-btn
+        .select-amount
+          .range
+            &::-webkit-slider-thumb
+              box-shadow: -407px 0 0 400px #389fffc9
+
+              &:active
+                box-shadow: -407px 0 0 400px #389fff
+
+    .select-pay
+      .btns
+        .btn.cash
+          background: #6cb8ff
+
+        .btn.card
+          color: #ffff
+          background: #1d85ff
+
+          svg
+            fill: #ffff
+
+    .pay-petrol
+      background: linear-gradient(90deg, #6cb8ff 0%, #1d85ff 100%)
+
+      &::before
+        background: linear-gradient(90deg, #1d85ff 0%, #6cb8ff 100%)
+
+.petrol
+  position: relative
+  overflow: hidden
+  background: #141614
+  border-radius: 0.65vw
+  width: 45vw
+  height: 45vw
+  animation: fadeInLTD 1s ease
+
+  .blobs
+    user-select: none
+    z-index: 0
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    filter: blur(12vw)
+
+    #one
+      position: absolute
+      top: -9vw
+      left: -9vw
+      width: 27vw
+      height: 26vw
+
+    #two
+      position: absolute
+      top: 30vw
+      left: 26vw
+      width: 27vw
+      height: 26vw
+      transform: rotate(180deg)
+
+  .content-inside
+    z-index: 1
+    position: relative
+    padding: 2vw 2.65vw
+
+    .header
+      display: flex
+      flex-direction: row
+      align-items: center
+      justify-content: space-between
+      user-select: none
+      pointer-events: none
+
+      .logotype
+        display: flex
+        flex-direction: row
+        align-items: center
+        gap: 2vw
+
+        .logo
+          width: 7vw
+
+        .description
+          width: 9vw
+          font-weight: 500
+          font-size: 0.8vw
+          color: rgba(255, 255, 255, 0.75)
+
+      .car-info
+        display: flex
+        align-items: center
+        justify-content: flex-end
+        flex-direction: row-reverse
+        background: rgba(255, 255, 255, 0.09)
+        border-radius: 0.354vw
+        width: 17vw
+        padding: 1vw 1vw
+        
+        .car-img
+          position: absolute
+          right: 3vw
+          width: 9.5vw
+
+        .text
+          display: flex
+          flex-direction: column
+          gap: 0.2vw
+
+          .car-name
+            font-weight: 600
+            font-size: 0.992vw
+            text-transform: uppercase
+            color: #fff
+
+          .type-petrol
+            display: flex
+            flex-direction: column
+            gap: 0.3vw
+
+            .info
+              width: 7vw
+              font-weight: 500
+              font-size: 0.7vw
+              color: rgba(255, 255, 255, 0.75)
+
+            .type
+              font-weight: 600
+              font-size: 0.85vw
+              text-transform: uppercase
+
+            #gas
+              color: #1dff77
+
+            #diesel
+              color: #ff611d
+
+            #electro
+              color: #49b3ff
+
+    .select-petrol
+      display: flex
+      flex-direction: row
+      justify-content: space-between
+      margin-top: 1.2vw
+
+      #gas
+        .bg-filter
+          .blur-elipse
+            background: rgba(87, 245, 112, 0.3)
+
+          .elipse-bg
+            svg
+              fill: rgba(87, 245, 112, 0.47)
+              stroke: rgba(107, 255, 132, 0.9)
+              box-shadow: 0 0 13px 3px rgba(75, 255, 104, 0.3)
+              border-radius: 100%
+
+        .title
+          color: rgba(87, 245, 111, 0.959)
+          -webkit-text-stroke: 0.5px #6BFF83
+
+      #diesel
+        .bg-filter
+          .blur-elipse
+            background: rgba(151, 73, 16, 0.57)
+
+          .elipse-bg
+            svg
+              fill: rgba(183, 101, 25, 0.5)
+              stroke: rgba(183, 101, 25, 0.9)
+              box-shadow: 0 0 13px 3px rgba(255, 109, 2, 0.3)
+              border-radius: 100%
+
+        .title
+          color: rgba(255, 97, 29, 0.955)
+          -webkit-text-stroke: 0.5px #FF611D
+      
+      #electro
+        .bg-filter
+          .blur-elipse
+            background: rgba(8, 75, 123, 0.57)
+
+          .flash-bg
+            svg
+              fill: rgba(0, 149, 255, 0.7)
+
+        .title
+          color: rgb(0, 149, 255)
+          -webkit-text-stroke: 0.5px #4FB6FF
+
+      .type
+        user-select: none
+        position: relative
+        overflow: hidden
+        cursor: pointer
+        display: flex
+        flex-direction: column
+        align-items: center
+        background: rgba(255, 255, 255, 0.09)
+        border: 0.60px solid rgba(255, 255, 255, 0.16)
+        border-radius: 0.354vw
+        width: 12.4vw
+        height: 12.8vw
+
+        .bg-filter
+          position: absolute
+          bottom: 0
+
+          .blur-elipse
+            width: 10vw
+            height: 10vw
+            margin-bottom: -5vw
+            background: red
+            filter: blur(4.249vw)
+            border-radius: 100%
+
+        .title
+          position: absolute
+          bottom: 0
+          padding-bottom: 3.3vw
+          font-weight: 700
+          font-size: 1.8vw
+          letter-spacing: 0.1em
+          text-transform: uppercase
+          z-index: 1
+
+        .header
+          display: flex
+          flex-direction: row
+          justify-content: space-between
+          width: 95%
+          padding-top: 0.3vw
+          z-index: 1
+
+          .price
+            border-radius: 0.3vw
+            padding: 0.5vw 0.95vw
+            font-weight: 600
+            font-size: 0.85vw
+            text-transform: uppercase
+            background: rgba(255, 255, 255, 0.08)
+            color: #ffff
+
+          .select-svg
+            display: none
+
+        .select-hover
+          display: none
+
+        &:hover
+          .select-hover
+            position: absolute
+            display: flex
+            align-items: flex-end
+            justify-content: center
+            bottom: 0
+            width: 100%
+            height: 7vw
+            background: linear-gradient(360deg, #141614 0%, rgba(20, 22, 20, 0.74) 45.99%, rgba(20, 22, 20, 0.46) 68.49%, rgba(20, 22, 20, 0) 100%)
+            animation: fadeInSelectHover 0.22s ease-in-out
+            z-index: 2
+
+            .text
+              font-weight: 700
+              font-size: 0.992vw
+              letter-spacing: 0.05em
+              text-transform: uppercase
+              padding-bottom: 1.8vw
+
+      .type.selected
+        .header
+          .select-svg
+            display: flex
+            border-radius: 0.3vw
+            padding: 0.5vw 0.5vw
+            animation: fadeInSelectSVG 0.5s ease-in-out
+
+        &:hover
+          .select-hover
+            display: none
+
+    .amount-petrol
+      display: flex
+      flex-direction: column
+      align-items: flex-start
+      margin-top: 1.5vw
+      user-select: none
+
+      .title
+        font-weight: 600
+        font-size: 1vw
+        text-transform: uppercase
+        color: #fff
+
+      .input-btn
+        width: 100%
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+        margin-top: 0.5vw
+
+        .select-amount
+          display: flex
+          flex-direction: column
+          gap: 0.3vw
+
+          .info
+            display: flex
+            justify-content: space-between
+            width: 20vw
+            padding: 1.25vw 1.3vw
+            background: rgba(255, 255, 255, 0.09)
+            border-radius: 0.354vw
+            font-weight: 600
+            font-size: 1.275vw
+            color: #fff
+
+            .liters
+              .measurement
+                color: rgba(255, 255, 255, 0.65)
+                font-size: 1.1vw
+          
+          .range
+            -webkit-appearance: none
+            appearance: none
+            width: 100%
+            cursor: pointer
+            outline: none
+            overflow: hidden
+            border-radius: 0.2vw
+            background: rgba(255, 255, 255, 0.09)
+
+            &::-webkit-slider-runnable-track
+              height: 0.7vw
+
+            &::-moz-range-track
+              height: 0.7vw
+
+            &::-webkit-slider-thumb
+              cursor: grabbing
+              -webkit-appearance: none
+              appearance: none
+              height: 0.7vw
+              width: 0.9vw
+              background-color: #ffff
+              border-radius: 0.1vw
+
+            &::-moz-range-thumb
+              cursor: grabbing
+              -webkit-appearance: none
+              appearance: none
+              height: 0.7vw
+              width: 0.9vw
+              background-color: #ffff
+              border-radius: 0.1vw
+              box-shadow: -407px 0 0 400px #21dd6cc6
+
+              &:active
+                box-shadow: -407px 0 0 400px #21dd6c
+
+        .full-fuel
+          cursor: pointer
+          outline: none
+          border: none
+          width: 15vw
+          background: rgba(255, 255, 255, 0.09)
+          border-radius: 0.354vw
+          font-family: $Montserrat
+          font-weight: 600
+          font-size: 1.1vw
+          text-transform: uppercase
+          color: rgba(255, 255, 255, 0.85)
+          transition: all 0.4s
+
+          &:hover
+            transition: all 0.4s
+            background: #ffff
+            color: #131C33
+
+    .select-pay
+      display: flex
+      flex-direction: column
+      justify-content: flex-start
+      margin-top: 1.5vw
+      user-select: none
+
+      .title
+        font-weight: 600
+        font-size: 1vw
+        text-transform: uppercase
+        color: #fff
+
+      .btns
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+        margin-top: 0.5vw
+
+        .btn
+          display: flex
+          flex-direction: row
+          align-items: center
+          justify-content: center
+          gap: 1vw
+          cursor: pointer
+          outline: none
+          border: none
+          width: 19vw
+          height: 3.3vw
+          background: rgba(255, 255, 255, 0.09)
+          border-radius: 0.354vw
+          font-family: $Montserrat
+          font-weight: 600
+          font-size: 0.93vw
+          text-transform: uppercase
+          color: rgba(255, 255, 255, 0.85)
+          transition: all 0.4s
+
+          svg
+            fill: rgba(255, 255, 255, 0.85)
+            width: 1.05vw
+
+          &:hover
+            transition: all 0.4s
+            background: #ffff
+            color: #131c33
+
+            svg
+              transition: all 0.4s
+              fill: #131c33
+
+        .btn.cash
+          color: #131c33
+          background: #1DFF77
+          transition: all 0.4s
+
+          svg
+            fill: #131c33
+
+          &:hover
+            color: #131c33
+            transition: all 0.4s
+
+            svg
+              fill: #131c33
+              transition: all 0.4s
+        
+        .btn.card
+          background: #7DB1FF
+          color: #131c33
+          transition: all 0.4s
+
+          svg
+            fill: #131c33
+
+          &:hover
+            color: #131c33
+            transition: all 0.4s
+
+            svg
+              fill: #131c33
+              transition: all 0.4s
+
+    .pay-petrol
+      cursor: pointer
+      user-select: none
+      position: relative
+      width: 100%
+      height: 3.3vw
+      margin-top: 1.5vw
+      outline: none
+      border: none
+      border-radius: 0.354vw
+      font-family: $Montserrat
+      font-weight: 600
+      font-size: 1vw
+      text-transform: uppercase
+      color: #131C33
+      z-index: 1000
+
+      &::before
+        content: ""
+        display: block
+        opacity: 0
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 3.3vw
+        z-index: -1000
+        border-radius: 0.354vw
+        transition: opacity 0.3s ease-in-out
+
+      &:hover
+        &::before
+          opacity: 1
+
+@keyframes fadeInLTD
+  from
+    opacity: 0
+    transform: translateY(-50vw)
+  to
+    opacity: 1
+    transform: translateX(0)
+
+@keyframes fadeInSelectSVG
+  0%
+    opacity: 0
+    margin-right: -25%
+  100%
+    opacity: 1
+    margin-right: 0%
+
+@keyframes fadeInSelectHover
+  0%
+    opacity: 0
+    margin-bottom: -20%
+  100%
+    opacity: 1
+    margin-bottom: 0%

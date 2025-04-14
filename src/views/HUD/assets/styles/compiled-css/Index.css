@@ -1,0 +1,63 @@
+body {
+  width: 100%;
+  height: 100%;
+}
+
+.hud {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 97.5%;
+  height: 96.5%;
+  -webkit-animation: fadeInHud 1.5s ease;
+          animation: fadeInHud 1.5s ease;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+}
+.hud .effects .e-right-content {
+  opacity: 0.9;
+  position: absolute;
+  right: -20vw;
+  top: -18vw;
+  width: 50vw;
+}
+.hud .content-inside {
+  height: 100%;
+}
+.hud .content-inside .right-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
+}
+
+@-webkit-keyframes fadeInHud {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInHud {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

@@ -1,0 +1,16 @@
+.login {
+  display: flex;
+  flex-direction: column;
+  gap: 2vw;
+  width: 30vw;
+  animation: fadeInLogin 1s ease;
+}
+
+@keyframes fadeInLogin {
+  from {
+    transform: translateY(-30%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}/*# sourceMappingURL=Login.css.map */

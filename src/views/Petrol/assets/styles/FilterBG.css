@@ -1,0 +1,210 @@
+.elipse-bg {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+.elipse-bg svg {
+  opacity: 0.6;
+}
+.elipse-bg svg:nth-child(1) {
+  animation-name: animElipse;
+  animation-duration: 7s;
+  animation-iteration-count: infinite;
+  animation-delay: 0s;
+  animation-timing-function: ease;
+  position: absolute;
+  width: 1.3vw;
+  left: -1.7vw;
+}
+.elipse-bg svg:nth-child(2) {
+  animation-name: animElipse;
+  animation-duration: 6.5s;
+  animation-iteration-count: infinite;
+  animation-delay: 0s;
+  animation-timing-function: ease;
+  position: absolute;
+  width: 1.5vw;
+  left: -0.7vw;
+}
+.elipse-bg svg:nth-child(3) {
+  animation-name: animElipse;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-delay: 0s;
+  animation-timing-function: ease;
+  position: absolute;
+  width: 0.8vw;
+  left: 0vw;
+}
+.elipse-bg svg:nth-child(4) {
+  animation-name: animElipse;
+  animation-duration: 6.7s;
+  animation-iteration-count: infinite;
+  animation-delay: 0s;
+  animation-timing-function: ease;
+  position: absolute;
+  width: 1.6vw;
+  left: 5vw;
+}
+.elipse-bg svg:nth-child(5) {
+  animation-name: animElipse;
+  animation-duration: 8s;
+  animation-iteration-count: infinite;
+  animation-delay: 0s;
+  animation-timing-function: ease;
+  position: absolute;
+  width: 1.3vw;
+  left: 5.6vw;
+}
+.elipse-bg svg:nth-child(6) {
+  animation-name: animElipse;
+  animation-duration: 2.7s;
+  animation-iteration-count: infinite;
+  animation-delay: 0s;
+  animation-timing-function: ease;
+  position: absolute;
+  width: 0.8vw;
+  left: 8.5vw;
+}
+.elipse-bg svg:nth-child(7) {
+  animation-name: animElipse;
+  animation-duration: 3.4s;
+  animation-iteration-count: infinite;
+  animation-delay: 0s;
+  animation-timing-function: ease;
+  position: absolute;
+  width: 1.2vw;
+  left: 9vw;
+}
+.elipse-bg svg:nth-child(8) {
+  animation-name: animElipse;
+  animation-duration: 4.7s;
+  animation-iteration-count: infinite;
+  animation-delay: 0s;
+  animation-timing-function: ease;
+  position: absolute;
+  width: 0.9vw;
+  left: 10.4vw;
+}
+
+.flash-bg {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+.flash-bg svg {
+  opacity: 0.6;
+}
+.flash-bg svg:nth-child(1) {
+  animation-name: animFlash;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-delay: 0s;
+  animation-timing-function: ease-in-out;
+  position: absolute;
+  width: 1.3vw;
+  left: -1.7vw;
+}
+.flash-bg svg:nth-child(2) {
+  animation-name: animFlash;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-delay: 0s;
+  animation-timing-function: ease;
+  position: absolute;
+  width: 1.5vw;
+  left: -0.7vw;
+}
+.flash-bg svg:nth-child(3) {
+  animation-name: animFlash;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-delay: 0s;
+  animation-timing-function: ease-in-out;
+  position: absolute;
+  width: 0.8vw;
+  left: 0vw;
+}
+.flash-bg svg:nth-child(4) {
+  animation-name: animFlash;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-delay: 0s;
+  animation-timing-function: ease-in;
+  position: absolute;
+  width: 1.6vw;
+  left: 5vw;
+}
+.flash-bg svg:nth-child(5) {
+  animation-name: animFlash;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-delay: 0s;
+  animation-timing-function: ease-in-out;
+  position: absolute;
+  width: 1.3vw;
+  left: 5.6vw;
+}
+.flash-bg svg:nth-child(6) {
+  animation-name: animFlash;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-delay: 0s;
+  animation-timing-function: ease;
+  position: absolute;
+  width: 0.8vw;
+  left: 8.5vw;
+}
+.flash-bg svg:nth-child(7) {
+  animation-name: animFlash;
+  animation-duration: 3.4s;
+  animation-iteration-count: infinite;
+  animation-delay: 0s;
+  animation-timing-function: ease-in-out;
+  position: absolute;
+  width: 1.2vw;
+  left: 9vw;
+}
+
+@keyframes animElipse {
+  0% {
+    top: 100%;
+    opacity: 1;
+    margin-left: 10px;
+  }
+  25% {
+    margin-left: -10px;
+  }
+  50% {
+    margin-left: 10px;
+  }
+  75% {
+    margin-left: -10px;
+  }
+  100% {
+    top: -150%;
+    opacity: 0;
+    margin-left: 10px;
+  }
+}
+@keyframes animFlash {
+  0% {
+    top: 100%;
+    opacity: 1;
+    margin-left: -10px;
+  }
+  25% {
+    margin-left: -5px;
+  }
+  50% {
+    margin-left: 0px;
+  }
+  75% {
+    margin-left: 5px;
+  }
+  100% {
+    top: -150%;
+    opacity: 0;
+    margin-left: 10px;
+  }
+}/*# sourceMappingURL=FilterBG.css.map */

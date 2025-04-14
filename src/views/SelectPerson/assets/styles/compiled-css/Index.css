@@ -1,0 +1,402 @@
+@media (min-width: 2100px) {
+  body .select-person .main-section {
+    zoom: 95%;
+  }
+}
+@media (min-width: 2220px) {
+  body .select-person .main-section {
+    zoom: 85%;
+  }
+}
+@media (min-width: 2500px) {
+  body .select-person .main-section {
+    zoom: 70%;
+  }
+}
+@media (min-width: 2900px) {
+  body .select-person .main-section {
+    zoom: 65%;
+  }
+}
+@media (min-width: 3100px) {
+  body .select-person .main-section {
+    zoom: 60%;
+  }
+}
+@media (min-width: 3400px) {
+  body .select-person .main-section {
+    zoom: 55%;
+  }
+}
+@media (min-width: 3700px) {
+  body .select-person .main-section {
+    zoom: 50%;
+  }
+}
+
+.select-person {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  gap: 3vw;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 1.5vw 1.5vw;
+  width: 100vw;
+  height: 100vh;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  zoom: 100%;
+}
+.select-person.hidden {
+  display: none;
+}
+.select-person .bg-effect {
+  position: absolute;
+  width: 28vw;
+  height: 100%;
+  right: -5vw;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+      -ms-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+  z-index: -1;
+}
+.select-person .main-section .right-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.1vw;
+  width: 28vw;
+  height: 100%;
+  -webkit-animation: fadeInSelectPerson 1.3s ease;
+          animation: fadeInSelectPerson 1.3s ease;
+}
+.select-person .main-section .right-block .header-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.3vw;
+}
+.select-person .main-section .right-block .header-section .rp-name {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.7vw;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.select-person .main-section .right-block .header-section .status-person {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.05vw;
+  font-weight: 500;
+}
+.select-person .main-section .right-block .list-persons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1vw;
+  padding: 0 0;
+  width: 100%;
+}
+.select-person .main-section .right-block .list-persons .person-act {
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 0.5vw;
+  width: 100%;
+  height: 9vw;
+}
+.select-person .main-section .right-block .list-persons .person-act .line {
+  width: 0.5vw;
+  height: 100%;
+  background: rgba(133, 168, 255, 0.4);
+}
+.select-person .main-section .right-block .list-persons .person-act .selection-person {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0 1.5vw;
+  gap: 1.5vw;
+  width: 100%;
+  background: rgba(133, 168, 255, 0.4);
+}
+.select-person .main-section .right-block .list-persons .person-act .selection-person .left-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 3.7vw;
+  height: 3.7vw;
+  background: rgba(124, 161, 255, 0.6);
+  border: 0.13vw solid rgba(255, 255, 255, 0.3);
+  border-radius: 0.4vw;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 1.1vw;
+}
+.select-person .main-section .right-block .list-persons .person-act .selection-person .left-content img {
+  width: 1vw;
+}
+.select-person .main-section .right-block .list-persons .person-act .selection-person .right-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.5vw;
+}
+.select-person .main-section .right-block .list-persons .person-act .selection-person .right-content .title {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.3vw;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 90%;
+}
+.select-person .main-section .right-block .list-persons .person-act .selection-person .right-content .description {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 0.8vw;
+  opacity: 0.9;
+  width: 18vw;
+}
+.select-person .main-section .right-block .list-persons .person-act .selection-person .right-content .header-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.select-person .main-section .right-block .list-persons .person-act .selection-person .right-content .header-title .rp-name {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.3vw;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.select-person .main-section .right-block .list-persons .person-act .selection-person .right-content .header-title .status {
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.9vw;
+  font-weight: 500;
+  opacity: 0.9;
+}
+.select-person .main-section .right-block .list-persons .person-act .selection-person .right-content .money-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1.2vw;
+}
+.select-person .main-section .right-block .list-persons .person-act .selection-person .right-content .money-block .money {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.3vw;
+}
+.select-person .main-section .right-block .list-persons .person-act .selection-person .right-content .money-block .money .icon {
+  width: 0.9vw;
+  height: 0.9vw;
+}
+.select-person .main-section .right-block .list-persons .person-act .selection-person .right-content .money-block .money .text-money {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.05vw;
+  font-weight: 500;
+}
+.select-person .main-section .right-block .list-persons .person-act .selection-person .right-content .fraction {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 0.9vw;
+  color: rgba(255, 255, 255, 0.862745098);
+}
+.select-person .main-section .right-block .list-persons .person-act .selection-person .right-content .fraction span {
+  color: #ffffff;
+}
+.select-person .main-section .right-block .list-persons .person-act.select {
+  -webkit-animation: fadeInBlockAct 1.3s cubic-bezier(0.57, 0.27, 0.28, 1.14);
+          animation: fadeInBlockAct 1.3s cubic-bezier(0.57, 0.27, 0.28, 1.14);
+}
+.select-person .main-section .right-block .list-persons .person-act.select .line {
+  background: #356eff;
+}
+.select-person .main-section .right-block .list-persons .person-act.select .selection-person {
+  background: #356eff;
+}
+.select-person .main-section .right-block .list-persons .person-act.select .selection-person .left-content {
+  border: 0.13vw solid rgba(255, 255, 255, 0.1);
+  background: rgba(90, 137, 255, 0.74);
+}
+.select-person .main-section .right-block .select-person-btn {
+  cursor: pointer;
+  outline: none;
+  border: none;
+  height: 4.8vw;
+  background: url("../../img/select-btn.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 0.4vw;
+  color: #131c33;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.9vw;
+  font-weight: 600;
+  text-transform: uppercase;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.select-person .main-section .right-block .select-person-btn:hover {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  -webkit-box-shadow: 0 0 3.4vw 0.5vw rgba(234, 211, 231, 0.49);
+          box-shadow: 0 0 3.4vw 0.5vw rgba(234, 211, 231, 0.49);
+}
+.select-person .help-move {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 0.5vw;
+  height: 2.5vw;
+  -webkit-animation: fadeInSelectPerson 1.3s ease;
+          animation: fadeInSelectPerson 1.3s ease;
+}
+.select-person .help-move .text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 0.3vw;
+  padding: 0 1.5vw;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.8vw;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.select-person .help-move .icon-mouse {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 2.5vw;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 0.3vw;
+}
+.select-person .help-move .icon-mouse img {
+  width: 0.9vw;
+}
+
+@-webkit-keyframes fadeInBlockAct {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInBlockAct {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fadeInSelectPerson {
+  from {
+    opacity: 0;
+    -webkit-transform: translateX(70%);
+            transform: translateX(70%);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+@keyframes fadeInSelectPerson {
+  from {
+    opacity: 0;
+    -webkit-transform: translateX(70%);
+            transform: translateX(70%);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}

@@ -1,0 +1,61 @@
+.input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.5rem;
+}
+.input .name-input {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 13px;
+  text-transform: uppercase;
+  color: #fff;
+}
+.input input {
+  outline: none;
+  border: none;
+  height: 2.95rem;
+  border-radius: 0.27rem;
+  background: #21315a;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding-left: 0.9rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  color: white;
+}
+.input input::-webkit-input-placeholder {
+  color: rgba(255, 255, 255, 0.4);
+  font-weight: 500;
+  font-size: 12px;
+}
+.input input::-moz-placeholder {
+  color: rgba(255, 255, 255, 0.4);
+  font-weight: 500;
+  font-size: 12px;
+}
+.input input:-ms-input-placeholder {
+  color: rgba(255, 255, 255, 0.4);
+  font-weight: 500;
+  font-size: 12px;
+}
+.input input::-ms-input-placeholder {
+  color: rgba(255, 255, 255, 0.4);
+  font-weight: 500;
+  font-size: 12px;
+}
+.input input::placeholder {
+  color: rgba(255, 255, 255, 0.4);
+  font-weight: 500;
+  font-size: 12px;
+}
+.input input::-webkit-outer-spin-button,
+.input input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}

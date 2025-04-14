@@ -1,0 +1,137 @@
+$Montserrat: "Montserrat", sans-serif
+
+.clothes
+  display: flex
+  flex-direction: row
+  justify-content: space-between
+  flex-wrap: wrap
+  gap: 1.6vw
+  height: 64vh
+  overflow: auto
+  list-style: none
+  padding: 0 0
+  padding-right: 0.8vw
+  scroll-behavior: smooth
+  border-radius: 0.6vw
+  outline: none
+
+  &::-webkit-scrollbar
+    width: 0.5vw
+
+  &::-webkit-scrollbar-track
+    opacity: 1
+    background-color: #cdcdcd2a
+    border-radius: 100px
+
+  &::-webkit-scrollbar-thumb
+    cursor: grabbing
+    background-color: #cdcdcd2a
+    border-radius: 100px
+
+    &:hover
+      background-color: #cdcdcd5a
+
+  .cloth
+    display: flex
+    cursor: pointer
+    flex-direction: column
+    align-items: flex-start
+    overflow: hidden
+    background: rgba(12, 255, 182, 0.08)
+    border: 1px solid rgba(12, 255, 182, 0.34)
+    border-radius: 0.6vw
+    width: 21vw
+    height: 37vh
+    animation: fadeInClothes 0.5s ease
+    transition: all 0.3s
+
+    &:hover
+      .content-inside
+        .image-block
+          .circle
+            background: rgba(255, 255, 255, 0.07)
+
+    .content-inside
+      display: flex
+      flex-direction: column
+      justify-content: space-between
+      position: relative
+      box-sizing: border-box
+      padding: 2.5vh 1.2vw 1.3vh 1.2vw
+      height: 100%
+      width: 100%
+
+      .header-title
+        display: flex
+        position: relative
+        flex-direction: column
+        justify-content: center
+        align-items: flex-start
+        gap: 0.5vh
+        z-index: 2
+
+        .name-clothes
+          font-family: $Montserrat
+          font-weight: 600
+          font-size: 1.25vw
+          text-transform: uppercase
+          color: #fff
+
+        .price
+          font-family: $Montserrat
+          font-weight: 600
+          font-size: 1.2vw
+          text-transform: uppercase
+          color: #1dff77
+
+      .image-block
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+        z-index: 1
+
+        img
+          position: relative
+          z-index: 1
+          width: 15vh
+
+        .circle
+          width: 27vh
+          height: 27vh
+          background: rgba(255, 255, 255, 0.02)
+          border-radius: 100%
+          position: absolute
+          top: 50%
+          left: 50%
+          transform: translate(-50%, -50%)
+          transition: all 0.3s
+          z-index: 0
+
+      .buy-clothes
+        cursor: pointer
+        position: relative
+        outline: none
+        height: 5.5vh
+        background: #124D50
+        border: 1px solid rgba(12, 255, 182, 0.65)
+        border-radius: 0.3vw
+        z-index: 1
+        font-family: $Montserrat
+        font-weight: 600
+        font-size: 0.85vw
+        text-transform: uppercase
+        color: #1dff77
+        transition: all 0.3s
+
+        &:hover
+          transition: all 0.3s
+          color: #131C33
+          background: rgb(12, 255, 182)
+
+
+@keyframes fadeInClothes
+  0%
+    transform: scale(0.8)
+  100%
+    transform: scale(1)

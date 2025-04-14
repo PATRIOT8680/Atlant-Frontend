@@ -1,0 +1,216 @@
+$Montserrat: "Montserrat", sans-serif
+
+.vips
+  display: flex
+  flex-direction: row
+  align-items: center
+  justify-content: space-between
+  width: 100%
+  height: 100%
+
+  .vip
+    cursor: pointer
+    position: relative
+    overflow: hidden
+    height: 62.5vh
+    width: 30.5vw
+    background: #000
+    border-radius: 0.6vw
+    padding: 2.5vh 2vw
+    box-sizing: border-box
+
+    &:hover
+      .person-img
+        transform: scale(1.05)
+        transition: all 0.3s
+
+    .person-img
+      user-select: none
+      pointer-events: none
+      position: absolute
+      bottom: -0.5vw
+      right: -6.5vw
+      opacity: 0.3
+      mix-blend-mode: luminosity
+      z-index: 1
+      width: 62vh
+      transition: all 0.3s
+
+    .content-inside
+      position: relative
+      display: flex
+      flex-direction: column
+      justify-content: space-between
+      height: 100%
+      z-index: 2
+
+      .header-title
+        display: flex
+        flex-direction: column
+        gap: 1.5vh
+        
+        .name-vip
+          font-family: $Montserrat
+          font-weight: 700
+          font-size: 1.7vw
+          text-transform: uppercase
+
+        .price
+          display: flex
+          align-items: center
+          font-family: $Montserrat
+          font-size: 1.4vw
+          font-weight: 600
+          color: #1dff77
+
+          img
+            margin-left: 0.5vw
+            width: 2.2vw
+
+      .privileges
+        display: flex
+        flex-direction: column
+        gap: 0.3vh
+        margin-top: 1vh
+
+        .title
+          font-family: $Montserrat
+          font-weight: 500
+          font-size: 0.98vw
+          width: 6.6vw
+          padding-bottom: 0.2vw
+          border-bottom: 0.15vw solid
+
+        .list-privileges
+          display: flex
+          flex-direction: column
+          gap: 0.4vw
+          list-style: none
+          padding: 0 0
+
+          .privilege
+            display: flex
+            flex-direction: row
+            justify-content: space-between
+            align-items: center
+            background: rgba(255, 255, 255, 0.09)
+            border-radius: 0.3vw
+            height: 6vh
+            box-sizing: border-box
+            padding: 0 1.3vw
+            font-size: 0.9vw
+            font-weight: 500
+
+            .value
+              font-size: 1vw
+              font-weight: 600
+
+      .buy-vip
+        cursor: pointer
+        border: none
+        outline: none
+        height: 6.5vh
+        border-radius: 0.3vw
+        font-family: $Montserrat
+        font-weight: 600
+        font-size: 0.9vw
+        text-transform: uppercase
+
+
+  #sapfire
+    background: rgba(0, 255, 240, 0.1)
+    border: 0.071vw solid rgba(0, 255, 240, 0.65)
+    animation: fadeInBlockOne 0.7s ease
+
+    .name-vip
+      color: #00fff0
+      text-shadow: 0 0 3.612vw rgba(0, 255, 240, 0.6)
+
+    .privilege
+      .value
+        color: #00fff0
+
+    .buy-vip
+      background: rgba(0, 255, 240, 0.2)
+      border: 1px solid rgba(0, 255, 240, 0.54)
+      color: #00fff0
+      transition: all 0.3s
+
+      &:hover
+        color: #131C33
+        background: rgb(0, 255, 238)
+        transition: all 0.3s
+
+  #lazurit
+    background: rgba(61, 162, 255, 0.15)
+    border: 1px solid rgba(61, 162, 255, 0.65)
+    animation: fadeInBlockTwo 0.7s ease
+
+    .person-img
+      width: 37vh
+      right: -2vw
+
+    .name-vip
+      color: #44bcff
+      text-shadow: 0 0 51px rgba(68, 188, 255, 0.6)
+
+    .privilege
+      .value
+        color: #44bcff
+
+    .buy-vip
+      background: rgba(68, 188, 255, 0.2)
+      border: 1px solid rgba(68, 188, 255, 0.54)
+      color: #44bcff
+      transition: all 0.3s
+
+      &:hover
+        color: #131C33
+        background: rgb(68, 190, 255)
+        transition: all 0.3s
+
+  #ametist
+    background: rgba(198, 106, 255, 0.15)
+    border: 1px solid rgba(198, 106, 255, 0.65)
+    animation: fadeInBlockThree 0.7s ease
+
+    .person-img
+      width: 58vh
+      right: -8vw
+
+    .name-vip
+      color: #c66aff
+      text-shadow: 0 0 51px 0 rgba(198, 106, 255, 0.6)
+
+    .privilege
+      .value
+        color: #d288ff
+
+    .buy-vip
+      background: rgba(198, 106, 255, 0.2)
+      border: 1px solid rgba(198, 106, 255, 0.54)
+      color: #d288ff
+      transition: all 0.3s
+
+      &:hover
+        color: #131C33
+        background: rgb(198, 106, 255)
+        transition: all 0.3s
+
+@keyframes fadeInBlockOne
+  0%
+    transform: translateX(-85%)
+  100%
+    transform: translateX(0)
+
+@keyframes fadeInBlockTwo
+  0%
+    transform: translateY(-85%)
+  100%
+    transform: translateX(0)
+
+@keyframes fadeInBlockThree
+  0%
+    transform: translateX(85%)
+  100%
+    transform: translateX(0)

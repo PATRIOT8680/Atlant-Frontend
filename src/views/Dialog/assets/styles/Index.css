@@ -1,0 +1,109 @@
+#BOTTOM_LEFT {
+  bottom: 0;
+  left: 0;
+}
+#BOTTOM_LEFT .effect-bg {
+  left: -4vw;
+}
+#BOTTOM_LEFT .header-block {
+  align-items: flex-start;
+}
+#BOTTOM_LEFT .dialog-text {
+  text-align: left;
+}
+#BOTTOM_LEFT .btns-block {
+  display: flex;
+  justify-content: flex-start;
+}
+
+#BOTTOM_CENTER {
+  bottom: 0;
+  left: 50%;
+  width: 50vw;
+  transform: translate(-50%, 0);
+}
+#BOTTOM_CENTER .effect-bg {
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+#BOTTOM_CENTER .header-block {
+  align-items: flex-start;
+}
+
+#BOTTOM_RIGHT {
+  bottom: 0;
+  right: 0;
+}
+#BOTTOM_RIGHT .effect-bg {
+  right: -4vw;
+}
+#BOTTOM_RIGHT .header-block {
+  align-items: flex-end;
+}
+#BOTTOM_RIGHT .dialog-text {
+  text-align: right;
+}
+#BOTTOM_RIGHT .btns-block {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.dialog {
+  position: absolute;
+  width: 40vw;
+  color: red;
+}
+.dialog .effect-bg {
+  position: absolute;
+  width: 60vw;
+  height: 45vw;
+  bottom: -10vw;
+  border-radius: 2vw;
+  z-index: 1;
+}
+.dialog .content-inside {
+  display: flex;
+  flex-direction: column;
+  gap: 1vw;
+  position: relative;
+  margin: 1.5vw 1.5vw;
+  z-index: 2;
+}
+.dialog .content-inside .header-block {
+  display: flex;
+  flex-direction: column;
+  font-family: "Montserrat", sans-serif;
+  gap: 0.3vw;
+}
+.dialog .content-inside .header-block .npc-name {
+  font-size: 1.8vw;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #74abff;
+}
+.dialog .content-inside .header-block .npc-status {
+  font-size: 0.8vw;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: white;
+  background: rgba(255, 255, 255, 0.16);
+  border-radius: 0.3vw;
+  padding: 0.5vw 0.7vw;
+}
+.dialog .content-inside .dialog-text {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.1vw;
+  font-weight: 500;
+  color: white;
+  line-height: 145%;
+}
+.dialog .content-inside .btns-block {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 0.5vw;
+  width: 100%;
+}
+.dialog .content-inside .btns-block .btn {
+  height: 3.3vw;
+}/*# sourceMappingURL=Index.css.map */

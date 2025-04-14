@@ -1,0 +1,170 @@
+.server-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  gap: 1.2vw;
+  position: relative;
+  right: 0;
+}
+.server-section .server-info {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1.5vw;
+}
+.server-section .server-info .statistics {
+  display: flex;
+  flex-direction: row;
+  gap: 0.7vw;
+  height: 2vw;
+}
+.server-section .server-info .statistics .block-stat {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.3vw;
+  height: 100%;
+}
+.server-section .server-info .statistics .block-stat:nth-child(2) .icon img {
+  width: 0.8vw;
+}
+.server-section .server-info .statistics .block-stat .icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 2vw;
+  background: rgba(20, 22, 20, 0.9);
+  border: 0.035vw solid rgba(255, 255, 255, 0.18);
+  border-radius: 0.567vw;
+}
+.server-section .server-info .statistics .block-stat .icon img {
+  width: 1vw;
+  height: 1vw;
+}
+.server-section .server-info .statistics .block-stat .text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: 0 1vw;
+  background: rgba(20, 22, 20, 0.9);
+  border: 0.03vw solid rgba(255, 255, 255, 0.1);
+  border-radius: 0.5vw;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 0.9vw;
+  text-transform: uppercase;
+}
+.server-section .server-info .logotype-project {
+  width: 6vw;
+}
+.server-section .quests {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  gap: 0.3vw;
+  width: 17vw;
+  box-sizing: border-box;
+  padding: 0.6vw 1vw;
+  background: rgba(20, 22, 20, 0.9);
+  border-right: 0.4vw solid #1372ff;
+  border-radius: 0.567vw 0 0 0.567vw;
+}
+.server-section .quests .header-block {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.server-section .quests .header-block .to-location {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.6vw;
+  height: 1.6vw;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 0.3vw;
+  transition: all 0.3s;
+}
+.server-section .quests .header-block .to-location:hover {
+  transition: all 0.3s;
+  background: rgba(255, 255, 255, 0.2);
+}
+.server-section .quests .header-block .to-location:hover img {
+  transition: all 0.3s;
+  opacity: 1;
+}
+.server-section .quests .header-block .to-location img {
+  transition: all 0.3s;
+  opacity: 0.8;
+  width: 0.6vw;
+}
+.server-section .quests .header-block .title-quest {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 0.9vw;
+  text-transform: uppercase;
+  color: #4f95ff;
+  text-shadow: 0 0 27px rgba(79, 149, 255, 0.4);
+}
+.server-section .quests .description-quest {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 0.7vw;
+  line-height: 145%;
+  color: #fff;
+}
+.server-section .weapon {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  overflow: hidden;
+  gap: 1vw;
+  box-sizing: border-box;
+  padding: 1vw 1.5vw;
+  background: rgba(20, 22, 20, 0.9);
+  border-right: 0.4vw solid #1372ff;
+  border-radius: 0.567vw 0 0 0.567vw;
+}
+.server-section .weapon .ammo-block {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.15vw;
+}
+.server-section .weapon .ammo-block .clip-ammo {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 1.3vw;
+  text-transform: uppercase;
+  color: #fff;
+}
+.server-section .weapon .ammo-block .all-ammo {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 0.9vw;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.6);
+}
+.server-section .weapon .img-block {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.server-section .weapon .img-block .effect {
+  position: absolute;
+  width: 3vw;
+  height: 2vw;
+  border-radius: 3vw;
+}
+.server-section .weapon .img-block .weapon-img {
+  position: relative;
+  transform: scale(-1, 1);
+  width: 5vw;
+}/*# sourceMappingURL=ServerSection.css.map */

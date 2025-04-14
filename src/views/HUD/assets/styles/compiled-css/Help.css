@@ -1,0 +1,62 @@
+.help {
+  position: relative;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  right: 0;
+}
+.help .help-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  list-style: none;
+  gap: 1vw;
+}
+.help .help-list .key {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1vw;
+}
+.help .help-list .key .btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 3vw;
+  height: 2.1vw;
+  background: rgba(20, 22, 20, 0.9);
+  border-radius: 0.5vw;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 1vw;
+  text-transform: uppercase;
+  color: #4f95ff;
+}
+.help .help-list .key .text {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 0.9vw;
+  text-transform: uppercase;
+  color: #fff;
+}

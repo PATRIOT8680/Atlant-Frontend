@@ -1,0 +1,238 @@
+.minimap-section {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  position: absolute;
+  gap: 1vw;
+  left: 0;
+  bottom: 0;
+}
+.minimap-section .minimap-block {
+  position: relative;
+  left: 25rem;
+  display: flex;
+  flex-direction: column;
+  width: 15vw;
+}
+.minimap-section .minimap-block .minimap {
+  width: 100%;
+  height: 10vw;
+}
+.minimap-section .minimap-block .needs {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 0.6vw;
+  width: 100%;
+  height: 2.2vw;
+  margin-bottom: 0.5vw;
+}
+.minimap-section .minimap-block .needs .block-need {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.3vw;
+}
+.minimap-section .minimap-block .needs .block-need .icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.4vw;
+  width: 2.2vw;
+  height: 100%;
+}
+.minimap-section .minimap-block .needs .block-need .icon img {
+  width: 1vw;
+}
+.minimap-section .minimap-block .needs .block-need .progress-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 4.7vw;
+  border-radius: 0.4vw;
+  box-sizing: border-box;
+  padding: 0 0.7vw;
+}
+.minimap-section .minimap-block .needs .block-need .progress-bar svg {
+  width: 6vw;
+  height: 0.55vw;
+  border-radius: 30vw;
+}
+.minimap-section .minimap-block .needs .block-need .progress-bar svg rect {
+  height: 0.55vw;
+}
+.minimap-section .minimap-block .needs #water .icon {
+  background: rgba(37, 164, 255, 0.25);
+}
+.minimap-section .minimap-block .needs #water .icon img {
+  width: 0.8vw;
+}
+.minimap-section .minimap-block .needs #water .progress-bar {
+  background: rgba(37, 164, 255, 0.25);
+}
+.minimap-section .minimap-block .needs #eat .icon {
+  background: rgba(255, 142, 60, 0.25);
+}
+.minimap-section .minimap-block .needs #eat .progress-bar {
+  background: rgba(255, 142, 60, 0.25);
+}
+.minimap-section .player-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5vw;
+}
+.minimap-section .player-info .zone {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 0 1.4vw;
+  height: 2.7vw;
+  background: rgba(20, 22, 20, 0.9);
+  border: 0.03vw solid rgba(255, 255, 255, 0.1);
+  border-radius: 0.5vw;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 0.8vw;
+  text-transform: uppercase;
+}
+.minimap-section .player-info #danger {
+  color: #ff0935;
+  text-shadow: 0 0 1.2vw rgba(255, 9, 53, 0.8);
+}
+.minimap-section .player-info #safe {
+  color: #10ff64;
+  text-shadow: 0 0 1.2vw rgba(23, 255, 112, 0.8);
+}
+.minimap-section .player-info .cash-micro {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.65vw;
+  height: 2.7vw;
+}
+.minimap-section .player-info .cash-micro .cash {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5vw;
+  height: 100%;
+}
+.minimap-section .player-info .cash-micro .cash .icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(20, 22, 20, 0.9);
+  border: 0.03vw solid rgba(255, 255, 255, 0.1);
+  border-radius: 0.5vw;
+  width: 2.7vw;
+  height: 100%;
+}
+.minimap-section .player-info .cash-micro .cash .icon img {
+  width: 0.7vw;
+}
+.minimap-section .player-info .cash-micro .cash .text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 1.25vw;
+  height: 100%;
+  background: rgba(20, 22, 20, 0.9);
+  border: 0.03vw solid rgba(255, 255, 255, 0.1);
+  border-radius: 0.5vw;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 1vw;
+  text-transform: uppercase;
+  color: #fff;
+}
+.minimap-section .player-info .cash-micro .microphone {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.7vw;
+  height: 100%;
+  overflow: hidden;
+  background: rgba(20, 22, 20, 0.9);
+  border: 0.03vw solid rgba(255, 255, 255, 0.1);
+  animation: fadeInMicrophone 0.9s ease;
+  border-radius: 0.5vw;
+}
+.minimap-section .player-info .cash-micro .microphone img {
+  position: absolute;
+  width: 0.9vw;
+  z-index: 2;
+}
+.minimap-section .player-info .cash-micro .microphone .effect {
+  position: absolute;
+  width: 1.05vw;
+  height: 1.05vw;
+  animation: activeMicrophone 2s infinite;
+  z-index: 1;
+}
+.minimap-section .player-info .location {
+  display: flex;
+  flex-direction: row;
+  height: 2.7vw;
+  gap: 0.5vw;
+}
+.minimap-section .player-info .location .icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.7vw;
+  height: 100%;
+  background: rgba(20, 22, 20, 0.9);
+  border: 0.03vw solid rgba(255, 255, 255, 0.1);
+  border-radius: 0.5vw;
+}
+.minimap-section .player-info .location .icon img {
+  width: 1.05vw;
+}
+.minimap-section .player-info .location .block-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  background: rgba(20, 22, 20, 0.9);
+  border: 0.03vw solid rgba(255, 255, 255, 0.1);
+  border-radius: 0.5vw;
+  height: 100%;
+  padding: 0 1vw;
+}
+.minimap-section .player-info .location .block-text .district {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 0.75vw;
+  text-transform: uppercase;
+  color: #fff;
+}
+.minimap-section .player-info .location .block-text .street {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 0.6vw;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+@keyframes activeMicrophone {
+  0% {
+    transform: scale(0.6);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(0.6);
+  }
+}
+@keyframes fadeInMicrophone {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}/*# sourceMappingURL=MinimapSection.css.map */

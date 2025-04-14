@@ -1,0 +1,170 @@
+.vehicles {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 1.6vw;
+  height: 64vh;
+  overflow: auto;
+  list-style: none;
+  padding: 0 0;
+  padding-right: 0.8vw;
+  scroll-behavior: smooth;
+  border-radius: 0.6vw;
+  outline: none;
+}
+.vehicles::-webkit-scrollbar {
+  width: 0.5vw;
+}
+.vehicles::-webkit-scrollbar-track {
+  opacity: 1;
+  background-color: rgba(205, 205, 205, 0.1647058824);
+  border-radius: 100px;
+}
+.vehicles::-webkit-scrollbar-thumb {
+  cursor: -webkit-grabbing;
+  cursor: grabbing;
+  background-color: rgba(205, 205, 205, 0.1647058824);
+  border-radius: 100px;
+}
+.vehicles::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(205, 205, 205, 0.3529411765);
+}
+.vehicles .vehicle {
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 12vw;
+  width: 30vw;
+  overflow: hidden;
+  border-radius: 0.4vw;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  -webkit-animation: fadeInVehicles 0.5s ease;
+          animation: fadeInVehicles 0.5s ease;
+}
+.vehicles .vehicle:hover {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  -webkit-transform: scale(1.02);
+      -ms-transform: scale(1.02);
+          transform: scale(1.02);
+}
+.vehicles .vehicle .left-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 1.5vh 1.1vw;
+  height: 100%;
+  width: 15vw;
+  background: rgba(255, 255, 255, 0.1);
+}
+.vehicles .vehicle .left-block .header-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 0.2vh;
+}
+.vehicles .vehicle .left-block .header-title .veh-name {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 1vw;
+}
+.vehicles .vehicle .left-block .header-title .type-veh {
+  opacity: 0.85;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 0.8vw;
+}
+.vehicles .vehicle .left-block .characteristics {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 0.8vh;
+  list-style: none;
+  padding: 0 0;
+}
+.vehicles .vehicle .left-block .characteristics li {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 0.9vw;
+}
+.vehicles .vehicle .left-block .price {
+  cursor: pointer;
+  outline: none;
+  border: none;
+  height: 4.5vh;
+  width: 10vw;
+  border-radius: 0.3vw;
+  background: linear-gradient(109deg, #49f483 0%, #0affa7 100%);
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 0.8vw;
+  text-transform: uppercase;
+  color: #131c33;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.vehicles .vehicle .left-block .price:hover {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  -webkit-box-shadow: 0 0 25px 3px rgba(73, 244, 131, 0.2);
+          box-shadow: 0 0 25px 3px rgba(73, 244, 131, 0.2);
+}
+
+@-webkit-keyframes fadeInVehicles {
+  0% {
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes fadeInVehicles {
+  0% {
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}

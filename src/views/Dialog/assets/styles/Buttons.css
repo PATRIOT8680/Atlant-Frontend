@@ -1,0 +1,19 @@
+.button-dialog {
+  outline: none;
+  border: none;
+  cursor: pointer;
+  height: 100%;
+  padding: 0 3vw;
+  border-radius: 0.4vw;
+  background: rgba(255, 255, 255, 0.12);
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 0.9vw;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.8901960784);
+  transition: all 0.3s;
+}
+.button-dialog:hover {
+  transition: all 0.3s;
+  background: #1372ff;
+}/*# sourceMappingURL=Buttons.css.map */

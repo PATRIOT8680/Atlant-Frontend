@@ -1,0 +1,99 @@
+$Montserrat: "Montserrat", sans-serif
+
+body
+  @media (min-width: 1400px)
+    .navigation-create-char
+      zoom: 90%
+
+  @media (min-width: 1900px)
+    .navigation-create-char
+      zoom: 85%
+
+  @media (min-width: 2900px)
+    .navigation-create-char
+      zoom: 80%
+
+.navigation-create-char
+  display: flex
+  flex-direction: column
+  gap: 0.7rem
+
+  .nav-wrapper.select
+    transition: all 0.3s
+    background: rgba(58, 113, 255, 0.98)
+
+    img
+      opacity: 1
+
+  .nav-wrapper
+    cursor: pointer
+    display: flex
+    align-items: center
+    justify-content: center
+    box-sizing: border-box
+    padding: 0 2rem
+    flex-direction: row
+    gap: 1.5rem
+    background: rgba(19, 28, 51, 0.98)
+    border-radius: 0.6rem
+    width: 21rem
+    height: 9rem
+
+    img
+      opacity: 0.9
+      width: 3rem
+
+    .text-block
+      display: flex
+      flex-direction: column
+      gap: 0.3rem
+
+      .title
+        font-family: $Montserrat
+        font-size: 1.2rem
+        font-weight: 700
+        text-transform: uppercase
+
+      .description
+        font-family: $Montserrat
+        font-size: 0.7rem
+        font-weight: 500
+        line-height: 141%
+        color: rgba(255, 255, 255, 0.7)
+        width: 13rem
+
+  .btn-create-char
+    cursor: pointer
+    outline: none
+    border: none
+    height: 3.5rem
+    background: #3a71ff
+    border-radius: 0.4rem
+    font-family: $Montserrat
+    font-weight: 600
+    font-size: 0.7rem
+    text-transform: uppercase
+    color: #fff
+    transition: all 0.3s
+
+    &:hover
+      transition: all 0.3s
+      box-shadow: 0 0 1.7vw 0.637vw rgba(58, 113, 255, 0.50)
+
+  .btn-register-char
+    cursor: pointer
+    outline: none
+    border: none
+    height: 3.5rem
+    background: #3a71ff
+    border-radius: 0.4rem
+    font-family: $Montserrat
+    font-weight: 600
+    font-size: 0.7rem
+    text-transform: uppercase
+    color: #fff
+    transition: all 0.3s
+
+    &:hover
+      transition: all 0.3s
+      box-shadow: 0 0 1.7vw 0.637vw rgba(58, 113, 255, 0.50)    

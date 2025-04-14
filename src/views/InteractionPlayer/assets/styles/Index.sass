@@ -1,0 +1,303 @@
+$Montserrat: "Montserrat", sans-serif
+
+.interaction-player
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+
+  .hover-section
+    transition: all 0.3s
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    font-family: $Montserrat
+    font-size: 0.8vw
+    font-weight: 600
+    text-transform: uppercase
+
+  .hover-section.act
+    transition: all 0.3s
+    color: #4892ff
+
+  svg
+    width: 35vw
+    height: 35vw
+
+    .center-circle
+      cursor: pointer
+      circle
+        transition: all 0.3s
+        fill: #131C33
+        stroke-width: 0.5vw
+        stroke: #333d58
+
+      &:hover
+        circle
+          fill: rgb(19, 28, 51)
+          stroke-width: 0.5vw
+          stroke: #5197fe
+          transition: all 0.3s
+
+    .center-circle.hover-sec
+      circle
+        transition: all 0.3s
+        stroke-width: 0.5vw
+        stroke: #1372ff
+
+        &:hover
+          background: none
+          transition: all 0.3s
+
+    #interaction
+      cursor: pointer
+      transition: all 0.3s
+
+      &:hover
+        path
+          transition: all 0.3s
+          fill: #1372FF
+
+    .title-interaction
+      font-size: 77%
+
+    .trade-items
+      .text-icon
+        transform: translate(13.3%, 27.5%)
+
+        .icon-interaction
+          width: 2vw
+
+        .title-interaction
+          font-family: $Montserrat
+          font-weight: 600
+          text-transform: uppercase
+          transform: translate(1vw, 4.3vw)
+
+    .documents
+      .text-icon
+        transform: translate(39.9%, 7%)
+
+        .icon-interaction
+          width: 2vw
+
+        .title-interaction
+          font-family: $Montserrat
+          font-weight: 600
+          text-transform: uppercase
+          transform: translate(0.8vw, 4.3vw)
+
+    .social
+      .text-icon
+        transform: translate(71.4%, 12.5%)
+
+        .icon-interaction
+          width: 2vw
+
+        .title-interaction
+          font-family: $Montserrat
+          font-weight: 600
+          text-transform: uppercase
+          transform: translate(0.8vw, 4.3vw)
+
+
+    .cash
+      .text-icon
+        transform: translate(86.4%, 42.5%)
+
+        .icon-interaction
+          width: 2vw
+
+        .title-interaction
+          font-family: $Montserrat
+          font-weight: 600
+          text-transform: uppercase
+          transform: translate(0.8vw, 4.3vw)
+
+    .acquaint
+      .text-icon
+        transform: translate(72.4%, 71.5%)
+
+        .icon-interaction
+          width: 2vw
+
+        .title-interaction
+          font-family: $Montserrat
+          font-weight: 600
+          text-transform: uppercase
+          transform: translate(0.8vw, 4.3vw)
+
+    .home
+      .text-icon
+        transform: translate(40.4%, 81.5%)
+
+        .icon-interaction
+          width: 2vw
+
+        .title-interaction
+          font-family: $Montserrat
+          font-weight: 600
+          text-transform: uppercase
+          transform: translate(0.8vw, 4.3vw)
+
+    .fraction
+      .text-icon
+        transform: translate(14.4%, 59.5%)
+
+        .icon-interaction
+          width: 3.9%
+
+        .title-interaction
+          font-family: $Montserrat
+          font-weight: 600
+          text-transform: uppercase
+          transform: translate(0.8vw, 4.3vw)
+
+
+  .selections-interaction
+    position: absolute
+    z-index: -1
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    width: 90vw
+    height: 90vw
+    border-radius: 100%
+    display: flex
+    align-items: center
+    justify-content: center
+
+    #docs
+      z-index: 1
+      transform: translate(-13vw, -16.5vw)
+
+    #lic
+      transform: translate(-5vw, -20.5vw)
+
+
+    #socials
+      transform: translate(19vw, -21.5vw)
+
+    #cash
+      display: flex
+      flex-direction: column
+      transform: translate(32vw, -9.5vw)
+
+    #home
+      transition: all 0.3s
+
+    #sell-home
+
+    .group-selection
+      display: flex
+      flex-direction: row
+      align-items: center
+      justify-content: center
+      gap: 1.3vw
+      position: absolute
+
+      span
+        cursor: pointer
+        display: flex
+        align-items: center
+        justify-content: center
+        padding: 0.8vw 1.5vw
+        background: rgba(19, 28, 51, 0.98)
+        border-radius: 0.4vw
+        font-family: $Montserrat
+        font-weight: 600
+        text-transform: uppercase
+        font-size: 0.8vw
+        transition: all 0.3s
+
+        &:hover
+          transition: all 0.3s
+          background: #1372FF
+      
+      .passport
+        transform: translate(7vw, 4vw)
+
+      .licenses
+        transform: translate(4vw, -0.5vw)
+      
+      .military-ticket
+        transform: translate(1vw, -4.5vw)
+
+      .work_lic
+        transform: translate(-2vw, -8.5vw)
+
+      .cary-arms
+        transform: translate(-4vw, 4vw)
+      
+      .pair-anim
+        transform: translate(-10vw, 8.5vw)
+
+      .money-one
+        transform: translate(-12vw, 8.5vw)
+      
+      .money-two
+        transform: translate(-10.5vw, 8.5vw)
+
+      .money-three
+        transform: translate(-10vw, 8.5vw)
+
+      .money-four
+        transform: translate(-10vw, 8.5vw)
+      
+      .money-five
+        transform: translate(-10vw, 8.5vw)
+
+      .invite-home
+        transform: translate(-8vw, 20.5vw)
+
+      .sell-home
+        transform: translate(-9vw, 17.5vw)
+
+      .invite-fraction
+        transform: translate(-22vw, 8.5vw)
+      
+      .med_lic
+        width: 17vw
+        transform: translate(52vw, 30vw)
+      
+      .a_lic
+        width: 22vw
+        transform: translate(35vw, 25vw)
+
+      .b_lic
+        width: 22vw
+        transform: translate(16vw, 20vw)
+
+      .c_lic
+        width: 22vw
+        transform: translate(-3vw, 15vw)
+
+      .air_lic
+        transform: translate(-20vw, 10vw)
+
+      .ship_lic
+        transform: translate(-32vw, 4vw)
+
+      .gun_lic
+        transform: translate(-40vw, -1vw)
+
+      .taxi_lic
+        transform: translate(7vw, 25vw)
+
+      .law_lic
+        transform: translate(-11vw, 19vw)
+
+      .biz_lic
+        transform: translate(-29vw, 1vw)
+
+      .fish_lic
+        transform: translate(-41vw, 7vw)
+
+      .marg_lic
+        transform: translate(-53vw, 13vw)
+
+      .gos_lic
+        transform: translate(-2vw, -8.5vw)
+
+

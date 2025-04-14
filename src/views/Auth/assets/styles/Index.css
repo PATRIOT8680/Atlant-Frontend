@@ -1,0 +1,156 @@
+.auth {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+.auth .effect {
+  position: absolute;
+  width: 38.354vw;
+  height: 85vh;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+.auth .header-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.6vw;
+}
+.auth .header-section .title-svg {
+  pointer-events: none;
+  width: 22vw;
+}
+.auth .header-section .description {
+  width: 24vw;
+  line-height: 145%;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 0.9vw;
+  color: rgba(255, 255, 255, 0.8);
+}
+.auth .inputs-btn {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1vw;
+}
+.auth .inputs-btn .block-inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8vw;
+  width: 100%;
+}
+.auth .inputs-btn .block-inputs .input-block {
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.auth .inputs-btn .block-inputs .input-block img {
+  width: 1vw;
+}
+.auth .inputs-btn .block-inputs .input-block .icon-block {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  background: rgba(58, 113, 255, 0.5);
+  border: 0.08vw solid rgba(58, 113, 255, 0.6);
+  border-radius: 0.3vw;
+  width: 3vw;
+  height: 3vw;
+  margin-left: 1.3vw;
+}
+.auth .inputs-btn .block-inputs .input-block .icon-block .icon {
+  width: 1vw;
+}
+.auth .inputs-btn .block-inputs .input-block input {
+  width: 100%;
+  height: 4.8vw;
+  outline: none;
+  border: none;
+  border-radius: 0.5vw;
+  background: rgba(133, 168, 255, 0.15);
+  border: 0.1vw solid rgba(255, 255, 255, 0.21);
+  box-sizing: border-box;
+  padding: 0 2vw 0 6vw;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.1vw;
+  font-weight: 600;
+  color: white;
+}
+.auth .inputs-btn .block-inputs .input-block input::-moz-placeholder {
+  color: rgba(255, 255, 255, 0.5);
+  letter-spacing: 0;
+  font-size: 0.9vw;
+}
+.auth .inputs-btn .block-inputs .input-block input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+  letter-spacing: 0;
+  font-size: 0.9vw;
+}
+.auth .inputs-btn .main-btn {
+  cursor: pointer;
+  width: 100%;
+  height: 5vw;
+  border: none;
+  outline: none;
+  border-radius: 0.5vw;
+  background: #3a71ff;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.95vw;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: white;
+  transition: all 0.3s;
+}
+.auth .inputs-btn .main-btn:hover {
+  transition: all 0.3s;
+  box-shadow: 0 0 2.833vw 0.567vw rgba(58, 113, 255, 0.25);
+}
+.auth .redirection-block {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 0.8vw;
+}
+.auth .redirection-block .main-redirection {
+  text-transform: uppercase;
+  font-size: 1vw;
+}
+.auth .redirection-block .main-redirection .second-text {
+  font-weight: 600;
+}
+.auth .redirection-block .main-redirection .link-text {
+  cursor: pointer;
+  font-weight: 700;
+  color: #5c8aff;
+}
+.auth .redirection-block .main-redirection .link-text:hover {
+  text-decoration: underline;
+  -webkit-text-decoration-skip-ink: none;
+          text-decoration-skip-ink: none;
+}
+.auth .redirection-block .bottom-redir {
+  cursor: pointer;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.95vw;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.7);
+  transition: all 0.3s;
+}
+.auth .redirection-block .bottom-redir:hover {
+  transition: all 0.3s;
+  color: rgb(255, 255, 255);
+}/*# sourceMappingURL=Index.css.map */

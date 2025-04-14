@@ -1,0 +1,419 @@
+.interaction-player {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+.interaction-player .hover-section {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.8vw;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.interaction-player .hover-section.act {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  color: #4892ff;
+}
+.interaction-player svg {
+  width: 35vw;
+  height: 35vw;
+}
+.interaction-player svg .center-circle {
+  cursor: pointer;
+}
+.interaction-player svg .center-circle circle {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  fill: #131C33;
+  stroke-width: 0.5vw;
+  stroke: #333d58;
+}
+.interaction-player svg .center-circle:hover circle {
+  fill: rgb(19, 28, 51);
+  stroke-width: 0.5vw;
+  stroke: #5197fe;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.interaction-player svg .center-circle.hover-sec circle {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  stroke-width: 0.5vw;
+  stroke: #1372ff;
+}
+.interaction-player svg .center-circle.hover-sec circle:hover {
+  background: none;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.interaction-player svg #interaction {
+  cursor: pointer;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.interaction-player svg #interaction:hover path {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  fill: #1372FF;
+}
+.interaction-player svg .title-interaction {
+  font-size: 77%;
+}
+.interaction-player svg .trade-items .text-icon {
+  -webkit-transform: translate(13.3%, 27.5%);
+      -ms-transform: translate(13.3%, 27.5%);
+          transform: translate(13.3%, 27.5%);
+}
+.interaction-player svg .trade-items .text-icon .icon-interaction {
+  width: 2vw;
+}
+.interaction-player svg .trade-items .text-icon .title-interaction {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  -webkit-transform: translate(1vw, 4.3vw);
+      -ms-transform: translate(1vw, 4.3vw);
+          transform: translate(1vw, 4.3vw);
+}
+.interaction-player svg .documents .text-icon {
+  -webkit-transform: translate(39.9%, 7%);
+      -ms-transform: translate(39.9%, 7%);
+          transform: translate(39.9%, 7%);
+}
+.interaction-player svg .documents .text-icon .icon-interaction {
+  width: 2vw;
+}
+.interaction-player svg .documents .text-icon .title-interaction {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  -webkit-transform: translate(0.8vw, 4.3vw);
+      -ms-transform: translate(0.8vw, 4.3vw);
+          transform: translate(0.8vw, 4.3vw);
+}
+.interaction-player svg .social .text-icon {
+  -webkit-transform: translate(71.4%, 12.5%);
+      -ms-transform: translate(71.4%, 12.5%);
+          transform: translate(71.4%, 12.5%);
+}
+.interaction-player svg .social .text-icon .icon-interaction {
+  width: 2vw;
+}
+.interaction-player svg .social .text-icon .title-interaction {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  -webkit-transform: translate(0.8vw, 4.3vw);
+      -ms-transform: translate(0.8vw, 4.3vw);
+          transform: translate(0.8vw, 4.3vw);
+}
+.interaction-player svg .cash .text-icon {
+  -webkit-transform: translate(86.4%, 42.5%);
+      -ms-transform: translate(86.4%, 42.5%);
+          transform: translate(86.4%, 42.5%);
+}
+.interaction-player svg .cash .text-icon .icon-interaction {
+  width: 2vw;
+}
+.interaction-player svg .cash .text-icon .title-interaction {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  -webkit-transform: translate(0.8vw, 4.3vw);
+      -ms-transform: translate(0.8vw, 4.3vw);
+          transform: translate(0.8vw, 4.3vw);
+}
+.interaction-player svg .acquaint .text-icon {
+  -webkit-transform: translate(72.4%, 71.5%);
+      -ms-transform: translate(72.4%, 71.5%);
+          transform: translate(72.4%, 71.5%);
+}
+.interaction-player svg .acquaint .text-icon .icon-interaction {
+  width: 2vw;
+}
+.interaction-player svg .acquaint .text-icon .title-interaction {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  -webkit-transform: translate(0.8vw, 4.3vw);
+      -ms-transform: translate(0.8vw, 4.3vw);
+          transform: translate(0.8vw, 4.3vw);
+}
+.interaction-player svg .home .text-icon {
+  -webkit-transform: translate(40.4%, 81.5%);
+      -ms-transform: translate(40.4%, 81.5%);
+          transform: translate(40.4%, 81.5%);
+}
+.interaction-player svg .home .text-icon .icon-interaction {
+  width: 2vw;
+}
+.interaction-player svg .home .text-icon .title-interaction {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  -webkit-transform: translate(0.8vw, 4.3vw);
+      -ms-transform: translate(0.8vw, 4.3vw);
+          transform: translate(0.8vw, 4.3vw);
+}
+.interaction-player svg .fraction .text-icon {
+  -webkit-transform: translate(14.4%, 59.5%);
+      -ms-transform: translate(14.4%, 59.5%);
+          transform: translate(14.4%, 59.5%);
+}
+.interaction-player svg .fraction .text-icon .icon-interaction {
+  width: 3.9%;
+}
+.interaction-player svg .fraction .text-icon .title-interaction {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  -webkit-transform: translate(0.8vw, 4.3vw);
+      -ms-transform: translate(0.8vw, 4.3vw);
+          transform: translate(0.8vw, 4.3vw);
+}
+.interaction-player .selections-interaction {
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 90vw;
+  height: 90vw;
+  border-radius: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.interaction-player .selections-interaction #docs {
+  z-index: 1;
+  -webkit-transform: translate(-13vw, -16.5vw);
+      -ms-transform: translate(-13vw, -16.5vw);
+          transform: translate(-13vw, -16.5vw);
+}
+.interaction-player .selections-interaction #lic {
+  -webkit-transform: translate(-5vw, -20.5vw);
+      -ms-transform: translate(-5vw, -20.5vw);
+          transform: translate(-5vw, -20.5vw);
+}
+.interaction-player .selections-interaction #socials {
+  -webkit-transform: translate(19vw, -21.5vw);
+      -ms-transform: translate(19vw, -21.5vw);
+          transform: translate(19vw, -21.5vw);
+}
+.interaction-player .selections-interaction #cash {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-transform: translate(32vw, -9.5vw);
+      -ms-transform: translate(32vw, -9.5vw);
+          transform: translate(32vw, -9.5vw);
+}
+.interaction-player .selections-interaction #home {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.interaction-player .selections-interaction .group-selection {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 1.3vw;
+  position: absolute;
+}
+.interaction-player .selections-interaction .group-selection span {
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0.8vw 1.5vw;
+  background: rgba(19, 28, 51, 0.98);
+  border-radius: 0.4vw;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.8vw;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.interaction-player .selections-interaction .group-selection span:hover {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  background: #1372FF;
+}
+.interaction-player .selections-interaction .group-selection .passport {
+  -webkit-transform: translate(7vw, 4vw);
+      -ms-transform: translate(7vw, 4vw);
+          transform: translate(7vw, 4vw);
+}
+.interaction-player .selections-interaction .group-selection .licenses {
+  -webkit-transform: translate(4vw, -0.5vw);
+      -ms-transform: translate(4vw, -0.5vw);
+          transform: translate(4vw, -0.5vw);
+}
+.interaction-player .selections-interaction .group-selection .military-ticket {
+  -webkit-transform: translate(1vw, -4.5vw);
+      -ms-transform: translate(1vw, -4.5vw);
+          transform: translate(1vw, -4.5vw);
+}
+.interaction-player .selections-interaction .group-selection .work_lic {
+  -webkit-transform: translate(-2vw, -8.5vw);
+      -ms-transform: translate(-2vw, -8.5vw);
+          transform: translate(-2vw, -8.5vw);
+}
+.interaction-player .selections-interaction .group-selection .cary-arms {
+  -webkit-transform: translate(-4vw, 4vw);
+      -ms-transform: translate(-4vw, 4vw);
+          transform: translate(-4vw, 4vw);
+}
+.interaction-player .selections-interaction .group-selection .pair-anim {
+  -webkit-transform: translate(-10vw, 8.5vw);
+      -ms-transform: translate(-10vw, 8.5vw);
+          transform: translate(-10vw, 8.5vw);
+}
+.interaction-player .selections-interaction .group-selection .money-one {
+  -webkit-transform: translate(-12vw, 8.5vw);
+      -ms-transform: translate(-12vw, 8.5vw);
+          transform: translate(-12vw, 8.5vw);
+}
+.interaction-player .selections-interaction .group-selection .money-two {
+  -webkit-transform: translate(-10.5vw, 8.5vw);
+      -ms-transform: translate(-10.5vw, 8.5vw);
+          transform: translate(-10.5vw, 8.5vw);
+}
+.interaction-player .selections-interaction .group-selection .money-three {
+  -webkit-transform: translate(-10vw, 8.5vw);
+      -ms-transform: translate(-10vw, 8.5vw);
+          transform: translate(-10vw, 8.5vw);
+}
+.interaction-player .selections-interaction .group-selection .money-four {
+  -webkit-transform: translate(-10vw, 8.5vw);
+      -ms-transform: translate(-10vw, 8.5vw);
+          transform: translate(-10vw, 8.5vw);
+}
+.interaction-player .selections-interaction .group-selection .money-five {
+  -webkit-transform: translate(-10vw, 8.5vw);
+      -ms-transform: translate(-10vw, 8.5vw);
+          transform: translate(-10vw, 8.5vw);
+}
+.interaction-player .selections-interaction .group-selection .invite-home {
+  -webkit-transform: translate(-8vw, 20.5vw);
+      -ms-transform: translate(-8vw, 20.5vw);
+          transform: translate(-8vw, 20.5vw);
+}
+.interaction-player .selections-interaction .group-selection .sell-home {
+  -webkit-transform: translate(-9vw, 17.5vw);
+      -ms-transform: translate(-9vw, 17.5vw);
+          transform: translate(-9vw, 17.5vw);
+}
+.interaction-player .selections-interaction .group-selection .invite-fraction {
+  -webkit-transform: translate(-22vw, 8.5vw);
+      -ms-transform: translate(-22vw, 8.5vw);
+          transform: translate(-22vw, 8.5vw);
+}
+.interaction-player .selections-interaction .group-selection .med_lic {
+  width: 17vw;
+  -webkit-transform: translate(52vw, 30vw);
+      -ms-transform: translate(52vw, 30vw);
+          transform: translate(52vw, 30vw);
+}
+.interaction-player .selections-interaction .group-selection .a_lic {
+  width: 22vw;
+  -webkit-transform: translate(35vw, 25vw);
+      -ms-transform: translate(35vw, 25vw);
+          transform: translate(35vw, 25vw);
+}
+.interaction-player .selections-interaction .group-selection .b_lic {
+  width: 22vw;
+  -webkit-transform: translate(16vw, 20vw);
+      -ms-transform: translate(16vw, 20vw);
+          transform: translate(16vw, 20vw);
+}
+.interaction-player .selections-interaction .group-selection .c_lic {
+  width: 22vw;
+  -webkit-transform: translate(-3vw, 15vw);
+      -ms-transform: translate(-3vw, 15vw);
+          transform: translate(-3vw, 15vw);
+}
+.interaction-player .selections-interaction .group-selection .air_lic {
+  -webkit-transform: translate(-20vw, 10vw);
+      -ms-transform: translate(-20vw, 10vw);
+          transform: translate(-20vw, 10vw);
+}
+.interaction-player .selections-interaction .group-selection .ship_lic {
+  -webkit-transform: translate(-32vw, 4vw);
+      -ms-transform: translate(-32vw, 4vw);
+          transform: translate(-32vw, 4vw);
+}
+.interaction-player .selections-interaction .group-selection .gun_lic {
+  -webkit-transform: translate(-40vw, -1vw);
+      -ms-transform: translate(-40vw, -1vw);
+          transform: translate(-40vw, -1vw);
+}
+.interaction-player .selections-interaction .group-selection .taxi_lic {
+  -webkit-transform: translate(7vw, 25vw);
+      -ms-transform: translate(7vw, 25vw);
+          transform: translate(7vw, 25vw);
+}
+.interaction-player .selections-interaction .group-selection .law_lic {
+  -webkit-transform: translate(-11vw, 19vw);
+      -ms-transform: translate(-11vw, 19vw);
+          transform: translate(-11vw, 19vw);
+}
+.interaction-player .selections-interaction .group-selection .biz_lic {
+  -webkit-transform: translate(-29vw, 1vw);
+      -ms-transform: translate(-29vw, 1vw);
+          transform: translate(-29vw, 1vw);
+}
+.interaction-player .selections-interaction .group-selection .fish_lic {
+  -webkit-transform: translate(-41vw, 7vw);
+      -ms-transform: translate(-41vw, 7vw);
+          transform: translate(-41vw, 7vw);
+}
+.interaction-player .selections-interaction .group-selection .marg_lic {
+  -webkit-transform: translate(-53vw, 13vw);
+      -ms-transform: translate(-53vw, 13vw);
+          transform: translate(-53vw, 13vw);
+}
+.interaction-player .selections-interaction .group-selection .gos_lic {
+  -webkit-transform: translate(-2vw, -8.5vw);
+      -ms-transform: translate(-2vw, -8.5vw);
+          transform: translate(-2vw, -8.5vw);
+}

@@ -1,0 +1,111 @@
+.notification-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.7vw;
+  position: absolute;
+  top: 2%;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+      -ms-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+  z-index: 100;
+}
+.notification-wrapper .notification-item {
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1.7vw;
+  width: 22vw;
+  padding: 1.2vw 1.7vw;
+  border-radius: 0.6vw;
+  -webkit-animation: enterNotify 0.5s ease forwards;
+          animation: enterNotify 0.5s ease forwards;
+}
+.notification-wrapper .notification-item .icon {
+  width: 1.5vw;
+}
+.notification-wrapper .notification-item .message {
+  width: 18.5vw;
+  font-size: 0.95vw;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+}
+.notification-wrapper .notification-item.exit {
+  -webkit-animation: exitNotify 0.5s ease forwards;
+          animation: exitNotify 0.5s ease forwards;
+}
+.notification-wrapper #error {
+  background: #ff1842;
+}
+.notification-wrapper #success {
+  background: #0dcea0;
+}
+.notification-wrapper #warning {
+  background: #ff4e16;
+}
+.notification-wrapper #info {
+  background: #169dff;
+}
+
+@-webkit-keyframes enterNotify {
+  from {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+    margin-top: -40%;
+  }
+  to {
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+    margin-top: 0;
+  }
+}
+
+@keyframes enterNotify {
+  from {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+    margin-top: -40%;
+  }
+  to {
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+    margin-top: 0;
+  }
+}
+@-webkit-keyframes exitNotify {
+  from {
+    opacity: 1;
+    -webkit-transform: rotate3d(0, 0, 0, 50deg);
+            transform: rotate3d(0, 0, 0, 50deg);
+  }
+  to {
+    opacity: 0;
+    -webkit-transform: rotate3d(1, 0, 0, 160deg);
+            transform: rotate3d(1, 0, 0, 160deg);
+  }
+}
+@keyframes exitNotify {
+  from {
+    opacity: 1;
+    -webkit-transform: rotate3d(0, 0, 0, 50deg);
+            transform: rotate3d(0, 0, 0, 50deg);
+  }
+  to {
+    opacity: 0;
+    -webkit-transform: rotate3d(1, 0, 0, 160deg);
+            transform: rotate3d(1, 0, 0, 160deg);
+  }
+}

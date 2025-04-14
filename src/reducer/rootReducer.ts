@@ -1,0 +1,98 @@
+import { combineReducers } from 'redux';
+
+// Components Reducer
+import { cashReducer } from '../reducer/cash';
+import { inDistrictReducer } from './inDistrict';
+import { inStreetReducer } from './inStreet';
+import { inZoneReducer } from './inZone';
+import { microphoneActive } from './microphone';
+import { eatReducer } from './eat';
+import { waterReducer } from './water';
+import { onlineReducer } from './online';
+import { sidReducer } from './sid';
+import { activeQuestReducer } from './activeQuest';
+import { speedometerReducer } from './hud/speedometer';
+import { activeWeaponReducer } from './hud/weapon';
+import { paydayReducer } from './hud/payday';
+import { sendNotifyReducer } from './sendNotify';
+import { interactionActiveReducer } from './hud/interaction';
+import { genderReducer } from './gender.ts';
+import { characterReducer } from './createChar/char.ts';
+import { reportReducer } from './adminMenu/report.ts';
+
+// Interface Reducer
+import { hudReducer } from '../reducer/hud/hud';
+import { petrolReducer } from './petrol/petrol';
+import { dialogReducer } from './dialog/dialog';
+import { rentReducer } from './dialog/rent.ts';
+import { interactionPlayerReducer } from './interactionPlayer/interactionPlayer';
+import { authReducer } from './auth/auth';
+import { selectPersonReducer } from './selectPerson/selectPerson';
+import { createCharReducer } from "./createChar/createChar.ts";
+import { adminMenuReducer } from './adminMenu/adminMenu.ts';
+
+export type RootState = {
+	// Components
+	cashReducer: ReturnType<typeof cashReducer>
+	inDistrictReducer: ReturnType<typeof inDistrictReducer>
+	inStreetReducer: ReturnType<typeof inStreetReducer>
+	inZoneReducer: ReturnType<typeof inZoneReducer>
+	microphoneActive: ReturnType<typeof microphoneActive>
+	eatReducer: ReturnType<typeof eatReducer>
+	waterReducer: ReturnType<typeof waterReducer>
+	onlineReducer: ReturnType<typeof onlineReducer>
+	sidReducer: ReturnType<typeof sidReducer>
+	activeQuestReducer: ReturnType<typeof activeQuestReducer>
+	speedometerReducer: ReturnType<typeof speedometerReducer>
+	activeWeaponReducer: ReturnType<typeof activeWeaponReducer>
+	paydayReducer: ReturnType<typeof paydayReducer>
+	sendNotifyReducer: ReturnType<typeof sendNotifyReducer>
+	interactionActiveReducer: ReturnType<typeof interactionActiveReducer>
+	genderReducer: ReturnType<typeof genderReducer>
+  characterReducer: ReturnType<typeof characterReducer>
+  reportReducer: ReturnType<typeof reportReducer>
+
+	// Interface
+	hudReducer: ReturnType<typeof hudReducer>
+	petrolReducer: ReturnType<typeof petrolReducer>
+	dialogReducer: ReturnType<typeof dialogReducer>
+  rentReducer: ReturnType<typeof rentReducer>
+	interactionPlayerReducer: ReturnType<typeof interactionPlayerReducer>
+	authReducer: ReturnType<typeof authReducer>
+	selectPersonReducer: ReturnType<typeof selectPersonReducer>
+	createCharReducer: ReturnType<typeof createCharReducer>
+  adminMenuReducer: ReturnType<typeof adminMenuReducer>
+}
+
+export const rootReducer = combineReducers({
+  // Components
+  cashReducer,
+  inDistrictReducer,
+  inStreetReducer,
+  inZoneReducer,
+  microphoneActive,
+  eatReducer,
+  waterReducer,
+  onlineReducer,
+  sidReducer,
+  activeQuestReducer,
+  speedometerReducer,
+  activeWeaponReducer,
+  paydayReducer,
+  sendNotifyReducer,
+  interactionActiveReducer,
+  genderReducer,
+  characterReducer,
+  reportReducer,
+
+  // Interface
+  hudReducer,
+  petrolReducer,
+  dialogReducer,
+  rentReducer,
+  interactionPlayerReducer,
+  authReducer,
+  selectPersonReducer,
+  createCharReducer,
+  adminMenuReducer
+});

@@ -1,0 +1,94 @@
+$Montserrat: "Montserrat", sans-serif
+
+.gen-create-char
+  display: flex
+  flex-direction: column
+  justify-content: space-around
+  height: 50%
+  gap: 1.5rem
+
+  .parents-section
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+
+    .parent
+      display: flex
+      flex-direction: column
+      gap: 0.5rem
+
+      .title
+        user-select: none
+        font-family: $Montserrat
+        font-weight: 600
+        font-size: 14px
+        text-transform: uppercase
+        color: #fff
+
+      .img-parent
+        user-select: none
+        width: 7.5rem
+        height: 7.5rem
+        border-radius: .3rem
+
+      .sliders
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+
+        .slider
+          user-select: none
+          cursor: pointer
+          display: flex
+          align-items: center
+          justify-content: center
+          width: 3.3rem
+          height: 1.9rem
+          background: #3a71ff
+          border-radius: 0.2rem
+
+          img
+            width: 0.85rem
+
+  .sex-char
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+    gap: 0.4rem
+
+    .title
+      font-family: $Montserrat
+      font-weight: 600
+      font-size: 0.83rem
+      color: #ffff
+      background: #ffffff16
+      text-transform: uppercase
+      padding: 0.2rem 0.5rem
+      border-radius: 0.3rem
+
+    .btns
+      display: flex
+      justify-content: space-between
+      width: 100%
+
+      .btn
+        cursor: pointer
+        display: flex
+        align-items: center
+        justify-content: center
+        width: 48%
+        padding: 0.5rem 0
+        background: #ffffff15
+        color: #ffffffaf
+        border-radius: 0.3rem
+        font-family: $Montserrat
+        font-size: 0.9rem
+        font-weight: 500
+
+      .btn.active
+        color: #ffff
+        background: #3A71FF
+
+
+     
+

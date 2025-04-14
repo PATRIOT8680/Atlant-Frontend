@@ -1,0 +1,41 @@
+.help {
+  position: relative;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  right: 0;
+}
+.help .help-list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  list-style: none;
+  gap: 1vw;
+}
+.help .help-list .key {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1vw;
+}
+.help .help-list .key .btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3vw;
+  height: 2.1vw;
+  background: rgba(20, 22, 20, 0.9);
+  border-radius: 0.5vw;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 1vw;
+  text-transform: uppercase;
+  color: #4f95ff;
+}
+.help .help-list .key .text {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 0.9vw;
+  text-transform: uppercase;
+  color: #fff;
+}/*# sourceMappingURL=Help.css.map */

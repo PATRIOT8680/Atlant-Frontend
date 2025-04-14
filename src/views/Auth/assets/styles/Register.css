@@ -1,0 +1,16 @@
+.register {
+  display: flex;
+  flex-direction: column;
+  gap: 2vw;
+  width: 30vw;
+  animation: fadeInReg 1s ease;
+}
+
+@keyframes fadeInReg {
+  from {
+    transform: translateY(-30%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}/*# sourceMappingURL=Register.css.map */

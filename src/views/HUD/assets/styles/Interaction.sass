@@ -1,0 +1,50 @@
+$Montserrat: "Montserrat", sans-serif
+
+.interaction
+  display: flex
+  position: absolute
+  bottom: 0
+  left: 50%
+  transform: translate(-50%, 0)
+  height: 2.8vw
+  gap: 0.3vw
+  color: #6ca7ff
+  animation: fadeInInteraction 0.7s ease forwards
+  
+  .key
+    display: flex
+    align-items: center
+    justify-content: center
+    height: 100%
+    width: 2.7vw
+    background: rgba(20, 22, 20, 0.9)
+    border: 0.03vw solid rgba(255, 255, 255, 0.1)
+    text-shadow: 0 0 1vw #4f95ff
+    border-radius: 0.5vw
+    font-family: $Montserrat
+    font-weight: 600
+    font-size: 1.1vw
+    overflow: hidden
+
+  .text-interaction
+    display: flex
+    align-items: center
+    justify-content: center
+    height: 100%
+    background: rgba(20, 22, 20, 0.9)
+    border: 0.03vw solid rgba(255, 255, 255, 0.1)
+    text-shadow: 0 0 1vw #4f95ff
+    padding: 0 1.5vw
+    border-radius: 0.5vw
+    text-transform: uppercase
+    font-family: $Montserrat
+    font-weight: 600
+    font-size: 0.9vw
+    overflow: hidden
+
+
+@keyframes fadeInInteraction
+  from
+    bottom: -5vw
+  to
+    bottom: 0

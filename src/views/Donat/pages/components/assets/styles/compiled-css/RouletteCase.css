@@ -1,0 +1,309 @@
+@charset "UTF-8";
+.roulette-container {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 14vw;
+  background: rgba(20, 28, 48, 0.38);
+  border: 0.071vw solid rgba(255, 255, 255, 0.1);
+  border-radius: 0.6vw;
+}
+.roulette-container .roulette-arrow {
+  position: absolute;
+  bottom: -0.5vw;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+      -ms-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+  z-index: 2;
+}
+.roulette-container .roulette {
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  gap: 1vw;
+  height: 14vw;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  -webkit-transition: -webkit-transform 10s ease-in-out;
+  transition: -webkit-transform 10s ease-in-out;
+  transition: transform 10s ease-in-out;
+  transition: transform 10s ease-in-out, -webkit-transform 10s ease-in-out;
+}
+.roulette-container .roulette #Обычный .img-block .effect {
+  background: rgba(249, 250, 249, 0.2);
+}
+.roulette-container .roulette #Редкий .img-block .effect {
+  background: rgba(255, 134, 22, 0.2);
+}
+.roulette-container .roulette #Легендарный .img-block .effect {
+  background: rgba(144, 76, 255, 0.2);
+}
+.roulette-container .roulette .roulette-item {
+  overflow: hidden;
+  position: relative;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 16vw;
+  height: 10vw;
+  background: #132030;
+  border: 0.071vw solid rgba(255, 255, 255, 0.1);
+  border-radius: 0.6vw;
+}
+.roulette-container .roulette .roulette-item .content-inside {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0.5vw 1.2vw;
+}
+.roulette-container .roulette .roulette-item .content-inside .name-prise {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 0.75vw;
+  text-transform: uppercase;
+  color: #fff;
+}
+.roulette-container .roulette .roulette-item .content-inside .img-block .effect {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-filter: blur(3vw);
+          filter: blur(3vw);
+  width: 8vw;
+  height: 8vw;
+  border-radius: 100%;
+  z-index: 1;
+}
+.roulette-container .roulette .roulette-item .content-inside .img-block .item-img {
+  width: 9.5vw;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+.bottom-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 0.7vw;
+}
+.bottom-content .amount-scrolls {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 0.7vw;
+}
+.bottom-content .amount-scrolls .title {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 0.9vw;
+  color: #fff;
+}
+.bottom-content .amount-scrolls .list-amounts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 0.5vw;
+  list-style: none;
+  padding: 0 0;
+  -webkit-padding-start: 0;
+          padding-inline-start: 0;
+  -webkit-margin-after: 0;
+          margin-block-end: 0;
+  -webkit-margin-before: 0;
+          margin-block-start: 0;
+}
+.bottom-content .amount-scrolls .list-amounts .amount {
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: rgba(255, 255, 255, 0.05);
+  border: 0.5px solid rgba(255, 255, 255, 0.11);
+  border-radius: 0.6vw;
+  width: 2.5vw;
+  height: 2.5vw;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 1.1vw;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.8);
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.bottom-content .amount-scrolls .list-amounts .amount.selected {
+  color: #131c33;
+  font-weight: 700;
+  background: #49f483;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+.bottom-content .scroll-roulette {
+  cursor: pointer;
+  outline: none;
+  border: none;
+  background: #49f483;
+  border-radius: 0.6vw;
+  width: 18vw;
+  height: 4vw;
+  margin-left: 1.8vw;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 0.95vw;
+  text-transform: uppercase;
+  color: #131c33;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.bottom-content .scroll-roulette:hover {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  -webkit-box-shadow: 0 0 0 5px rgba(73, 244, 131, 0.25);
+          box-shadow: 0 0 0 5px rgba(73, 244, 131, 0.25);
+}
+.bottom-content .scroll-roulette.spinned {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  background: rgba(255, 255, 255, 0.05);
+  color: rgba(255, 255, 255, 0.8549019608);
+  font-weight: 600;
+  text-transform: none;
+}
+.bottom-content .scroll-roulette.spinned:hover {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  background: rgba(255, 255, 255, 0.098);
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+.bottom-content .fast-spin {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  gap: 1.4vw;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.11);
+  border-radius: 0.6vw;
+  width: 17vw;
+  height: 3.5vw;
+}
+.bottom-content .fast-spin .title {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 0.9vw;
+  text-transform: uppercase;
+  color: #fff;
+}
+.bottom-content .switch {
+  position: relative;
+  display: inline-block;
+  width: 3.7vw;
+  height: 2vw;
+  margin-left: 1vw;
+}
+.bottom-content .switch input {
+  display: none;
+}
+.bottom-content .slider {
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 0.3vw;
+}
+.bottom-content .slider::before {
+  position: absolute;
+  content: "";
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+      -ms-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+  width: 1.4vw;
+  height: 1.4vw;
+  background-color: #ff1d53;
+  border-radius: 0.2vw;
+  margin-left: 0.3vw;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.bottom-content input:checked + .slider {
+  background-color: rgba(17, 255, 212, 0.19);
+}
+.bottom-content input:checked + .slider:before {
+  background-color: #1dff77;
+  -webkit-transform: translateX(1.65vw);
+      -ms-transform: translateX(1.65vw);
+          transform: translateX(1.65vw);
+  top: 15%;
+}

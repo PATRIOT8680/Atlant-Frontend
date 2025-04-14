@@ -1,0 +1,138 @@
+$Bebas: "Bebas Neue", sans-serif
+$Karantina: "Karantina", sans-serif
+$Montserrat: "Montserrat", sans-serif
+
+.navigation
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: space-between
+  box-sizing: border-box
+  padding: 20px 25px
+  width: 17rem
+  height: 100%
+  border: 1px solid rgb(55, 55, 55)
+  border-radius: 0.625rem
+  background: rgb(19, 19, 19)
+  opacity: 0.95
+  
+
+  .header
+    display: flex
+    flex-direction: row
+    align-items: center
+    user-select: none
+    gap: 0.9375rem
+
+    .icon
+      width: 1.8125rem
+
+    span
+      background: linear-gradient(181deg, #9f9c9c 0%, #c1c1c1 53.36%, #fff 100%)
+      background-clip: text
+      -webkit-background-clip: text
+      -webkit-text-fill-color: transparent
+      white-space: nowrap
+      font-family: $Karantina
+      text-transform: uppercase
+      font-size: 2.875rem
+      font-weight: 400
+
+  .btns-list
+    display: flex
+    flex-direction: column
+    gap: 13px
+    width: 100%
+
+    .tab-btn.selected
+      border: 1px solid rgba(255, 255, 255, 0.3)
+      background: rgba(255, 255, 255, 0.12)
+
+      ellipse
+        width: 0.4375rem
+        height: 0.4375rem
+        background: #608cfa
+        border-radius: 100%
+        box-shadow: 0 0 10px 2px #497af6ab
+
+    .tab-btn
+      display: flex
+      align-items: center
+      flex-direction: row
+      justify-content: space-between
+      box-sizing: border-box
+      padding: 0 0.9375rem
+      width: 100%
+      height: 6vh
+      border: none
+      outline: none
+      border-radius: 0.4rem
+      background: rgba(255, 255, 255, 0.08)
+      cursor: pointer
+      transition: all 0.4s
+      user-select: none
+
+      &:hover
+        transition: all 0.4s
+        border: 1px solid rgba(255, 255, 255, 0.3)
+        background: rgba(255, 255, 255, 0.12)
+
+      .left-content
+        display: flex
+        align-items: center
+        gap: 1.0625rem
+
+        .icon-tab
+          width: 1rem
+
+        .text
+          font-family: $Montserrat
+          font-weight: 400
+          font-size: 13px
+          color: #ffff
+
+
+  .exit-btn
+    width: 100%
+    display: flex
+    align-items: center
+    gap: 20px
+    box-sizing: border-box
+    padding: 0 0.9375rem
+    height: 6vh
+    border: none
+    outline: none
+    border-radius: 0.4rem
+    background: rgba(255, 255, 255, 0.08)
+    cursor: pointer
+    transition: all 0.4s
+    user-select: none
+
+    &:hover
+      border: 1px solid rgba(255, 255, 255, 0.3)
+      background: rgba(255, 255, 255, 0.12)
+      transition: all 0.4s
+
+      .esc
+        transition: all 0.4s
+        background: #ffff
+        color: #000000
+
+      .text
+        color: #ffff
+    
+    .esc
+      transition: all 0.4s
+      font-family: $Bebas
+      font-weight: 400
+      font-size: 16px
+      padding: 4px 6px
+      background: #ffffff2c
+      border-radius: 3px
+      color: #ffffffaa
+
+    .text
+      font-family: $Montserrat
+      font-weight: 400
+      font-size: 13px
+      color: #ffffffaa

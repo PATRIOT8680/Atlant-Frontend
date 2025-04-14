@@ -1,0 +1,167 @@
+.skins-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  overflow: auto;
+  outline: none;
+  gap: 3.8vw;
+  height: 99%;
+}
+.skins-content::-webkit-scrollbar {
+  width: 0.5vw;
+}
+.skins-content::-webkit-scrollbar-track {
+  opacity: 1;
+  background-color: rgba(205, 205, 205, 0.1647058824);
+  border-radius: 100px;
+}
+.skins-content::-webkit-scrollbar-thumb {
+  cursor: -webkit-grabbing;
+  cursor: grabbing;
+  background-color: rgba(205, 205, 205, 0.1647058824);
+  border-radius: 100px;
+}
+.skins-content::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(205, 205, 205, 0.3529411765);
+}
+.skins-content .skin {
+  cursor: pointer;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: rgba(50, 169, 255, 0.12);
+  border-radius: 0.6vw;
+  width: 20vw;
+  height: 20vw;
+}
+.skins-content .skin:hover {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.skins-content .skin:hover .skin-img {
+  border-radius: 0.3vw;
+  -webkit-box-shadow: 0 0 0 0.3vw rgba(255, 255, 255, 0.07);
+          box-shadow: 0 0 0 0.3vw rgba(255, 255, 255, 0.07);
+}
+.skins-content .skin .content-inside {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 2vh 1.4vw 2vh 1.4vw;
+  width: 100%;
+  height: 100%;
+}
+.skins-content .skin .content-inside .header-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+.skins-content .skin .content-inside .header-title .name-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.4vw;
+}
+.skins-content .skin .content-inside .header-title .name-block .text {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 0.8vw;
+  text-transform: uppercase;
+  color: #fff;
+}
+.skins-content .skin .content-inside .header-title .name-block .name-skin {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 1vw;
+  text-transform: uppercase;
+  color: #fff;
+}
+.skins-content .skin .content-inside .header-title .price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin-top: 0.5vw;
+  gap: 0.3vw;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 1.1vw;
+  text-transform: uppercase;
+  color: #11ffd4;
+}
+.skins-content .skin .content-inside .header-title .price img {
+  width: 1.7vw;
+}
+.skins-content .skin .content-inside .skin-img {
+  position: absolute;
+  top: 54%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 17vw;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.skins-content .skin .content-inside .buy-skin {
+  cursor: pointer;
+  position: relative;
+  outline: none;
+  height: 2.5vw;
+  background: #1A4968;
+  border: 1px solid rgba(50, 169, 255, 0.54);
+  border-radius: 0.3vw;
+  z-index: 1;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 0.85vw;
+  text-transform: uppercase;
+  color: #61d0ff;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.skins-content .skin .content-inside .buy-skin:hover {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  color: #131C33;
+  background: rgb(50, 170, 255);
+}

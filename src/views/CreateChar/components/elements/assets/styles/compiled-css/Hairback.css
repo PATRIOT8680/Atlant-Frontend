@@ -1,0 +1,128 @@
+.hair-create-char {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1rem;
+}
+.hair-create-char .section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 0.7rem;
+}
+.hair-create-char .section .title {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 0.85rem;
+  color: white;
+  background: rgba(255, 255, 255, 0.0862745098);
+  text-transform: uppercase;
+  padding: 0.2rem 0.5rem;
+  border-radius: 0.3rem;
+}
+.hair-create-char .section .list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-margin-before: 0;
+          margin-block-start: 0;
+  -webkit-margin-after: 0;
+          margin-block-end: 0;
+  padding: 0 0;
+  gap: 0.5rem;
+  width: 100%;
+}
+.hair-create-char .section .list .hair .img-hair {
+  pointer-events: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  width: 5.5rem;
+  height: 5.5rem;
+  border-radius: 0.3rem;
+}
+.hair-create-char .section .list .hair.active .img-hair {
+  -webkit-box-shadow: 0 0 0 4px rgba(58, 114, 255, 0.2235294118);
+          box-shadow: 0 0 0 4px rgba(58, 114, 255, 0.2235294118);
+}
+.hair-create-char .colors {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 0.5rem;
+}
+.hair-create-char .colors .title {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 0.85rem;
+  color: white;
+  background: rgba(255, 255, 255, 0.0862745098);
+  text-transform: uppercase;
+  padding: 0.2rem 0.5rem;
+  border-radius: 0.3rem;
+}
+.hair-create-char .colors .squares {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 0;
+  -webkit-margin-before: 0;
+          margin-block-start: 0;
+  -webkit-margin-after: 0;
+          margin-block-end: 0;
+  width: 100%;
+  height: 2.2rem;
+}
+.hair-create-char .colors .squares .square {
+  cursor: pointer;
+  width: 2.2rem;
+  height: 100%;
+  border-radius: 0.2rem;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+.hair-create-char .colors .squares .square.active {
+  border-bottom: 3px solid #3a72ff;
+  -webkit-transition: all 0.1s;
+  transition: all 0.1s;
+  -webkit-transform: rotate(360deg);
+      -ms-transform: rotate(360deg);
+          transform: rotate(360deg);
+}
