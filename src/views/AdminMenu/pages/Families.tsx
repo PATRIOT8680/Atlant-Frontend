@@ -68,11 +68,20 @@ const Families = () => {
   }, [])
 
   const handleSearchFamily = () => {
+    if (!searchInp.trim()) {
+      setIsSearched(false)
+      setFoundFamily(null)
+      setAllFamilies(exampleFamilies)
+      return
+    }
+
     const searchId = parseInt(searchInp, 10)
     const found = allFamilies.find(family => 
       family.name.toLowerCase() === searchInp.toLowerCase() || 
       family.id === searchId
     )
+
+    setIsSearched(true)
 
     if (found) {
       setFoundFamily(found)
@@ -104,7 +113,6 @@ const Families = () => {
 
   let content
   if (isSearched && foundFamily === null) {
-    setIsSearched(false)
     content = (
       <span className="no-found">Семья не найдена!</span>
     )
@@ -190,7 +198,14 @@ const Families = () => {
             <input type="text" 
               placeholder='Введите название или ID семьи...'
               value={searchInp}
-              onChange={(e) => setSearchInp(e.target.value)}
+              onChange={(e) => {
+                setSearchInp(e.target.value)
+                if (isSearched) {
+                  setIsSearched(false)
+                  setFoundFamily(null)
+                }
+              }}
+              onKeyDown={(e) => e.key === 'Enter' && handleSearchFamily()}
             />
             <button className="btn-search" onClick={handleSearchFamily}>Найти</button>
           </div>

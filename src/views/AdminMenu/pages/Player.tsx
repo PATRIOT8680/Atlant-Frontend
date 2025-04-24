@@ -42,7 +42,7 @@ const Player = () => {
   }
 
   const [player, setPlayer] = useState<string>('')
-  const [foundPlayer, setFoundPlayer] = useState<IPlayer | null | 'no-found'>(examplePlayer)
+  const [foundPlayer, setFoundPlayer] = useState<IPlayer | null | 'no-found'>()
   const { handleModalOpen, ModalComponent } = useModal()
 
   const playerLabels: { [key in keyof IPlayer]: string } = {

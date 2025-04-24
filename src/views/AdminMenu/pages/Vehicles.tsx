@@ -42,8 +42,17 @@ const Vehicles = () => {
   }, [])
 
   const handleSearchVehicle = () => {
+    if (!searchInp.trim()) {
+      setIsSearched(false)
+      setFoundVehicle(null)
+      setAllVehicles(exampleVehicles)
+      return
+    }
+
     const searchId = parseInt(searchInp, 10)
     const found = allVehicles.find(vehicle => vehicle.id === searchId)
+
+    setIsSearched(true)
 
     if (found) {
       setFoundVehicle(found)
@@ -64,7 +73,6 @@ const Vehicles = () => {
 
   let content
   if (isSearched && foundVehicle === null) {
-    setIsSearched(false)
     content = (
       <span className="no-found">Данный транспорт не найден!</span>
     )
@@ -107,7 +115,14 @@ const Vehicles = () => {
             <input type="text" 
               placeholder='Введите ID транспорта...'
               value={searchInp}
-              onChange={(e) => setSearchInp(e.target.value)}
+              onChange={(e) => {
+                setSearchInp(e.target.value)
+                if (isSearched) {
+                  setIsSearched(false)
+                  setFoundVehicle(null)
+                }
+              }}
+              onKeyDown={(e) => e.key === 'Enter' && handleSearchVehicle()}
             />
             <button className="btn-search" onClick={handleSearchVehicle}>Найти</button>
           </div>

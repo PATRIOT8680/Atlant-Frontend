@@ -88,14 +88,24 @@ const Crime = () => {
   }, [])
 
   const handleSearchCrime = () => {
+    if (!searchInp.trim()) {
+      setIsSearched(false)
+      setFoundCrime(null)
+      setAllCrime(exampleCrime)
+      return
+    }
+
     const searchId = parseInt(searchInp, 10)
     const found = allCrime.find(crime => 
       crime.name.toLowerCase() === searchInp.toLowerCase() || 
       crime.id === searchId
     )
 
+    setIsSearched(true);
+
     if (found) {
       setFoundCrime(found)
+      setAllCrime(exampleCrime)
     } else {
       setFoundCrime(null)
     }
@@ -139,7 +149,6 @@ const Crime = () => {
 
   let content
   if (isSearched && foundCrime === null) {
-    setIsSearched(false)
     content = (
       <span className="no-found">Данная организация не найдена!</span>
     )
@@ -220,7 +229,14 @@ const Crime = () => {
             <input type="text" 
               placeholder='Введите название или ID crime-организации...'
               value={searchInp}
-              onChange={(e) => setSearchInp(e.target.value)}
+              onChange={(e) => {
+                setSearchInp(e.target.value)
+                if (isSearched) {
+                  setIsSearched(false)
+                  setFoundCrime(null)
+                }
+              }}
+              onKeyDown={(e) => e.key === 'Enter' && handleSearchCrime()}
             />
             <button className="btn-search" onClick={handleSearchCrime}>Найти</button>
           </div>

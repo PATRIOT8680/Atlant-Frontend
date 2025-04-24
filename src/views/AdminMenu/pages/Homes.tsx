@@ -77,11 +77,20 @@ const Homes = () => {
   }, [])
 
   const handleSearchHome = () => {
+    if (!searchInp.trim()) {
+      setIsSearched(false)
+      setFoundHome(null)
+      setAllHomes(exampleHomes)
+      return
+    }
+
     const searchId = parseInt(searchInp, 10)
     const found = allHomes.find(home => 
       home.owner.toLowerCase() === searchInp.toLowerCase() || 
       home.id === searchId
     )
+
+    setIsSearched(true)
 
     if (found) {
       setFoundHome(found)
@@ -123,7 +132,6 @@ const Homes = () => {
 
   let content
   if (isSearched && foundHome === null) {
-    setIsSearched(false)
     content = (
       <span className="no-found">Такой дом не найден!</span>
     )
@@ -211,7 +219,14 @@ const Homes = () => {
             <input type="text" 
               placeholder='Введите ID дома или владельца...'
               value={searchInp}
-              onChange={(e) => setSearchInp(e.target.value)}
+              onChange={(e) => {
+                setSearchInp(e.target.value)
+                if (isSearched) {
+                  setIsSearched(false)
+                  setFoundHome(null)
+                }
+              }}
+              onKeyDown={(e) => e.key === 'Enter' && handleSearchHome()}
             />
             <button className="btn-search" onClick={handleSearchHome}>Найти</button>
           </div>

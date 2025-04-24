@@ -88,11 +88,20 @@ const Fraction = () => {
   }, [])
 
   const handleSearchFraction = () => {
+    if (!searchInp.trim()) {
+      setIsSearched(false)
+      setFoundFraction(null)
+      setAllFractions(exampleFractions)
+      return
+    }
+
     const searchId = parseInt(searchInp, 10)
     const found = allFractions.find(frac => 
       frac.name.toLowerCase() === searchInp.toLowerCase() || 
       frac.id === searchId
     )
+
+    setIsSearched(true)
 
     if (found) {
       setFoundFraction(found)
@@ -139,7 +148,6 @@ const Fraction = () => {
 
   let content
   if (isSearched && foundFraction === null) {
-    setIsSearched(false)
     content = (
       <span className="no-found">Данная фракция не найдена!</span>
     )
@@ -220,7 +228,14 @@ const Fraction = () => {
             <input type="text" 
               placeholder='Введите название или ID фракции...'
               value={searchInp}
-              onChange={(e) => setSearchInp(e.target.value)}
+              onChange={(e) => {
+                setSearchInp(e.target.value)
+                if (isSearched) {
+                  setIsSearched(false)
+                  setFoundFraction(null)
+                }
+              }}
+              onKeyDown={(e) => e.key === 'Enter' && handleSearchFraction()}
             />
             <button className="btn-search" onClick={handleSearchFraction}>Найти</button>
           </div>
